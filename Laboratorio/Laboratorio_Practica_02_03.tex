@@ -1,0 +1,91 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{hyperref}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Práctica 2 - Mediciones en Física \vspace{-5ex}}
+\date{}
+
+\renewcommand*{\theenumi}{\thesection.\arabic{enumi}}
+\renewcommand*{\theenumii}{\theenumi.\arabic{enumii}}
+% \renewcommand*{\theenumi}{\thesubsection.\arabic{enumi}}
+\setlist[enumerate]{font=\bfseries}
+
+\begin{document}
+\maketitle
+
+\noindent
+\textbf{Nombre:} \rule{8cm}{0.3mm} \textbf{Fecha:} \rule{4cm}{0.3mm} \\[0.5em]
+\textbf{Grupo: } \rule{3cm}{0.3mm} \hspace{2cm} \textbf{Puntos/Firma:} \rule{5cm}{0.3mm}
+
+\section{Lista de mediciones realizadas.}
+
+Anota en la siguiente tabla los objetos y mediciones realizadas con su incertidumbre:
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | p{5cm} | p{5cm} |} \hline
+Objeto & \multicolumn{1}{|c|}{Instrumento} & \multicolumn{1}{c|}{Magnitud ($m \pm \Delta m$)} \\ \hline
+\multirow{6}{*}{Hoja carta} & & Largo: \\ \cline{3-3}
+ & & Ancho:\\ \cline{2-3}
+ & & Largo: \\ \cline{3-3}
+ & & Ancho: \\ \cline{2-3}
+ & & Largo: \\ \cline{3-3}
+ & & Ancho:\\ \hline
+\multirow{6}{*}{Roldana 1} & \multirow{2}{*}{Vernier} & \diameter \, externo: \\ \cline{3-3}
+  & & \diameter \, interno: \\ \cline{2-3}
+  & \multirow{2}{*}{Flexómetro}& \diameter \, externo: \\ \cline{3-3}
+  & & \diameter \, interno: \\ \cline{2-3}
+  & \multirow{2}{*}{Regla \SI{30}{\centi\meter}}& \diameter \, externo: \\ \cline{3-3}
+  & & \diameter \, interno: \\ \hline
+\multirow{6}{*}{Roldana 2} & \multirow{2}{*}{Vernier} & \diameter \, externo: \\ \cline{3-3}
+& & \diameter \, interno: \\ \cline{2-3}
+& \multirow{2}{*}{Flexómetro}& \diameter \, externo: \\ \cline{3-3}
+& & \diameter \, interno: \\ \cline{2-3}
+& \multirow{2}{*}{Regla \SI{30}{\centi\meter}}& \diameter \, externo: \\ \cline{3-3}
+& & \diameter \, interno: \\ \hline
+\multirow{2}{*}{Balín} & Vernier & Diámetro: \\ \cline{2-3}
+ & Micrómetro & Diámetro: \\ \hline
+\multirow{2}{*}{Moneda $10$ pesos} & & Diámetro: \\ \cline{3-3}
+ & & Espesor: \\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | p{5cm} | p{5cm} |} \hline
+Objeto & \multicolumn{1}{|c|}{Instrumento} & \multicolumn{1}{c|}{Magnitud ($m \pm \Delta m$)} \\ \hline
+\multirow{3}{*}{Vaso precipitado} & & \diameter externo: \\ \cline{3-3}
+ & & \diameter interno: \\ \cline{3-3}
+ & & Profundidad: \\ \hline
+ \multirow{3}{*}{Tubo ensayo} & & \diameter externo: \\ \cline{3-3}
+ & & \diameter interno: \\ \cline{3-3}
+ & & Profundidad: \\ \hline
+Lata de aluminio & Micrómetro & Espesor: \\ \hline
+\multirow{3}{*}{Tapa de PET} & & \diameter externo: \\ \cline{3-3}
+ & & \diameter interno: \\ \cline{3-3}
+ & & Profundidad: \\ \hline
+\end{tabular}
+\end{table}
+
+\end{document}

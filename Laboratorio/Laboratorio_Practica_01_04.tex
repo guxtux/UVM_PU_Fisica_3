@@ -1,0 +1,73 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Práctica 1 - Análisis preliminar \\  Física III\vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+Luego de haber realizado el montaje experimental para la Ley de Hooke, deberás de preparar un análisis preliminar de los datos experimentales, con los siguientes puntos:
+
+\begin{enumerate}
+\item En la tabla de valores $F$ [\unit{\gram}] y $x$ [\unit{\centi\meter}] agrega una columna en donde vas a calcular el valor de $k = F/x$, las unidades quedarán en \unit{\gram\per\centi\meter}, quedando la tabla de la siguiente manera:
+\begin{table}[H]
+\centering
+\begin{tabular}{c | c | c}
+$F$ \, [\unit{\gram}] & $x$ \, [\unit{\centi\meter}] & $k$ \, [\unit{\gram\per\centi\meter}] \\ \hline
+\vdots & \vdots & \vdots \\
+\end{tabular}
+\end{table}
+\item Elabora una gráfica de $F$, la fuerza en gramos (eje y) contra $x$, el desplazamiento en centímetros (eje x), presenta cada dato con un símbolo, por ejemplo "+".
+\item Traza una recta que \enquote{toque} la mayor cantidad de puntos experimentales.
+\item Considera dos puntos que estén separados y muy cerca de la recta, obtén la pendiente $m$ de la recta que acabas de trazar.
+\begin{align*}
+m = \dfrac{\Delta \, y}{\Delta x} = \dfrac{y_{f} - y_{i}}{x_{f} - x_{i}}
+\end{align*}
+El valor de $m$ representa el valor de $k$ la constante del resorte, anota ese valor aquí:
+
+$m = $ \rule{2cm}{0.3mm} [\unit{\gram\per\centi\meter}]
+\item En una nueva tabla agrega el valor de la pendiente m de la recta, y para cada registro obtén el valor absoluto de la diferencia de $m - k$:
+\begin{table}[H]
+\centering
+\begin{tabular}{c | c | c | c}
+$F$ \, [\unit{\gram}] & $x$ \, [\unit{\centi\meter}] & $k$ \, [\unit{\gram\per\centi\meter}] & $\abs{m - k}$ \\ \hline
+\vdots & \vdots & \vdots & \vdots \\
+\end{tabular}
+\end{table}
+\item Señala en la tabla y en la gráfica el(los) valor(es) cuyo valor de $\abs{m - k}$ sea cero o muy cercano a cero.
+\item Responde las siguientes preguntas:
+\begin{enumerate}
+\item ¿Observaste algo en particular en el resorte con la fuerza de mayor magnitud? ¿Tardó más tiempo en estabilizarse para hacer la medición?
+\item ¿Por qué no todos los valores de la cuarta columna de la última tabla son cero?
+\item ¿Cómo mejorarías el montaje experimental?
+\item ¿Se cumplió el objetivo de la práctica 1?
+\item ¿Las hipótesis de nuestra práctica son correctas? En caso de que no lo sean, explica el por qué.
+\end{enumerate}
+\item Una vez que hayas respondido todo lo anterior, deberás de anotarlo en tu archivo donde tienes el marco teórico que ya presentaste para la práctica 1.
+\item Deberás de enviar tu archivo actualizado en la asignación por Teams.
+\item En la siguiente clase se te pedirá que expongas tu análisis preliminar, por lo que deberás de preparar la información solicitada.
+\item En caso de que elabores tu gráfica en tu cuaderno o en hoja milimétrica, toma un foto o escanea la imagen para que adjuntes esa imagen en la asignación.
+\item Recuerda que esta actividad cuenta para la calificación.
+\item El trabajo de análisis es INDIVIDUAL.
+\end{enumerate}
+
+\end{document}

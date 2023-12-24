@@ -1,0 +1,59 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{hyperref}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Práctica 2 - Mediciones en Física \\  Física III \vspace{-5ex}}
+\date{}
+
+\renewcommand*{\theenumi}{\thesection.\arabic{enumi}}
+\renewcommand*{\theenumi}{\thesubsection.\arabic{enumi}}
+\renewcommand*{\theenumii}{\theenumi.\arabic{enumii}}
+\setlist[enumerate]{font=\bfseries}
+
+\begin{document}
+\maketitle
+
+\section{Reportando mediciones directas e indirectas. }
+
+Mencionamos en el documento anterior que toda medición que se realice, debe de reportarse con el error o incertidumbre asociado al instrumento, que corresponderá a la mitad de la mínima escala de medida, en caso de que el instrumento sí indique cuál es su error, se deberá utilizar ese valor.
+
+La magnitud de la medición se reporta como $m \pm \Delta x$, donde $m$ es el valor de la medición y $\Delta x$ el error o incertidumbre asociado.
+
+Tanto en las mediciones directas e indirectas el manejo de las magnitudes y su incertidumbre se debe de realizar de manera cuidadosa, por ejemplo, al medir con una regla de \SI{30}{\centi\meter} la longitud de una cartulina:
+\begin{enumerate}
+\item Notamos que ésta magnitud es más larga que la regla, por lo que tendremos que ocupar en varias ocasiones la regla para luego sumar las cantidades, el error asociado a la medición se debe de presentar de cierto modo. 
+\item Si queremos calcular el área de la cartulina, multiplicamos el valor del largo por el valor del ancho, lo que nos devolverá el valor de la superficie (ya sea en \unit{\square\centi\meter} o en \unit{\square\meter}), el error obtenido de esta medición indirecta, también se debe de reportar de manera particular.
+\end{enumerate}
+El procedimiento que permite obtener el error de manera general, se le conoce como \textbf{propagación de errores}.
+
+\subsection{Propagación de errores.}
+
+Consideremos que se tienen dos mediciones con su error asociado: $x \pm \Delta x$ y $y \pm \Delta y$, debemos de manejar las siguientes operaciones para reportar la magnitud y el error:
+
+\subsection*{Suma o diferencia de dos magnitudes.}
+
+Cuando una magnitud $m$ es el resultado de la suma o resta de dos o más magnitudes medidas directamente, el error en dichas magnitudes traerá consigo un error $\Delta m$, es decir:
+\begin{align*}
+m \pm \Delta m &= (x \pm \Delta x) + (x \pm \Delta x) \\[0.5em]
+m \pm \Delta m &= (x \pm y) \pm (\Delta x + \Delta y)
+\end{align*}
+Notemos que aunque se resten las dos cantidades $x$ e $y$, el error asociado es la suma de $\Delta x$ y $\Delta y$.
+\end{document}

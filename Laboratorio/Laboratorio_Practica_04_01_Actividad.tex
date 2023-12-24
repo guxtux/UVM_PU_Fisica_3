@@ -1,0 +1,103 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{calc}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\newlength{\depthofsumsign}
+\setlength{\depthofsumsign}{\depthof{$\sum$}}
+\newcommand{\nsum}[1][1.4]{% only for \displaystyle
+    \mathop{%
+        \raisebox
+            {-#1\depthofsumsign+1\depthofsumsign}
+            {\scalebox
+                {#1}
+                {$\displaystyle\sum$}%
+            }
+    }
+}
+
+\title{\vspace*{-2cm} Práctica 4 - Plano inclinado \\  Física III\vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{table}[H]
+\begin{tabular}{l l}
+\textbf{Integrantes:} & 1. \rule{8cm}{0.1mm} \\
+ & 2. \rule{8cm}{0.1mm} \\
+ & 3. \rule{8cm}{0.1mm} \\
+\end{tabular}
+\end{table}
+
+\section{Actividad a realizar.}
+
+Se realizarán los registros de tiempo de desplazamiento de un balín o canica sobre un riel que estará inclinado a diferentes ángulos, nos interesa determinar la velocidad que adquiere, así como la aceleración. Este es un problema dentro del Movimiento Uniformemente Acelerado.
+
+\section{Material.}
+
+\begin{enumerate}
+\item Riel de \SI{150}{\centi\meter}
+\item Plano inclinado.
+\item Balín o canica.
+\item Cronómetro (puede ser el del celular)
+\end{enumerate}
+
+\section{Montaje.}
+
+\begin{enumerate}
+\item Se coloca la base del plano inclinado a un ángulo de \ang{10}, sujetando el tornillo mariposa de tal manera que la base quede fija.
+\item Colocamos el riel sobre el plano inclinado.
+\item Se va a registrar el tiempo que tarda en deslizarse una distancia de \SI{10}{\centi\meter}, para ello, un integante del equipo debe de soltar el balín en el extremo inicial del riel, otro integrante deberá de colocar un bolígrafo o un lápiz en la marca de los \SI{10}{\centi\meter}. Cuando se suelte el balín, deberá de avisarse para que el cronómetro se inicie y cuando el balín llegue a la marca de distancia, se deberá de avisar para deterner el cronómetro.
+\item El tiempo que se registre en el cronómetro, es el que se deberá de anotar en la tabla de datos.
+\item Para tener una medida uniforme en cada distancia, deberán de repetir 5 (cinco veces) el registro de tiempo.
+\item Se avanza a la siguiente marca de distancia, a \SI{20}{\centi\meter} y se repiten las cinco mediciones de tiempo.
+\item Se continua hasta completar una distancia de \SI{100}{\centi\meter}.
+\item Cuando se haya completado la tabla, se cambia el ángulo de la mesa a \ang{15} y se repite todo el procedimiento, esto considera que hay que elaborar una tabla de distancias y tiempos nuevamente.
+\item El registro considera también el cambio de ángulo a \ang{20} y \ang{25}, cada uno, con su respectiva tabla.
+\end{enumerate}
+
+\section{Tabla de registro.}
+
+Se recomienda que imprimas esta hoja o que la prepares en tu cuaderno para el registro de tiempos.
+\begin{table}[H]
+\centering
+Tabla para un ángulo de \ang{10}
+
+\begin{tabular}{| c | >{\centering}p{1cm} | >{\centering}p{1cm} | >{\centering}p{1cm} | >{\centering}p{1cm} | >{\centering}p{1cm} | c |} \hline
+ & \multicolumn{5}{c|}{Tiempos} & \\ \hline
+Distancia & $t_{1}$ & $t_{2}$ & $t_{3}$ & $t_{4}$ & $t_{5}$ & $t$ Promedio \\ \hline
+\SI{10}{\centi\meter} & & & & & & \\ \hline
+\SI{20}{\centi\meter} & & & & & & \\ \hline
+\SI{30}{\centi\meter} & & & & & & \\ \hline
+\SI{40}{\centi\meter} & & & & & & \\ \hline
+\SI{50}{\centi\meter} & & & & & & \\ \hline
+\SI{60}{\centi\meter} & & & & & & \\ \hline
+\SI{70}{\centi\meter} & & & & & & \\ \hline
+\SI{80}{\centi\meter} & & & & & & \\ \hline
+\SI{90}{\centi\meter} & & & & & & \\ \hline
+\SI{100}{\centi\meter} & & & & & & \\ \hline
+\end{tabular}
+\end{table}
+
+Para el reporte de la Práctica deben de presentarse cuatro tablas, en la siguiente sesión de Laboratorio se continuará con el registro, pero en esta clase, se calificará la evidencia de trabajo.
+
+\end{document}

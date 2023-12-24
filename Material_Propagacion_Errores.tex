@@ -1,0 +1,169 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{hyperref}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Propagación de errores \\  Física III \vspace{-5ex}}
+\date{}
+
+\renewcommand*{\theenumi}{\thesection.\arabic{enumi}}
+\renewcommand*{\theenumii}{\theenumi.\arabic{enumii}}
+% \renewcommand*{\theenumi}{\thesubsection.\arabic{enumi}}
+\setlist[enumerate]{font=\bfseries}
+
+\begin{document}
+\maketitle
+
+\subsection{Propagación de errores.}
+
+Consideremos que se tienen dos mediciones con su error asociado: $x \pm \Delta x$ y otra cantidad $y \pm \Delta y$, debemos de manejar las siguientes operaciones para reportar la magnitud y el error:
+
+\section{Suma o diferencia de dos magnitudes.}
+
+Cuando una magnitud $m$ es el resultado de la suma o resta de dos o más magnitudes medidas directamente, el error en dichas magnitudes traerá consigo un error $\Delta m$, es decir:
+\begin{align*}
+m \pm \Delta m &= (x \pm \Delta x) + (y \pm \Delta y) \\[0.5em]
+m \pm \Delta m &= (x \pm y) \pm (\Delta x + \Delta y)
+\end{align*}
+Notemos que aunque se resten las dos cantidades $x$ e $y$, el error asociado es la suma de $\Delta x$ y $\Delta y$.
+
+\vspace*{1cm}
+\noindent
+\textbf{Ejemplo:} Se mide el largo y ancho de una hoja tamaño oficio con una regla de \SI{30}{\centi\meter} cuya incertidumbre es de $\pm \SI{0.05}{\centi\meter}$ (que es la mitad de la mínima escala de la regla), reportando los siguientes valores:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| c | c |} \hline
+        Ancho & $\num{22} \pm \num{0.05} \, \unit{\centi\meter}$ \\ \hline
+        Largo & $(\num{30} \pm \num{0.05} \, \unit{\centi\meter}) + (\num{4} \pm \num{0.05} \, \unit{\centi\meter})$ \\ \hline
+    \end{tabular}
+\end{table}
+Como vemos en el renglón del largo de la hoja, fue necesario utilizar en dos ocasiones la regla ya que la hoja de papel tamaño oficio es mayor que la regla, por lo que debemos de reportar el largo como la suma de dos cantidades, cada una con su incertidumbre:
+\begin{align*}
+\text{Largo} &= (\num{30} \pm \num{0.05} \, \unit{\centi\meter}) + (\num{4} \pm \num{0.05} \, \unit{\centi\meter}) = \\[0.5em]
+&= (30 + 4) \pm (\num{0.05} + \num{0.05}) \, \unit{\centi\meter} = \\[0.5em]
+&= \num{34} \pm \SI{0.1}{\centi\meter}
+\end{align*}
+Por lo que la tabla quedaría de la siguiente manera:
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c |} \hline
+    Ancho & $\num{22} \pm \num{0.05} \, \unit{\centi\meter}$ \\ \hline
+    Largo & $\num{34} \pm \SI{0.1}{\centi\meter}$ \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Producto de dos magnitudes.}
+
+Si las cantidades $x$ e $y$ se multiplican para obtener la cantidad $m$, se tiene que:
+\begin{align*}
+m &= x \times y \\[0.5em]
+m \pm \Delta m &= (x \pm \Delta x) \times (y \pm \Delta y) \\[0.5em]
+m \pm \Delta m &= (x \times y) \pm (x \, \Delta y) \pm (y \, \Delta x) + ( \Delta x \, \Delta y)
+\end{align*}
+Si las cantidades $\Delta x$ como $\Delta y$ son pequeñas, el producto $\Delta x \, \Delta y$ se puede despreciar, por lo que el producto de dos magntiudes será:
+\begin{align*}
+m \pm \Delta m &= (x \times y) \pm (x \, \Delta y) + (y \, \Delta x)
+\end{align*}
+
+\vspace*{0.5cm}
+\noindent
+\textbf{Ejemplo: } Si calculamos el área de la hoja de tamaño oficio, debemos de multiplicar el largo por el ancho:
+\begin{align*}
+\text{área} &= \text{largo} \times \text{ancho} = (\num{22} \pm \num{0.05} \, \unit{\centi\meter}) \times (\num{34} \pm \SI{0.1}{\centi\meter}) = \\[0.5em]
+&= (22 \times 34) \pm \big[ (\num{22} \times \num{0.1}) + (\num{34}  \times \num{0.05}) \big] \unit{\square\centi\meter} = \\[0.5em]
+&= \num{748} \pm \big[ \num{2.2} + \num{1.7} \big] \unit{\square\centi\meter} = \\[0.5em]
+&= \num{748} \pm \SI{3.9}{\square\centi\meter}
+\end{align*}
+
+\noindent
+Con esta operación reportamos el valor del área de la hoja de oficio con su incertidumbre es: $\num{748} \pm \SI{3.9}{\square\centi\meter}$.
+
+
+\section{Producto por una constante}.
+
+Si se tiene una magnitud $x\pm \Delta x$, al multiplicarse por un valor constante $A$, la cantidad $m \pm \Delta m$ se reporta como:
+\begin{align*}
+m \pm \Delta m = A \, x \pm \abs{A} \, \Delta x
+\end{align*}
+donde $\abs{A}$ es la función valor absoluto aplicada al valor $A$, es decir, nos va a devolver siempre el valor de $A$ con signo positivo.
+
+\section{Potencia de una magnitud.}
+
+Cuando se tiene una magnitud $x \pm \Delta x$ y se eleva a un exponente $n$, la medición $m$ que se reporta es:
+\begin{align*}
+m &= x^{n} \\[0.5em]
+m \pm \Delta m &= x^{n} \pm n \, \dfrac{\Delta x}{\abs{x}}
+\end{align*}
+
+\textbf{Ejemplo: } Para mostrar un ejemplo de las operaciones multiplicación por una constante y potencia de una magnitud, revisemos el siguiente caso: Medimos con un flexómetro (con incertidumbre $\pm \SI{0.05}{\centi\meter}$ el diámetro $d$ de un portavaso, anotamos el valor $\num{10} \pm \SI{0.05}{\centi\meter}$ y nos piden obtener el valor del área a partir de la expresión conocida para el área de un círculo:
+\begin{align*}
+\text{área} = \pi \, r^{2}
+\end{align*}
+En donde reconocemos que hay elevar al cuadrado el valor del radio, pero como tenemos un diámetro, sabemos que el radio es la mitad del diámetro, para luego multiplicar por el valor de $\pi$, entonces la expresión a usar es:
+\begin{align*}
+\text{área} = \pi \, \left( \dfrac{d}{2} \right)^{2} = \dfrac{\pi}{4} \, d^{2}
+\end{align*}
+Obtenemos primero el valor de la magnitud y su incertidumbre cuando se eleva al exponente $2$:
+\begin{align*}
+\text{área} &= \dfrac{\pi}{4} \, d^{2} = \dfrac{\pi}{4} \, (\num{10} \pm \SI{0.05}{\centi\meter})^2 = \\[0.5em]
+&= \dfrac{\pi}{4} \, \left[ (\num{10})^2 \pm 2 \, \left( \dfrac{\num{0.05}}{\abs{10}} \right)  \, \unit{\centi\meter} \right] = \\[0.5em]
+&= \dfrac{\pi}{4} \, \left( \num{100} \pm \SI{0.01}{\square\centi\meter} \right)
+\end{align*}
+El siguiente paso es multiplicar por el valor constante $\pi/4$:
+\begin{align*}
+\text{área} &= \left( \dfrac{\pi}{4} \right) \, \left( \num{100} \pm \SI{0.01}{\square\centi\meter} \right) = \\[0.5em]
+&= \left( \dfrac{\pi}{4} \times \num{100} \right) \pm \left( \abs{\left( \dfrac{\pi}{4} \right)} \times \SI{0.01}{\square\centi\meter} \right) = \\[0.5em]
+&= \num{78.539} \pm \SI{0.0078}{\square\centi\meter}
+\end{align*}
+El área del portavaso lo reportamos con el valor: $\num{78.539} \pm \SI{0.0078}{\square\centi\meter}$
+
+\section{Cociente entre dos magnitudes.}
+
+Cuando una magnitud $m$ es el resultado de dividir dos o más magnitudes medidas
+directamente, un error en dichas magnitudes traerá consigo un error $\Delta m$:
+\begin{align*}
+m &= \dfrac{x}{y} \\[0.5em]
+m \pm \Delta m &= \dfrac{(x \pm \Delta x)}{y \pm \Delta y} \\[0.5em]
+m \pm \Delta m &= \dfrac{x}{y} \pm \dfrac{(x \, \Delta y) + (y \, \Delta x)}{(y^{2})}
+\end{align*}
+
+\vspace*{0.5cm}
+\noindent
+En electricidad se sabe que el valor de la corriente eléctrica $I$ en Amperes (\unit{\ampere}) es igual al cociente del voltaje $V$ en Volts (\unit{\volt}) entre la resistencia $R$ en Ohms (\unit{\ohm}), en el Laboratorio se midieron las siguientes magnitudes:
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c |} \hline
+    Magnitud & Valor \\ \hline
+    Voltaje & $\num{120} \pm \num{0.05} \, \unit{\volt}$ \\ \hline
+    Resistencia & $\num{1000} \pm \num{50} \, \unit{\ohm}$ \\ \hline
+\end{tabular}
+\end{table}
+El valor de corriente a reportar es:
+\begin{align*}
+I &= \dfrac{V}{R} = \dfrac{V \pm \Delta V}{R \pm \Delta R} = \\[0.5em]
+I &= \dfrac{\num{120}}{\num{1000}} \pm \dfrac{(\num{120} \times \num{50}) + (\num{1000} \times \num{0.05})}{(\num{1000})^{2}} \, \unit{\ampere}= \\[0.5em]
+&= \num{0.12} \pm \dfrac{6050}{1000000} \, \unit{\ampere}= \\[0.5em]
+&= \num{0.12} \pm \SI{0.00605}{\ampere}
+\end{align*}
+El valor de corriente en Amperes con su incertidumbre que se reportaría luego de dividir dos magnitudes es: $\num{0.12} \pm \SI{0.00605}{\ampere}$
+
+\vspace*{1cm}
+Con estos ejercicios tendrás la referencia para obtener las magnitudes que se piden para la Práctica 2 - Mediciones en Física.
+\end{document}

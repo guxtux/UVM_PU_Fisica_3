@@ -1,0 +1,165 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{hyperref}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Práctica 2 - Mediciones en Física \\  Física III \vspace{-5ex}}
+\date{}
+
+\renewcommand*{\theenumi}{\thesection.\arabic{enumi}}
+\renewcommand*{\theenumii}{\theenumi.\arabic{enumii}}
+% \renewcommand*{\theenumi}{\thesubsection.\arabic{enumi}}
+\setlist[enumerate]{font=\bfseries}
+
+\begin{document}
+\maketitle
+
+\section{Reportando mediciones directas e indirectas. }
+
+Mencionamos en el documento anterior que toda medición que se realice, debe de reportarse con el error o incertidumbre asociado al instrumento, que corresponderá a la mitad de la mínima escala de medida, en caso de que el instrumento sí indique cuál es su error, se deberá utilizar ese valor.
+
+La magnitud de la medición se reporta como $m \pm \Delta m$, donde $m$ es el valor de la medición y $\Delta m$ el error o incertidumbre asociado.
+
+Tanto en las mediciones directas e indirectas el manejo de las magnitudes y su incertidumbre se debe de realizar de manera cuidadosa, por ejemplo, al medir con una regla de \SI{30}{\centi\meter} la longitud de una cartulina:
+\begin{enumerate}[label=\alph*)]
+\item Notamos que ésta magnitud es más larga que la regla, por lo que tendremos que ocupar en varias ocasiones la regla para luego sumar las cantidades, el error asociado a la medición se debe de presentar de cierto modo. 
+\item Si queremos calcular el área de la cartulina, multiplicamos el valor del largo por el valor del ancho, lo que nos devolverá el valor de la superficie (ya sea en \unit{\square\centi\meter} o en \unit{\square\meter}), el error obtenido de esta medición indirecta, también se debe de reportar de manera particular.
+\end{enumerate}
+El procedimiento que permite obtener el error de manera general, se le conoce como \textbf{propagación de errores}.
+
+\subsection{Propagación de errores.}
+
+Consideremos que se tienen dos mediciones con su error asociado: $x \pm \Delta x$ y otra cantidad $y \pm \Delta y$, debemos de manejar las siguientes operaciones para reportar la magnitud y el error:
+
+\subsection*{Suma o diferencia de dos magnitudes.}
+
+Cuando una magnitud $m$ es el resultado de la suma o resta de dos o más magnitudes medidas directamente, el error en dichas magnitudes traerá consigo un error $\Delta m$, es decir:
+\begin{align*}
+m \pm \Delta m &= (x \pm \Delta x) + (y \pm \Delta y) \\[0.5em]
+m \pm \Delta m &= (x \pm y) \pm (\Delta x + \Delta y)
+\end{align*}
+Notemos que aunque se resten las dos cantidades $x$ e $y$, el error asociado es la suma de $\Delta x$ y $\Delta y$.
+
+\subsection*{Producto de dos magnitudes.}
+
+Si las cantidades $x$ e $y$ se multiplican para obtener la cantidad $m$, se tiene que:
+\begin{align*}
+m &= x \times y \\[0.5em]
+m \pm \Delta m &= (x \pm \Delta x) \times (y \pm \Delta y) \\[0.5em]
+m \pm \Delta m &= (x \times y) \pm (x \, \Delta y) \pm (y \, \Delta x) + ( \Delta x \, \Delta y)
+\end{align*}
+Si las cantidades $\Delta x$ como $\Delta y$ son pequeñas, el producto $\Delta x \, \Delta y$ se puede despreciar, por lo que el producto de dos magntiudes será:
+\begin{align*}
+m \pm \Delta m &= (x \times y) \pm (x \, \Delta y) + (y \, \Delta x)
+\end{align*}
+
+\subsection*{Producto por una constante}.
+
+Si se tiene una magnitud $x\pm \Delta x$, al multiplicarse por un valor constante $A$, la cantidad $m \pm \Delta m$ se reporta como:
+\begin{align*}
+m \pm \Delta m = A \, x \pm \abs{A} \, \Delta x
+\end{align*}
+donde $\abs{A}$ es la función valor absoluto aplicada al valor $A$, es decir, nos va a devolver siempre el valor de $A$ con signo positivo.
+
+\subsection*{Potencia de una magnitud.}
+
+Cuando se tiene una magnitud $x \pm \Delta x$ y se eleva a un exponente $n$, la medición $m$ que se reporta es:
+\begin{align*}
+m &= x^{n} \\[0.5em]
+m \pm \Delta m &= x^{n} \pm n \, \dfrac{\Delta x}{\abs{x}}
+\end{align*}
+
+\subsection*{Cociente entre dos magnitudes.}
+
+Cuando una magnitud $m$ es el resultado de dividir dos o más magnitudes medidas
+directamente, un error en dichas magnitudes traerá consigo un error $\Delta m$:
+\begin{align*}
+m &= \dfrac{x}{y} \\[0.5em]
+m \pm \Delta m &= \dfrac{(x \pm \Delta x)}{y \pm \Delta y} \\[0.5em]
+m \pm \Delta m &= \dfrac{x}{y} \pm \dfrac{(x \, \Delta y) + (y \, \Delta x)}{(y^{2})}
+\end{align*}
+
+\section{Análisis de los datos.}
+
+Con la explicación anterior, tendrás que obtener el valor y la incertidumbre asociada a las siguientes cantidades y con los respectivos instrumentos:
+
+\begin{enumerate}[label=\roman*)]
+\item Área de la hoja tamaño carta en \unit{\square\centi\meter} \hspace{1cm} $\Rightarrow A =$ largo por ancho
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | p{3cm} | p{3cm} | c |} \hline
+Instrumento & \multicolumn{1}{|c|}{Largo} & \multicolumn{1}{c|}{Ancho} & Magnitud $A \pm  \Delta A$ \\\hline
+Regla \SI{30}{\centi\meter} & & & \\ \hline
+Regla \SI{1}{\meter} & & & \\ \hline
+Flexómetro & & & \\ \hline
+\end{tabular}
+\end{table}
+\item Área de las dos roldanas \unit{\square\centi\meter}
+
+Para obtener el área ocupamos la expresión $\Rightarrow A = \pi \, \left( \dfrac{d^2}{4} \right)$
+
+Toma en cuenta que el área de la roldana será igual a:
+\begin{align*}
+A = \text{área diámetro exterior} - \text{área diámetro interior}
+\end{align*}
+\textbf{Roldana 1.}
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c | c | c |} \hline
+Instrumento & Diámetro exterior & Diámetro interior & Magnitud $A \pm  \Delta A$ \\\hline
+Regla \SI{30}{\centi\meter} & & & \\ \hline
+Flexómetro & & & \\ \hline
+Vernier \unit{\centi\meter} & & & \\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+\textbf{Roldana 2.}
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c | c | c |} \hline
+Instrumento & Diámetro exterior & Diámetro interior & Magnitud $A \pm  \Delta A$ \\\hline
+Regla \SI{30}{\centi\meter} & & & \\ \hline
+Flexómetro & & & \\ \hline
+Vernier \unit{\centi\meter} & & & \\ \hline
+\end{tabular}
+\end{table}
+\item Volumen del balín o canica en \unit{\cubic\centi\meter} $\hspace{1cm} \Rightarrow V = \left[ \dfrac{4}{3} \pi \left( \dfrac{d^{3}}{8} \right) \right]$
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | p{3cm} | c |} \hline
+Instrumento & \multicolumn{1}{|c|}{Diámetro} & Magnitud $V \pm  \Delta V$ \\\hline
+Vernier \unit{\centi\meter} & & \\ \hline
+Micrómetro \unit{\centi\meter} & & \\ \hline
+\end{tabular}
+\end{table}
+\end{enumerate}
+
+\section{Discusión de los resultados.}
+
+Después de completar tus operaciones responde las siguientes preguntas.
+\begin{enumerate}
+\item En la medición de magnitudes del tapón de PET, del vaso de precipitado y del tubo de ensayo, calcular el volumen de los mismos, ¿nos daría una medición confiable? recuerda los objetos y considera la parte interna de ellos, ¿terminaban en ángulo recto? ¿eran completamente lisos?
+\item Menciona la importancia de considerar el error o incertidumbre en las mediciones de laboratorio.
+\end{enumerate}
+
+Tus respuestas te van a servir para preparar las conclusiones del reporte que se entregará al concluir la siguiente clase.
+\end{document}

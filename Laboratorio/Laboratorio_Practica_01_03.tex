@@ -1,0 +1,63 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Actividad para la Práctica 1 \\  Física III\vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent
+\textbf{Nombre:} \rule{8cm}{0.3mm}
+\\[1em]
+\textbf{Fecha:} \rule{4cm}{0.3mm}
+\vspace{1cm}
+
+Grafica los puntos experimentales de la masa y el volumen de un bloque de hierro. Obtén la expresión matemática entre las variables.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=2]
+        \draw (0, 0) -- (4.5, 0) node [above, pos=1.1] {\small{$V \, [\unit{\cubic\centi\meter}]$}};
+        \draw (0, 0) -- (0, 7) node [left, pos=1.1] {\small{$m \, [\unit{\gram}]$}};
+
+        \draw[step=0.5, black, thin] (0, 0) grid (4.5, 7);
+        
+        \foreach [evaluate={\j=int(\x*10)}] \x in {1, 2, 3, 4}
+        {    
+            \draw (\x, 0.2) -- (\x, -0.2);
+            \node at (\x, -0.4) {\small{$\x$}};
+        }
+        \foreach [evaluate={\j=int(\x*5)}] \x in {1, 2, 3, 4, 5, 6, 7}
+        {
+            \draw (-0.2, \x) -- (0.2, \x);
+            \node at (-0.6, \x) {\small{$\j$}};
+        }
+        
+        % \draw [fill, color=blue](1, 1.6) circle (0.1cm); \pause
+        % \draw [fill, color=blue](2, 3.2) circle (0.1cm); \pause
+        % \draw [fill, color=blue](3, 4.8) circle (0.1cm); \pause
+        % \draw [fill, color=blue](4, 6.4) circle (0.1cm); \pause
+        % \draw [dashed, color=red] (0, 0) -- (4, 6.4);
+    \end{tikzpicture}
+\end{figure}
+
+\end{document}

@@ -1,0 +1,141 @@
+\documentclass[14pt]{beamer}
+\usepackage{./Estilos/BeamerUVM}
+\usepackage{./Estilos/ColoresLatex}
+\input{Preambulos/preambulo_Beamer_Madrid_default}
+% \usefonttheme{serif}
+\usepackage[clock]{ifsym}
+\usetikzlibrary{plotmarks}
+
+\sisetup{per-mode=symbol}
+\resetcounteronoverlays{saveenumi}
+
+\title{\Large{Trabajo de Desarrollo} \\ \normalsize{Física III}}
+\date{}
+
+% Macro para agregar el logo de UVM en cada slide de la presentación
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\coordinate (logo) at ([xshift=-1.5cm,yshift=-0.8cm]current page.north east);
+% \fill[devryblue] (logo) circle (.9cm);
+% \clip (logo) circle (.75cm);
+\node at (logo) {\includegraphics[width=2.1cm]{Imagenes/logo_UVM.png}};
+\end{tikzpicture}}
+
+\begin{document}
+\maketitle
+  
+\section*{Contenido}
+\frame{\frametitle{Contenido} \tableofcontents[currentsection, hideallsubsections]}
+
+\section{Trabajo de desarrollo}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Indicaciones}
+
+\begin{frame}
+\frametitle{Trabajo de desarrollo}
+Deberás de realizar un trabajo con los siguientes puntos:
+\pause
+\setbeamercolor{item projected}{bg=bananayellow,fg=ao}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Un revisión biográfica de Isaac Newton y de Johannes Kepler.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Trabajo de desarrollo}
+\setbeamercolor{item projected}{bg=bananayellow,fg=ao}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Para Isaac Newton deberás de presentar de manera general, las aportaciones que hizo para la mecánica, en particular, las llamadas Leyes de Newton, respondiendo ¿de qué manera logró establecer o construir esas leyes?
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Trabajo de desarrollo}
+Así como en la matemática y en la óptica. ¿Qué aportaciones realizó?
+\end{frame}
+\begin{frame}
+\frametitle{Trabajo de desarrollo}
+\setbeamercolor{item projected}{bg=bananayellow,fg=ao}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Para Johannes Kepler, presentarás su trabajo conocido como las Leyes de Kepler, ¿en qué consisten? ¿qué fenómenos explican?
+\seti
+\end{enumerate}
+\end{frame}
+
+\subsection{Puntos que otorga}
+
+\begin{frame}
+\frametitle{Trabajo de desarrollo}
+\setbeamercolor{item projected}{bg=bananayellow,fg=ao}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Esta actividad de desarrollo aportará hasta $7$ puntos de evaluación continua.
+\item La evaluación se hará con una rúbrica, pero el nivel de calidad y exigencia del trabajo será mayor.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Importante consideración}
+Todo trabajo se presentará como de elaboración propia, \pause en el caso donde se identifique que se hayan utilizado herramientas tipo chatGPT, y otras, el trabajo \textocolor{red}{será anulado}.
+\end{frame}
+
+\subsection{Fecha de entrega}
+
+\begin{frame}
+\frametitle{Trabajo de desarrollo}
+\setbeamercolor{item projected}{bg=bananayellow,fg=ao}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item La entrega del trabajo será por Teams, el plazo para el envío es el día 22 de noviembre a las 8 pm.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Trabajo de desarrollo}
+\setbeamercolor{item projected}{bg=bananayellow,fg=ao}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item No se recibirán trabajos extemporáneos, a menos que se presente la evidencia de problemas técnicos durante el envío y que se haya notificado oportunamente al Profesor.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Trabajo de desarrollo}
+\setbeamercolor{item projected}{bg=bananayellow,fg=ao}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Esta actividad \textocolor{ao}{deberá de incluirse} en la Bitácora de Evaluación Continua.
+\end{enumerate}
+\end{frame}
+\end{document}

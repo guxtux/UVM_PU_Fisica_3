@@ -1,0 +1,91 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{calc}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\newlength{\depthofsumsign}
+\setlength{\depthofsumsign}{\depthof{$\sum$}}
+\newcommand{\nsum}[1][1.4]{% only for \displaystyle
+    \mathop{%
+        \raisebox
+            {-#1\depthofsumsign+1\depthofsumsign}
+            {\scalebox
+                {#1}
+                {$\displaystyle\sum$}%
+            }
+    }
+}
+
+\title{\vspace*{-2cm} Práctica 3 - Vectores \\ Actividad en clase - Física III\vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\textbf{Nombre:} \rule{7cm}{0.1mm} \textbf{Fecha:} \rule{3cm}{0.1mm} 
+
+\vspace*{0.4cm}
+\textbf{Grupo:} \rule{3cm}{0.1mm}
+
+\vspace{1cm}
+
+\large
+Esta actividad otorgará \textbf{5 puntos} siempre y cuando se hayan completado todas las actividades de la clase y solo contará en la calificación con la firma. \hspace{2cm} \textbf{Puntos/Firma Profesor:} \rule{4cm}{0.1mm}
+
+\vspace*{0.5cm}
+Realiza la descomposición de los siguientes vectores.
+
+\begin{minipage}[T]{0.4\linewidth}
+Vector $\va{A}$:
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=2.5]
+        \draw [-stealth] (0, 0) -- (2, 0);
+        \draw [-stealth] (0, 0) -- (0, 1.5);
+        \draw [-stealth, thick] (0, 0) -- (1.63, 1.14) node [above, midway, rotate=35] {$\va{A} = \SI{2}{\newton}$};
+        \draw [-stealth] (0.5, 0) arc(0:35:0.5);
+        \node at (1.2, 0.2) {$\theta = \ang{35}$};
+    \end{tikzpicture}
+\end{figure}
+\end{minipage}
+\hspace{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+Vector $\va{B}$:
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1.5]
+        \draw [-stealth] (-2, 0) -- (0.5, 0);
+        \draw [-stealth] (0, 0) -- (0, 3.5);
+        \draw [-stealth, thick] (0, 0) -- (-2, 3.46) node [above, midway, rotate=-60] {$\va{B} = \SI{4}{\newton}$};
+        \draw [-stealth] (0.5, 0) arc(0:120:0.5);
+        \node at (1.2, 0.2) {$\theta = \ang{120}$};
+    \end{tikzpicture}
+\end{figure}
+\end{minipage}
+
+\vspace*{0.3cm}
+Revisando la mesa de fuerzas, responde las siguientes preguntas:
+\begin{enumerate}
+\item ¿Importa la orientación que dejes a la mesa de fuerza para obtener las componentes de un vector?
+\item ¿Cuál es la mínima escala del transportador de la mesa de fuerzas?
+\item Si el anillo que está al centro de la mesa de fuerzas no está centrado al poste, ¿qué nos dice del sistema de vectores que se está representando?
+\end{enumerate}
+\end{document}

@@ -1,0 +1,424 @@
+\documentclass[14pt]{beamer}
+\usepackage{./Estilos/BeamerUVM}
+\usepackage{./Estilos/ColoresLatex}
+\input{Preambulos/preambulo_Beamer_Madrid_default}
+% \usefonttheme{serif}
+\usepackage[clock]{ifsym}
+
+\sisetup{per-mode=symbol}
+\resetcounteronoverlays{saveenumi}
+
+\title{\Large{Revisión inicial} \\ \normalsize{Física III}}
+\date{}
+
+\renewcommand\cellset{\renewcommand\arraystretch{0.7}%
+\setlength\extrarowheight{0pt}}
+
+\begin{document}
+\maketitle
+
+\section*{Contenido}
+\frame[allowframebreaks]{\frametitle{Contenido} \tableofcontents[currentsection, hideallsubsections]}
+
+\section{¿Qué es la física?}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Lo que entendemos por física}
+
+\begin{frame}
+\frametitle{¿Qué es la física?}
+La Física es una ciencia basada en las \textocolor{cobalt}{observaciones} y \textocolor{cadmiumgreen}{medidas} de los fenómenos físicos.
+\end{frame}
+\begin{frame}
+\frametitle{Naturaleza de la física}
+La física es una ciencia experimental.
+\\
+\bigskip
+\pause
+Los físicos observan los fenómenos naturales e intentan encontrar los patrones y principios que los describen.
+\end{frame}
+\begin{frame}
+\frametitle{Naturaleza de la física}
+Tales patrones se denominan \textocolor{byzantine}{teorías físicas} \pause o, si están muy bien establecidos y se usan ampliamente, \textocolor{cordovan}{leyes o principios físicos}.
+\end{frame}
+
+\section{Conceptos importantes}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Medición}
+
+\begin{frame}
+\frametitle{¿Qué es medir?}
+Es \textocolor{lava}{comparar} una magnitud con otra de la misma especie, llamada patrón.
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es una magnitud?}
+Es una cantidad medible de un sistema físico a la que se le pueden asignar distintos valores como resultado de una medición o una relación de medidas.
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es una unidad?}
+Es una cantidad de una determinada magnitud física, definida y adoptada por convención o por ley.
+\\
+\bigskip
+\pause
+Cualquier valor de una cantidad física puede expresarse como un múltiplo de la unidad de medida.
+\end{frame}
+
+\subsection{Unidades fundamentales}
+
+\begin{frame}
+\frametitle{Las unidades fundamentales}
+Las \textocolor{airforceblue}{unidades fundamentales} del \textocolor{awesome}{Sistema Internacional de Unidades} (SI), son magnitudes físicas básicas que pueden medirse y son independientes de todas las demás.
+\end{frame}
+\begin{frame}
+\frametitle{Las unidades fundamentales}
+\begin{table}
+\renewcommand{\arraystretch}{1.1}
+\centering
+\begin{tabular}{l | c | c}
+Magnitud & Unidad & Símbolo \\ \hline 
+Longitud & metro & \unit{m} \\ \hline \pause
+Masa & kilogramo & \unit{\kilo\gram} \\ \hline
+Tiempo & segundo & \unit{\second} \\ \hline
+Temperatura & Kelvin & \unit{\kelvin} \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+\begin{frame}
+\frametitle{Las unidades fundamentales}
+\begin{table}
+\renewcommand{\arraystretch}{1.1}
+\centering
+\begin{tabular}{l | c | c}
+Magnitud & Unidad & Símbolo \\ \hline 
+Intensidad eléctrica & Ampere & \unit{\ampere} \\ \hline
+Intensidad luminosa & candela & cd \\ \hline
+Cantidad de sustancia & mol & \unit{mol}\\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+\begin{frame}
+\frametitle{Unidades derivadas}
+Son las unidades que provienen de una combinación de las unidades fundamentales.
+\end{frame}
+\begin{frame}
+\frametitle{Unidades derivadas}
+\begin{table}
+\renewcommand{\arraystretch}{1.1}
+\centering
+\begin{tabular}{l | c | c | c}
+Magnitud & Unidad & Símbolo & Equivalencia\\ \hline 
+Área & \makecell{metro \\ cuadrado} & \unit{\square\meter} &  \\ \hline
+Volumen & \makecell{metro \\ cúbico} & \unit{\cubic\meter} &  \\ \hline
+Velocidad & \makecell{metro \\ por segundo} & \unit{\meter\per\second} & \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+\begin{frame}
+\frametitle{Unidades derivadas}
+\begin{table}
+\renewcommand{\arraystretch}{1.4}
+\centering
+\begin{tabular}{l | c | c | c}
+Magnitud & Unidad & Símbolo & Equivalencia\\ \hline 
+Fuerza & newton & \unit{\newton} & $\displaystyle \unit[per-mode=fraction]{\kilo\gram\meter\per\square\second} $\\ \hline \pause
+Presión & Pascal & \unit{\pascal} & $\displaystyle \unit[per-mode=fraction]{\newton\per\square\meter}$ \\ \hline \pause
+Trabajo & Joule & \unit{\joule} & $\displaystyle \unit[per-mode=fraction]{\newton\meter}$ \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\section{Tipos de cantidades}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Cantidad escalar}
+
+\begin{frame}
+\frametitle{Cantidad escalar}
+Es la que queda definida con solo indicar su cantidad en \textocolor{amethyst}{número y unidad de medida}.
+\\
+\bigskip
+\pause
+Ejemplos: \SI{5}{\kilo\gram}, \pause \SI{20}{\degreeCelsius}, \pause \SI{250}{\square\meter}, \pause \SI{40}{\milli\gram}
+\end{frame}
+\begin{frame}
+\frametitle{Cantidad vectorial}
+Es la que además de definir cantidad en número y unidad de medida, se requiere indicar la dirección y sentido en que actúan.
+\\
+\bigskip
+\pause
+Se representan de manera gráfica por \textocolor{ao(english)}{vectores}, \pause los cuales deben tener: \textocolor{blue}{magnitud}, \pause \textocolor{red}{dirección} \pause y \textocolor{cadmiumorange}{sentido}.
+\end{frame}
+
+\section{Manejando unidades}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Los prefijos de unidades}
+
+\begin{frame}
+\frametitle{Los prefijos de las unidades}
+Una vez definidas las unidades fundamentales, es fácil introducir unidades más grande y más pequeñas para las mismas cantidades físicas.
+\end{frame}
+\begin{frame}
+\frametitle{Los prefijos de las unidades}
+En el sistema métrico, estas otras unidades siempre se relacionan con las fundamentales por múltiplos y submúltiplos de $10$.
+\end{frame}
+\begin{frame}
+\frametitle{Múltiplos de $10$}
+\begin{table}
+\renewcommand{\arraystretch}{1}
+\centering
+\begin{tabular}{c | c | c}
+Potencia & Prefijo & Abreviatura \\ \hline
+\num{d3} & kilo & k \\ \hline
+\num{d6} & mega & M \\ \hline
+\num{d9} & giga & G \\ \hline
+\num{d12} & tera & T \\ \hline
+\num{d15} & peta & P \\ \hline
+\num{d18} & exa & E \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+\begin{frame}
+\frametitle{Submúltiplos de $10$}
+\begin{table}
+\renewcommand{\arraystretch}{1}
+\centering
+\begin{tabular}{c | c | c}
+Potencia & Prefijo & Abreviatura \\ \hline
+\num{d-1} & deca & d \\ \hline
+\num{d-2} & centi & c \\ \hline
+\num{d-3} & mili & m \\ \hline
+\num{d-6} & micro & $\mu$ \\ \hline
+\num{d-9} & nano & n \\ \hline
+\num{d-12} & pico & p \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\section{Conversión de unidades}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Procedimiento a realizar}
+
+\begin{frame}
+\frametitle{¿Para qué hacer conversión de unidades?}
+En ocasiones se va a requerir expresar una cantidad en términos de otras unidades, ya sea por conveniencia o por que se requiere mantener un manejo homogéneo.
+\end{frame}
+\begin{frame}
+\frametitle{¿Para qué hacer conversión de unidades?}
+La regla básica es muy sencilla: \pause utilizar ya sea un \textocolor{blue}{factor de conversión}, o los factores de conversión necesarios.
+\end{frame}
+\begin{frame}
+\frametitle{El factor de conversión}
+Estos factores de conversión \enquote{ajustan} las unidades, dejando entonces un problema de tipo aritmético, \pause es decir, donde tenemos que hacer multiplicaciones o divisiones.
+\end{frame}
+\begin{frame}
+\frametitle{El factor de conversión}
+El factor de conversión es un \enquote{uno} que manejamos de manera conveniente.
+\end{frame}
+\begin{frame}
+\frametitle{Ejemplo 1}
+Consideremos el siguiente problema:
+\\
+\bigskip
+\pause
+Convertir 100 km a metros.
+\end{frame}
+\begin{frame}
+\frametitle{El facto de conversión}
+Siempre será necesario contar de manera previa con el(los) factor(es) de conversión:
+\pause
+\begin{align*}
+\SI{1}{\kilo\meter} = \SI{1000}{\meter}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{EL procedimiento}
+Procedemos a escribir el valor inicial que se multiplicará por el factor de conversión:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\SI{100}{\kilo\meter} \pause \left( \dfrac{\SI{1000}{\meter}}{\SI{1}{\kilo\meter}} \right) = \pause \SI{100000}{\meter}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Segundo ejercicio}
+Ahora consideremos el siguiente problema:
+\\
+\bigskip
+\pause
+Convertir \SI{250}{\kilo\meter\per\hour} a m/s
+\end{frame}
+\begin{frame}
+\frametitle{El procedimiento}
+Los factores de conversión son:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\SI{1}{\kilo\meter} &= \SI{1000}{\meter} \\[0.5em] \pause
+\SI{1}{\hour} &= \SI{3600}{\second}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Realizando la conversión}
+\begin{eqnarray*}
+\begin{aligned}
+\SI[per-mode=fraction]{250}{\kilo\meter\per\hour} \pause &\left( \dfrac{\SI{1000}{\meter}}{\SI{1}{\kilo\meter}} \right) \pause \left( \dfrac{\SI{1}{\hour}}{\SI{3600}{\second}} \right) = \pause \dfrac{\SI{250000}{\meter}}{\SI{3600}{\second}} = \\[0.5em] \pause
+&= \SI[per-mode=fraction]{69.44}{\meter\per\second}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Otro ejercicio - Volumen}
+Convertir $7$ galones a \unit{\cubic\centi\meter}.
+\\
+\bigskip
+Los factores de conversión son:
+\pause
+\begin{align*}
+1 \, \text{galón} &= \SI{3.785}{\liter} \\[0.5em]
+\SI{1}{\liter} &= \SI{1000}{\cubic\centi\meter}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Realizando la conversión}
+\begin{eqnarray*}
+\begin{aligned}
+7 \, \text{ga} \pause \left( \dfrac{\SI{3.785}{\liter}}{1 \, \text{ga}} \right) \pause \left( \dfrac{\SI{1000}{\cubic\centi\meter}}{\SI{1}{\liter}} \right) = \pause \SI{26945}{\cubic\centi\meter}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Siguiente ejercicio}
+Convertir \SI{96500}{\cubic\centi\meter\per\minute} a  galones/s
+\end{frame}
+\begin{frame}
+\frametitle{Factores de conversión necesarios}
+Listamos los factores de conversión:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+1 \, \text{ga} &= \SI{3.785}{\liter} \\[0.5em] \pause
+\SI{1}{\liter} &= \SI{1000}{\cubic\centi\meter} \\[0.5em] \pause
+\SI{1}{\minute} &= \SI{60}{\second}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Realizando la conversión}
+\begin{eqnarray*}
+\begin{aligned}
+&\SI[per-mode=fraction]{96500}{\cubic\centi\meter\per\minute} \pause  \left( \dfrac{\SI{1}{\liter}}{\SI{1000}{\cubic\centi\meter}} \right) \pause \left( \dfrac{1 \, \text{ga}}{\SI{3.785}{\liter}} \right) \pause \left(  \dfrac{\SI{1}{\minute}}{\SI{60}{\second}} \right) = \\[1em] \pause
+&= \dfrac{96500 \, \text{ga}}{\SI{227100}{\second}} = \\[1em] \pause
+&= 0.424 \dfrac{\text{ga}}{\unit{\second}}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Otro ejercicio}
+Convertir \SI{10}{\cubic\meter} a pies${}^{3}$
+\\
+\bigskip
+\pause
+El factor de conversión es:
+\begin{align*}
+1 \, \text{pie} = \SI{0.3048}{\meter}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Procedimiento para la solución}
+\begin{eqnarray*}
+\begin{aligned}
+1 \, \text{pie} &= \SI{0.3048}{\meter} \\[1em] \pause
+(1 \, \text{pie})^{3} &= (\SI{0.3048}{\meter})^{3} \pause \hspace{0.2cm} \Rightarrow \hspace{0.2cm} 1 \, \text{pie}^{3} = \SI{0.02831}{\cubic\meter} \\[1em] \pause
+\SI{10}{\cubic\meter} \pause &\left( \dfrac{1 \, \text{pie}}{\SI{0.02831}{\cubic\meter}} \right) = \pause 353.23 \, \text{pie}^{3}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+
+\begin{frame}
+\frametitle{Trabajo Evaluación Continua}
+Tendrás que elaborar una \textocolor{byzantine}{línea de tiempo} sobre la física, que deberá de abarcar desde el tiempo de los griegos hasta el siglo XX.
+\end{frame}
+\begin{frame}
+\frametitle{Puntos por la Actividad}
+La actividad otorgará hasta $6$ puntos de Evaluación Continua, siempre y cuando se cumpla el nivel de desempeño \textocolor{darkblue}{Excelente}.
+\end{frame}
+\begin{frame}
+\frametitle{Rúbrica de evaluación}
+La evaluación del trabajo será con una rúbrica, en donde se mencionarán los elementos a considerar y el nivel de desempeño. 
+\\
+\bigskip
+\pause
+Recuerda que es una guía muy clara en cuanto a lo que se espera que resuelvas.
+\end{frame}
+\begin{frame}
+\frametitle{Entrega de la Actividad}
+%El plazo para enviar por Teams la actividad es el jueves 21 de septiembre a las 8 pm.
+El plazo para enviar por Teams la actividad es el martes 19 de septiembre a las 8 pm.
+\\
+\bigskip
+\pause
+No se recibirán entregas extemporáneas, por correo o por mensaje directo al Profesor.
+\end{frame}
+
+\section{Notación científica}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Ejercicios}
+
+\begin{frame}
+\frametitle{Actividad a realizar}
+Escribe las siguientes cifras en notación científica:
+\setbeamercolor{item projected}{bg=cobalt,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item $16200000000000 =$% \num{1.62d13}$
+\item $0.00000045 = $ %\num{4.5d-7}$
+\item $0.00000000123 = $ % \num{1.23d-9}$
+\item $384500000000000 = $ % \num{3.845d14}$
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Ejercicio a resolver}
+La velocidad de la luz en el vacío es de \SI[per-mode=symbol]{300000}{\kilo\meter\per\second}.
+\\
+\bigskip
+\pause
+Escribe en notación científica esta cifra pero expresada en pulgadas por segundo.
+\end{frame}
+\begin{frame}
+\frametitle{Factores de conversión}
+Para responder este ejercicio necesitamos los factores de conversión:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\SI{1}{\kilo\meter} &= \pause \SI{1000}{\meter} = \pause \SI{d3}{\meter} \\[0.5em] \pause
+1 \, \text{pulgada} &= \pause \SI{2.54}{\centi\meter} = \pause \SI{2.54d-2}{\meter}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Expresando la velocidad de la luz}
+La velocidad de la luz en notación científica se escribe como:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\SI[per-mode=symbol]{300000}{\kilo\meter\per\second} = \pause \SI[per-mode=fraction]{3d5}{\kilo\meter\per\second}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Haciendo las operaciones}
+Ya podemos ocupar los factores de conversión:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\SI[per-mode=fraction]{3d5}{\kilo\meter\per\second} \, \pause &\left( \dfrac{\SI{d3}{\meter}}{\SI{1}{\kilo\meter}} \right) \pause \, \left( \dfrac{1 \, \text{pulgada}}{\SI{2.54d-2}{\meter}} \right) = \\[0.5em] \pause
+&= \dfrac{\SI{3d8}{\meter} \, \text{pulgadas}}{\SI{2.54d-2}{\meter}} = \\[0.5em] \pause 
+&= \num{1.1811d10} \, \dfrac{\text{pulgadas}}{\unit{\second}}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+
+\end{document}

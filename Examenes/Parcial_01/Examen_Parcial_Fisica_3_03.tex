@@ -1,0 +1,206 @@
+\documentclass[12pt, letter]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multicol}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{pdfpages}
+
+% \renewcommand{\questionlabel}{\thequestion}
+\decimalpoint
+
+\setlength{\belowdisplayskip}{-0.5pt}
+
+\usepackage{tasks}
+\settasks{
+    label=\Alph*), 
+    label-align=left,
+    item-indent={20pt}, 
+    column-sep={4pt},
+    label-width={16pt},
+}
+
+\sisetup{per-mode=symbol}
+\footer{}{\thepage}{}
+
+\begin{document}
+
+\includepdf[pages={1}]{Caratula_Examen_Parcial_PU_Fisica_3_03.pdf}
+
+\newpage
+
+\begin{questions}
+    \question De acuerdo al Sistema Internacional de Unidades ¿cuántas son las magnitudes fundamentales?
+     \begin{tasks}(4)
+         \task $11$
+         \task $10$
+         \task $8$
+         \task $7$
+     \end{tasks}
+    \question \textbf{Problema de ejecución:} Un conductor es detenido en la carretera, la policía le comenta que rebasó el límite de velocidad que es de \SI{100}{\kilo\meter\per\hour}, el conductor argumenta que manejaba a $1.25$ millas/minuto. ¿A qué velocidad en \unit{\kilo\meter\per\hour} iba conduciendo el auto?
+    \begin{tasks}(4)
+        \task \SI{120.67}{\kilo\meter\per\hour}
+        \task \SI{125.35}{\kilo\meter\per\hour}
+        \task \SI{132.78}{\kilo\meter\per\hour}
+        \task \SI{100.00}{\kilo\meter\per\hour}
+    \end{tasks}
+    \question \textbf{Ejercicio de ejecución.} La moto Ducatti Superleggera V4 corre a un máximo de $200$ millas por hora. A la máxima velocidad, ¿cuánto tiempo (en segundos) tarda en recorrer \SI{350}{\meter}?
+    \begin{tasks}(4)
+        \task \SI{3.854}{\second}
+        \task \SI{3.914}{\second}
+        \task \SI{4.314}{\second}
+        \task \SI{5.869}{\second}
+    \end{tasks}
+    \question \textbf{Ejercicio de ejecución.} El corredor jamaicano Usain Bolt estableció el récord de velocidad en la carrera de \SI{100}{\meter} con un tiempo de \SI{9.58}{\second}. ¿Cuál fue su velocidad expresada en \unit{\kilo\meter\per\hour}?
+    \begin{tasks}(4)
+        \task \SI{35.70}{\kilo\meter\per\hour}
+        \task \SI{37.57}{\kilo\meter\per\hour}
+        \task \SI{35.77}{\kilo\meter\per\hour}
+        \task \SI{38.80}{\kilo\meter\per\hour}
+    \end{tasks}
+    \question Se tienen $4$ objetos con los siguientes datos: \\
+    Objeto 1: $v = \SI{16}{\meter\per\second}, \, t = \SI{5}{\second}$ \\
+    Objeto 2: $v = \SI{15}{\meter\per\second}, \, t = \SI{6}{\second}$ \\
+    Objeto 3: $v = \SI{24}{\meter\per\second}, \, t = \SI{3}{\second}$ \\
+    Objeto 4: $v = \SI{4}{\meter\per\second}, \, t = \SI{22}{\second}$ \\[0.3em]
+    ¿Cuál de los objetos es el que recorrió mayor distancia? 
+    \begin{tasks}(4)
+        \task Objeto 1
+        \task Objeto 2
+        \task Objeto 3
+        \task Objeto 4        
+    \end{tasks}
+    \question \textbf{Ejercicio de ejecución.} Considera la siguiente figura ¿cuál es valor de la aceleración en el intervalo A - B?
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=1.5]{Imagenes/Examen_Grafica_02.png}
+    \end{figure}
+    \begin{tasks}(4)
+        \task \SI{1}{\meter\per\square\second}
+        \task \SI{-4}{\meter\per\square\second}
+        \task \SI{0}{\meter\per\square\second}
+        \task \SI{-1}{\meter\per\square\second}
+    \end{tasks}
+    
+    Para las preguntas \textbf{\ref{grafica_01}}, \textbf{\ref{grafica_02}}, \textbf{\ref{grafica_03}} y \textbf{\ref{grafica_04}}, considera que con los datos de la magnitud del desplazamiento de un móvil en función del tiempo, se obtuvo la siguiente gráfica:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=1.5]{Imagenes/Examen_Grafica_01.png}
+    \end{figure}
+    \question \label{grafica_01} ¿Qué posición tenía el móvil a los cuatro segundos posteriores al inicio de su movimiento?
+    \begin{tasks}(4)
+        \task \SI{0}{\meter}
+        \task \SI{10}{\meter}
+        \task \SI{20}{\meter}
+        \task \SI{30}{\meter}
+    \end{tasks}
+    \question \label{grafica_02} ¿Cuál es la magnitud de la velocidad del móvil en el intervalo D - E?
+    \begin{tasks}(4)
+        \task \SI{0}{\meter\per\second}
+        \task \SI{-5}{\meter\per\second}
+        \task \SI{-10}{\meter\per\second}
+        \task \SI{-20}{\meter\per\second}
+    \end{tasks}
+    \question \label{grafica_03} ¿Qué magnitud tiene la velocidad del móvil en el intervalo A -B?
+    \begin{tasks}(4)
+        \task \SI{0}{\meter\per\second}
+        \task \SI{50}{\meter\per\second}
+        \task \SI{10}{\meter\per\second}
+        \task \SI{15}{\meter\per\second}
+    \end{tasks}
+    \question \label{grafica_04} ¿Cuál fue la posición final del móvil?
+    \begin{tasks}(4)
+        \task \SI{0}{\meter}
+        \task \SI{10}{\meter}
+        \task \SI{20}{\meter}
+        \task \SI{30}{\meter}
+    \end{tasks}
+    \question \textbf{(5 puntos)} A continuación se te presenta la definición de 5 conceptos, la palabra faltante está en la parte inferior, relaciona cada definición con la palabra.
+    \begin{parts}
+        \part \rule{2cm}{0.3mm} es la distancia recorrida por unidad de tiempo.
+        \part \rule{2cm}{0.3mm} es comparar una magnitud con un patrón.
+        \part Cuando hablamos de la razón de cambio del desplazamiento con respecto al tiempo, hablamos de  \rule{2cm}{0.3mm}.
+        \part \rule{2cm}{0.3mm} es el cambio de posición de un objeto dentro de un espacio determinado.
+        \part \rule{1.5cm}{0.3mm} es la razón de cambio de la velocidad con respecto al tiempo.
+    \end{parts}
+    
+    \begin{center}
+    I) Velocidad, \hspace{0.2cm} II) Aceleración, \hspace{0.2cm} III) Sistema de referencia, \hspace{0.2cm} IV) Magnitud, \\[0.5em] V) Movimiento, \hspace{0.2cm} VI) Medir, \hspace{0.2cm} VII) Rapidez
+    \end{center}
+    {
+    \renewcommand{\thepartno}{\Alph{partno}}
+    \renewcommand{\partlabel}{\thepartno)}
+    \begin{parts}
+        \part a) - I), b) - V), c) - VII), d) - IV) e) - II)
+        \part a) - II), b) - III), c) - IV), d) - V) e) - VI)
+        \part a) - VII), b) - VI), c) - I), d) - V) e) - II)
+        \part a) - IV), b) - VI), c) - VII), d) - V) e) - I)
+    \end{parts}}
+    \question \textbf{Problema de ejecución:} Un auto deportivo acelera desde el reposo hasta alcanzar \SI{100}{\kilo\meter\per\hour} en \SI{4.5}{\second}. ¿Cuál es su aceleración?
+    \begin{tasks}(4)
+        \task \SI{5.10}{\meter\per\square\second}
+        \task \SI{6.17}{\meter\per\square\second}
+        \task \SI{11.11}{\meter\per\square\second}
+        \task \SI{27.77}{\meter\per\square\second}
+    \end{tasks}
+    \question De acuerdo al Sistema Internacional de Unidades ¿cuántas son las magnitudes fundamentales?
+    \begin{tasks}(4)
+        \task $11$
+        \task $7$
+        \task $8$
+        \task $10$
+    \end{tasks}
+    \question Si un objeto aumenta su aceleración, en la gráfica de velocidad contra tiempo la pendiente de la recta que describe el movimiento del objeto es:
+    \begin{tasks}(4)
+        \task Positiva
+        \task Negativa
+        \task Cero
+        \task Concomitante        
+    \end{tasks}
+    \question Resuelve la siguiente operación con notación científica, ocupa 4 dígitos decimales en el resultado.
+    \begin{align*}
+    \dfrac{\num{7.2d5} - \num{12e4}}{[(0.003)^{2}  \times \sqrt{\num{5.26d6}}]} =
+    \end{align*}
+    \begin{tasks}(4)
+        \task \num{29.0680d7}
+        \task \num{2.9068d7}
+        \task \num{2.9068d-7}
+        \task \num{3.9068d-6}
+    \end{tasks}
+    \question En la siguiente figura se muestran dos rutas para llegar del Aeropuerto de la CDMX al Museo Nacional de Antropología. Para la ruta A se cubre una distancia de \SI{11.5}{\kilo\meter}, mientras que para la ruta B, se cubre una distancia de \SI{6.1}{\kilo\meter}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{Imagenes/Trayectoria_03.png}
+    \end{figure}
+    El desplazamiento del Aeropuerto al Museo Nacional de Antropología con respecto a las rutas:
+    \begin{tasks}(4)
+        \task Es mayor en A.
+        \task Es mayor en B.
+        \task Es el mismo.
+        \task Es $A + B$
+    \end{tasks}
+
+\end{questions}
+
+\newpage
+\textbf{\huge{Formulario.}}
+\begin{table}[H]
+    \centering
+    \setlength{\tabcolsep}{40pt}
+    \renewcommand{\arraystretch}{2.5}
+    \begin{tabular}{c  c}
+            $v = \dfrac{d}{t}$ & $v = \dfrac{x_{f} - x_{i}}{t_{f} - t_{i}}$ \\
+            $a = \dfrac{v_{f} - v_{i}}{t}$ & $v_{f} = v_{i} + a \, t$ \\
+            $v_{f}^{2} = v_{i}^{2} + 2 \, a \, \left(x_{f} - x_{i} \right)$ & $x_{f} = x_{i} + v_{i} + \dfrac{1}{2} \, a \, t^{2}$ \\
+            $x_{f} = x_{i} + \dfrac{1}{2} \, \left(v_{i} + v_{f} \right) \, t$ & $g = \SI{9.81}{\meter\per\square\second}$ \\
+            $h =\dfrac{1}{2} \,g \, t^{2}$ & \\
+\end{tabular}
+\end{table}
+\end{document}

@@ -1,0 +1,133 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{hyperref}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Práctica 2 - Mediciones en Física \\ Análisis preliminar\vspace{-5ex}}
+\date{}
+
+\renewcommand*{\theenumi}{\thesection.\arabic{enumi}}
+\renewcommand*{\theenumii}{\theenumi.\arabic{enumii}}
+% \renewcommand*{\theenumi}{\thesubsection.\arabic{enumi}}
+\setlist[enumerate]{font=\bfseries}
+
+\begin{document}
+\maketitle
+
+\section{Trabajo a realizar.}
+
+Con las mediciones que completaste en la tercera clase de Laboratorio, deberás de presentar las siguientes tablas con las magnitudes y la incertidumbre de cada objeto medido, será necesario que te apoyes con las hojas que llevaste en cada clase.
+
+La incertidumbre $\pm \Delta m$ que hay que asociar a cada instrumento es la mitad de la mínima escala, que registraste en una de las tablas. Cada medición debe de llevar su incertidumbre, si falta algún valor eso te va a descontar puntos en esta actividad.
+
+\subsection{Hoja tamaño carta.}
+
+Anota las magnitudes con su incertidumbre de la hoja tamaño carta en \unit{\centi\meter}.
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | p{3cm} | p{3cm} |} \hline
+Instrumento & \multicolumn{1}{|c|}{Largo $\pm \Delta \text{Largo}$} & \multicolumn{1}{c|}{Ancho $\pm \Delta \text{Ancho}$}\\\hline
+Regla \SI{30}{\centi\meter} & & \\ \hline
+Regla \SI{1}{\meter} & & \\ \hline
+Flexómetro & & \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Roldanas.}
+
+Anota las magnitudes y su incertidumbre de las roldanas en \unit{\centi\meter}. Recuerda que abreviamos el diámetro por el símbolo \diameter.
+
+\textbf{Roldana 1.}
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c | c |} \hline
+Instrumento & \diameter exterior $\pm \diameter \text{ext.}$ & \diameter interior $\pm \diameter \text{ext.}$\\ \hline
+Regla \SI{30}{\centi\meter} & & \\ \hline
+Flexómetro & & \\\hline
+Vernier (en \unit{\centi\meter}) & & \\ \hline
+\end{tabular}
+\end{table}
+
+\textbf{Roldana 2.}
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c | c |} \hline
+Instrumento & \diameter exterior $\pm \diameter \text{int.}$ & \diameter interior $\pm \diameter \text{int.}$\\ \hline
+Regla \SI{30}{\centi\meter} & & \\ \hline
+Flexómetro & & \\ \hline
+Vernier(en \unit{\centi\meter}) & & \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Balín o canica.}
+
+Indica el diámetro y su incertidumbre del balín o canica en \unit{\centi\meter}.
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | p{3cm} |} \hline
+Instrumento & \multicolumn{1}{c|}{Diámetro $\pm \text{diámetro}$} \\\hline
+Vernier (en \unit{\centi\meter}) & \\ \hline
+Micrómetro (en \unit{\milli\meter}) & \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Objetos restantes.}
+
+En la siguiente tabla anota el instrumento que utilizaste, así como el valor de las magnitudes y su incertidumbre.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | p{5cm} | p{5cm} |} \hline
+Objeto & \multicolumn{1}{|c|}{Instrumento} & \multicolumn{1}{c|}{Magnitud ($m \pm \Delta m$)} \\ \hline
+\multirow{2}{*}{Moneda de $10$ pesos} & & \diameter externo: \\ \cline{3-3}
+ & & Espesor \\ \hline
+\multirow{3}{*}{Vaso precipitado} & & \diameter externo: \\ \cline{3-3}
+    & & \diameter interno: \\ \cline{3-3}
+    & & Profundidad: \\ \hline
+    \multirow{3}{*}{Tubo ensayo} & & \diameter externo: \\ \cline{3-3}
+    & & \diameter interno: \\ \cline{3-3}
+    & & Profundidad: \\ \hline
+Lata de aluminio & Micrómetro & Espesor: \\ \hline
+\multirow{3}{*}{Tapa de PET} & & \diameter externo: \\ \cline{3-3}
+    & & \diameter interno: \\ \cline{3-3}
+    & & Profundidad: \\ \hline
+\end{tabular}
+\end{table}
+
+\textbf{Se espera que las mediciones que reportas las hayas realizado de manera individual.}
+\\[0.5em]
+Responde las siguientes preguntas:
+\begin{enumerate}
+\item ¿Qué instrumento representó el manejo más sencillo?
+\item ¿Qué instrumento representó el manejo más complicado?
+\item ¿Qué instrumento tiene la mayor precisión?
+\end{enumerate}
+
+\section{Conclusiones.}
+
+Para las conclusiones se te pide que las tablas para la hoja, las roldanas y el diámetro del balín, indiques cuál es la medida que se acerca más al valor real del objeto. Deberás de justificar tu respuesta apoyándote con todos los elementos que se trabajaron: naturaleza del instrumento, incertidumbre asociada, manejo del aparato, etc.
+
+\section{Manejo y disposición de desechos.}
+
+El sobrante de las latas se envió al bote de basura inorgánica reciclable. El papel para limpiar la lata también se envió al bote de basura para papel. 
+
+\end{document}

@@ -1,0 +1,266 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{calc}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\newlength{\depthofsumsign}
+\setlength{\depthofsumsign}{\depthof{$\sum$}}
+\newcommand{\nsum}[1][1.4]{% only for \displaystyle
+    \mathop{%
+        \raisebox
+            {-#1\depthofsumsign+1\depthofsumsign}
+            {\scalebox
+                {#1}
+                {$\displaystyle\sum$}%
+            }
+    }
+}
+
+\title{\vspace*{-2cm} Práctica 3 - Vectores \\  Física III\vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Datos para la práctica.}
+
+\begin{itemize}
+\itemsep0em 
+\item  \textbf{Práctica:} 3.
+\item \textbf{Unidad:} Uno
+\item \textbf{Temática:} Descomposición de vectores.
+\item \textbf{Nombre de la práctica:} Vectores.
+\item \textbf{Número de sesiones que se requieren para la práctica:} Dos.
+\end{itemize}
+\textbf{Planteamiento del problema:} 
+
+\vspace*{0.5cm}
+Los vectores son magnitudes físicas como la velocidad, la aceleración y la fuerza (entre otras) en las que además de un número, tienen una dirección y un sentido. Los vectores se representan gráficamente por una flecha.
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[node distance=1cm]
+        \draw [-stealth, line width=0.5mm] (0, 0) -- node [above=0.1cm, midway, rotate=45] {$\va{A}$}(2, 2);
+    \end{tikzpicture}
+\end{figure}
+
+\vspace*{0.4cm}
+A continuación se presenta el \textbf{método de descomposición de vectores}.
+
+\vspace*{0.4cm}
+La base geométrica es la siguiente, todo vector se \enquote{descompone} en dos partes:
+\begin{enumerate}
+\item Una componente en la dirección del eje horizontal o eje $x$: $A_{x}$.
+\item Una componente en la dirección del eje vertical o eje $y$: $A_{y}$.
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1.2]
+        \draw [-stealth, thick, color=blue] (0, 0) -- (2, 2) node [above, midway] {$\va{A}$};
+        \draw [-stealth] (0.5, 0) arc(0:45:0.5);
+        \node at (0.8, 0.2) {$\theta$};
+        \draw (0, 0) -- (2.5, 0);
+        \draw [-stealth, thick] (2, 0) -- (2, 2) node [right, midway] {$A_{y}$};
+        \draw [-stealth, thick] (0, 0) -- (2, 0) node [below, midway] {$A_{x}$};
+        \draw (1.8, 0) -- (1.8, 0.2) -- (2, 0.2);
+    \end{tikzpicture}
+\end{figure}
+En donde el ángulo $\theta$ se forma a partir del eje horizontal y en el sentido contrario a las manecillas del reloj.
+
+\vspace*{0.4cm}
+Las componentes del vector $\va{A}$ son:
+\begin{eqnarray*}
+\begin{aligned}
+A_{x} &= \cos \theta \, \abs{A} \\[0.5em]
+A_{y} &= \sin \theta \, \abs{A}
+\end{aligned}
+\end{eqnarray*}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1.3]
+        \draw [-stealth, thick, color=blue] (0, 0) -- (2, 2) node [above, midway] {$\va{A}$};
+        \draw (0.5, 0) arc(0:45:0.5);
+        \node at (0.8, 0.2) {$\theta$};
+        \draw (0, 0) -- (2.5, 0);
+        \draw [-stealth, thick] (2, 0) -- (2, 2) node [right, midway] {$A_{y}$};
+        \draw [-stealth, thick] (0, 0) -- (2, 0) node [below, midway] {$A_{x}$};
+        \draw (1.8, 0) -- (1.8, 0.2) -- (2, 0.2);
+    \end{tikzpicture}
+\end{figure}
+
+La magnitud del vector $\va{A}$ es:
+\begin{align*}
+\abs{\va{A}} = \sqrt{(A_{x})^{2} + (A_{y})^{2}}
+\end{align*}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1.3]
+        \draw [-stealth, thick, color=blue] (0, 0) -- (2, 2) node [above, midway] {$\va{A}$};
+        \draw (0.5, 0) arc(0:45:0.5);
+        \node at (0.8, 0.2) {$\theta$};
+        \draw (0, 0) -- (2.5, 0);
+        \draw [-stealth, thick] (2, 0) -- (2, 2) node [right, midway] {$A_{y}$};
+        \draw [-stealth, thick] (0, 0) -- (2, 0) node [below, midway] {$A_{x}$};
+        \draw (1.8, 0) -- (1.8, 0.2) -- (2, 0.2);
+    \end{tikzpicture}
+\end{figure}
+
+El valor del ángulo $\theta$ es:
+\begin{align*}
+\theta = \tan^{-1} \left( \dfrac{A_y}{A_{x}} \right)
+\end{align*}
+
+\vspace*{0.5cm}
+Al tener varios vectores actuando sobre un objeto, el efecto neto de esos vectores se representa por la suma vectorial, de donde se obtiene un vector llamado \textbf{vector resultante}, el cual puede obtenerse mediante dos métodos: gráfico o analítico.
+
+Si tenemos un sistema de dos o más vectores $\va{A}_{1}$, $\va{A}_{2}$, $\va{A}_{3}$, $\va{A}_{4}$ (pueden ser más vectores), la suma vectorial por cada componente del vector resultante es:
+\begin{align*}
+R_{x} &= A_{1x} + A_{2x} + A_{3x} + A_{4x} = \nsum_{i=1}^{4} A_{ix} \\[0.5em]
+R_{x} &= A_{1y} + A_{2y} + A_{3y} + A_{4y} = \nsum_{i=1}^{4} A_{iy} 
+\end{align*}
+
+La magnitud del vector resultante sería entonces:
+\begin{align*}
+\abs{\va{R}} = \sqrt{(R_{x})^{2} + (R_{y})^{2}}
+\end{align*}
+El valor del ángulo $\theta_{R}$ del vector resultante es:
+\begin{align*}
+\theta_{R} = \tan^{-1} \left( \dfrac{R_y}{R_{x}} \right)
+\end{align*}
+
+\section{Marco teórico.}
+
+Responde las siguientes preguntas:
+
+\begin{enumerate}
+\itemsep0.5em 
+\item ¿Qué es un vector colineal?
+\item ¿Qué es un vector concurrente?
+\item ¿Qué es un vector coplanar?
+\item En una suma vectorial, ¿importa el orden con el que se van sumando los vectores?
+\item ¿En qué consiste el método gráfico para obtener el vector resultante de un sistema de vectores?
+\end{enumerate}
+
+\section{Objetivos.}
+
+\subsection{General.}
+
+Determinar el vector resultante de varias configuraciones en una mesa de fuerzas.
+
+\subsection{Específicos.}
+
+\begin{enumerate}
+% \item Obtener el valor de una fuerza en Newtons.
+\item Representar gráficamente el vector resultante de una configuración.
+\item Obtener el valor del ángulo que determina la dirección del vector resultante de una configuración.
+\end{enumerate}
+
+\section{Hipótesis.}
+
+La magnitud del vector resultante de un sistema en equilibrio vale cero.
+
+\section{Material.}
+
+\begin{enumerate}
+\itemsep0.15em 
+\item Mesa de fuerzas.
+\item Juego de pesas.
+\end{enumerate}
+Para esta actividad, se requiere que tengas a la mano una calculadora científica.
+
+\section{Registro de datos.}
+
+\subsection{Configuración 1.}
+
+Una vez que el Profesor te haya determinado la configuración de los cuatro vectores en la mesa de fuerzas, equilibra el anillo central de la misma, colocando pesas en el extremo colgante. Registra en la siguiente tabla el valor del ángulo y el peso que se ocupó (puedes imprimir esta hoja o en tu cuaderno recuperar la tabla y anotar los valores).
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | p{3cm} | p{3cm} |} \hline
+\textbf{Vector} & \multicolumn{1}{c|}{\textbf{Ángulo}} & \multicolumn{1}{c|}{\textbf{Peso}} \\ \hline
+$F_{1}$ & & \\ \hline
+$F_{2}$ & & \\ \hline
+$F_{3}$ & & \\ \hline
+$F_{4}$ & & \\ \hline
+\end{tabular}
+\end{table}
+Agrega un esquema (puede ser foto) de la configuración.
+
+\subsection{Configuración 2.}
+
+Una vez que el Profesor haya dejado la nueva configuración, repite los pasos y el registro para esta configuración, agrega un esquema o foto del sistema de vectores.
+
+\section{Resultados.}
+
+Deberás de anotar las tablas obtenidas, una para cada configuración de los cuatro vectores.
+
+\section{Análisis de datos.}
+
+Deberás de descomponer cada vector $F_{1}$, $F_{2}$, $F_{3}$, y $F_{4}$, en sus componentes del eje $x$ y del eje $y$, para ello ocuparás las expresiones:
+\begin{align*}
+F_{1x} &= \cos \theta \cdot \abs{\va{F_{1}}} \\[0.5em]
+F_{1y} &= \text{sen} \, \theta \cdot \abs{\va{F_{1}}}
+\end{align*}
+
+Completa la siguiente tabla de componentes de cada vector, para que la suma vectorial te sea más fácil de calcular:
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | p{3cm} | p{3cm} |} \hline
+\textbf{Componente} & \multicolumn{1}{c|}{\textbf{Ángulo}} & \multicolumn{1}{c|}{\textbf{Magnitud} \unit{\gram}} \\ \hline
+$F_{1x}$ & & \\ \hline
+$F_{1y}$ & & \\ \hline
+$F_{2x}$ & & \\ \hline
+$F_{2y}$ & & \\ \hline
+$F_{3x}$ & & \\ \hline
+$F_{3y}$ & & \\ \hline
+$F_{4x}$ & & \\ \hline
+$F_{4y}$ & & \\ \hline
+\end{tabular}
+\end{table}
+
+Las componentes del vector resultante $\va{R}$ se recuperan de la sumas:
+\begin{align*}
+R_{x} &= F_{1x} + F_{2x} + F_{3x} + F_{4x} \\[0.5em]
+R_{y} &= F_{1y} + F_{2y} + F_{3y} + F_{4y}
+\end{align*}
+La magnitud del vector resultante está dada por:
+\begin{align*}
+\abs{R} = \sqrt{R_{x}^{2} + R_{y}^{2}}
+\end{align*}
+La dirección del vector $\va{R}$ está dada por el ángulo $\theta_{R}$ que se obtiene de la expresión:
+\begin{align*}
+\theta_{R} = \tan^{-1} \left( \dfrac{R_{y}}{R_{x}} \right)
+\end{align*}
+Tendrás que completar la siguiente tabla:
+\begin{table}
+\centering
+\begin{tabular}{|c | c | c |} \hline
+Configuración & Magnitud $\va{R}$ (\unit{\gram}) & Ángulo $\theta_{R}$ \\ \hline
+1 & & \\ \hline
+2 & & \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Conclusiones.}
+
+Deberás de responder si luego del análisis de los datos, se cumplió con el objetivo general de la Práctica, así como mencionar si la Hipótesis planteada es correcta o no, recuerda que debes de justificar toda respuesta, si respondes con monosílabos, la calificación de la práctica se reducirá.
+
+\end{document}

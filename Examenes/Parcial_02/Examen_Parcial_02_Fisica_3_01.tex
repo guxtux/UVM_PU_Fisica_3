@@ -1,0 +1,260 @@
+\documentclass[12pt, letter]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{pdfpages}
+
+% \renewcommand{\questionlabel}{\thequestion}
+\decimalpoint
+
+\setlength{\belowdisplayskip}{-0.5pt}
+
+\usepackage{tasks}
+\settasks{
+    label=\Alph*), 
+    label-align=left,
+    item-indent={20pt}, 
+    column-sep={4pt},
+    label-width={16pt},
+}
+
+\sisetup{per-mode=symbol}
+\footer{}{\thepage}{}
+
+\begin{document}
+\includepdf[pages={1}]{Caratula_Examen_Parcial_02_PU_Fisica_3_01.pdf}
+
+\newpage
+
+\begin{questions}
+    \section{Movimiento uniformemente acelerado.}
+
+    \question Revisa el siguiente enunciado: \enquote{Un coche tiene una velocidad inicial de \SI{4}{\meter\per\second} y experimenta una aceleración cuya magnitud es de \SI{2}{\meter\per\square\second}, la cual dura \num{12} segundos.} Se pide calcular el desplazamiento del coche, ¿cuál de las siguientes expresiones nos resuelve el problema? \textbf{Nota: } Solo identifica la expresión, no se pide obtener el valor.
+    \begin{tasks}(4)
+        \task $v = \dfrac{d}{t}$
+        \task $d = \dfrac{v_{f}^{2} - v_{i}^{2}}{2 \, a}$
+        \task $d = \left( \dfrac{v_{f} + v_{i}}{2} \right) \, t$
+        \task $d = v_{i} \, t + \dfrac{a \, t^{2}}{2}$
+    \end{tasks}
+    \question Un tráiler parte del reposo y experimenta una aceleración cuya magnitud es de \SI{0.3}{\meter\per\square\second} durante \num{0.5} minutos. Si queremos obtener la velocidad del tráiler, ¿cuál será la expresión que nos resuelve el problema? \textbf{Nota: } Solo identifica la expresión, no se pide obtener el valor.
+    \begin{tasks}(4)
+        \task $v_{f} = v_{i} + a \, t$
+        \task $v_{f}^{2} = v_{i}^{2} + 2\, a \, d$
+        \task $d = v_{i} \, t + \dfrac{a \, t^{2}}{2}$
+        \task $d = \left( \dfrac{v_{f} + v_{i}}{2} \right) \, t$
+    \end{tasks}
+    \question \label{Problema_01} \textbf{Problema de ejecución:} Un camión de pasajeros con una velocidad de \SI{20}{\kilo\meter\per\hour} se lanza cuesta abajo de una pendiente y adquiere una velocidad de \SI{70}{\kilo\meter\per\hour} en \num{1} minuto. Si se considera que su aceleración fue constante. Calcula la aceleración del camión en \unit{\meter\per\square\second}.
+    \begin{tasks}(4)
+        \task \SI{50}{\meter\per\square\second}
+        \task \SI{0.83}{\meter\per\square\second}
+        \task \SI{0.23}{\meter\per\square\second}
+        \task \SI{1}{\meter\per\square\second}
+    \end{tasks}
+
+    \section{Caída libre.}
+    
+    \question Un objeto que experimenta una caída libre, se estudia considerando que el objeto está sujeto a una aceleración de tipo:
+    \begin{tasks}(4)
+        \task Ascendente.
+        \task Descendente.
+        \task Nula.
+        \task Constante.
+    \end{tasks}
+    \question Revisa el siguiente enunciado \enquote{Una canica se deja caer desde una ventana y tarda en llegar al suelo \num{5} segundos.}, ¿A qué altura se dejó caer la canica?. 
+    \\
+    ¿Cuál de las siguientes expresiones nos resuelve el problema? \textbf{Nota: } Solo identifica la expresión, no se pide obtener el valor.
+    \begin{tasks}(4)
+        \task $y = \dfrac{1}{2} \big( v_{i} + v_{f} \big) \, t$
+        \task $y = v_{i} \, t + \dfrac{1}{2} g \, t^{2}$
+        \task $2 \, g \, y = v_{f}^{2} - v_{i}^{2}$
+        \task $v_{f} = v_{i} + g \, t$
+    \end{tasks}
+    \question \label{Problema_02} \textbf{Problema de ejecución:} Considerando que ya identificaste la expresión para el problema anterior de la canica, ¿cuál es la altura a la que se dejó caer?
+    \begin{tasks}(4)
+        \task \SI{122.62}{\meter}
+        \task \SI{24.52}{\meter}
+        \task \SI{100.00}{\meter}
+        \task \SI{130.11}{\meter}
+    \end{tasks}
+
+    \newpage
+
+    \section{Tiro vertical.}
+
+    \question Completa la siguiente frase: Cuando un objeto lanzado hacia arriba, alcanza la altura máxima cuando su velocidad es \rule{2cm}{0.3mm}
+    \begin{tasks}(4)
+        \task Máxima.
+        \task Mínima.
+        \task $\dfrac{v_{i}}{2}$
+        \task Es cero.
+    \end{tasks}
+    \question El tiempo de vuelo de un objeto en tiro vertical se obtiene con la siguiente expresión:
+    \begin{tasks}(4)
+        \task $t_{\text{vuelo}} = - \dfrac{2 \, v_{i}}{g}$
+        \task $t_{\text{vuelo}} = - \dfrac{2 \, v_{f}}{g}$
+        \task $t_{\text{vuelo}} = - \dfrac{2 \, v_{i}^{2}}{g}$
+        \task $t_{\text{vuelo}} = - \dfrac{2 \, v_{f}^{2}}{g}$
+    \end{tasks}
+    \question Cuando un objeto se lanza verticalmente hacia arriba, se sabe que conforme se deplaza su velocidad \rule{2cm}{0.3mm}
+    \begin{tasks}(4)
+        \task Es constante.
+        \task Es cero.
+        \task Aumenta.
+        \task Disminuye.
+    \end{tasks}
+    \question \label{Problema_03} \textbf{Problema de ejecución: }Se lanza verticalmente hacia arriba una esfera metálica con una velocidad cuya magnitud es de \SI{20}{\meter\per\second}. ¿Qué distancia recorre a los \num{2} segundos?
+    \begin{tasks}(4)
+        \task \SI{15.09}{\meter}
+        \task \SI{59.62}{\meter}
+        \task \SI{20.38}{\meter}
+        \task \SI{10.19}{\meter}
+    \end{tasks}
+
+    \section{Fuerza y Leyes de Newton.}
+
+    \question Relaciona las columnas con las letras y los números.
+    
+    Son las leyes de Newton:
+    
+    \begin{minipage}[t]{0.4\linewidth}
+    \begin{parts}
+        \part Primera ley.
+        \part Segunda ley.
+        \part Tercera ley.
+    \end{parts}
+    \end{minipage}
+    \hspace{-0.5cm}
+    \begin{minipage}[t]{0.5\linewidth}
+        \begin{enumerate}[label=\arabic*)]
+            \itemsep0em
+            \item De gravitación universal.
+            \item De acción y reacción.
+            \item De inercia.
+            \item Relación entre masa y aceleración.
+        \end{enumerate}
+    \end{minipage}
+    \begin{tasks}(4)
+        \task a-1, \, b-2, \, 3-c
+        \task a-2, \, b-3, \, 3-1
+        \task a-3, \, b-4, \, 3-2
+        \task a-3, \, b-4, \, 3-1
+    \end{tasks}
+    \question ¿Qué es una fuerza?
+    \begin{tasks}
+        \task Es la interacción entre dos cuerpos.
+        \task Es la reacción a distancia entres dos cuerpos.
+        \task Es la suma del peso y la masa.
+        \task Es la masa de un cuerpo.
+    \end{tasks}
+    \question De la segunda ley de Newton, la expresión que relaciona la fuerza con la aceleración es:
+    \begin{tasks}(4)
+        \task $F = \dfrac{m}{a}$
+        \task $F = \dfrac{a}{m}$
+        \task $F = m \, a$
+        \task $F = m^{2} \, a$
+    \end{tasks}
+    \question Un objeto de \SI{200}{\kilo\gram} se coloca en la superficie de la Luna terrestre, si el valor de la aceleración debida a la gravedad en la Luna es de \SI{1.62}{\meter\per\square\second}, ¿Cuánto pesa en Newtons ese objeto en la superficie de la Luna?
+    \begin{tasks}(4)
+        \task \SI{-200}{\newton}
+        \task \SI{200}{\newton}
+        \task \SI{1962}{\newton}
+        \task \SI{324}{\newton}
+    \end{tasks}
+    \question ¿Cuál es la masa en la Tierra de un objeto que pesa \SI{490.5}{\newton} (Newtons)?
+    \begin{tasks}(4)
+        \task \SI{40}{\kilo\gram}
+        \task \SI{50}{\kilo\gram}
+        \task \SI{60}{\kilo\gram}
+        \task \SI{100}{\kilo\gram}
+    \end{tasks}
+    \question Supongamos que vamos de regreso a casa en un automóvil y presenta una falla, comenzamos a empujarlo al taller mecánico más cercano. Cuando el automóvil comienza a moverse: ¿Cómo es la fuerza que ejerces sobre el automóvil en comparación con la que éste ejerce sobre ti? 
+    \begin{tasks}
+        \task La fuerza que ejerce el automóvil es igual en magnitud y opuesta en dirección a la que el automóvil ejerce sobre ti.
+        \task La fuerza que ejerce el automóvil es mayor en magnitud y en la misma dirección a la que el automóvil ejerce sobre ti.
+        \task La fuerza que ejerce el automóvil es menor en magnitud y en dirección perpendicular a la que el automóvil ejerce sobre ti.
+        \task La fuerza que ejerce el automóvil es igual en magnitud y en dirección oblicua a la que el automóvil ejerce sobre ti.
+\end{tasks}
+    \question Sabemos que la fuerza es una cantidad vectorial, del siguiente vector de fuerza con una magnitud de \SI{15}{\newton} y que tiene una dirección de \ang{50}, ¿cuánto vale la componente $F_{y}$ en la dirección del eje de las ordenadas?
+    \begin{tasks}(4)
+        \task \SI{15}{\newton}
+        \task \SI{17.87}{\newton}
+        \task \SI{9.46}{\newton}
+        \task \SI{11.49}{\newton}
+    \end{tasks}
+    \question Resolviendo en una mesa de fuerzas las componentes de un sistema de vectores, se tiene que las componentes del vector resultante son $R_{x} = \SI{10}{\newton}$ y $R_{y} = \SI{8}{\newton}$. ¿Cuál es el ángulo que forma $\va{R}$ con respecto al eje $y$.
+    \begin{tasks}(4)
+        \task \ang{51.34}
+        \task \ang{38.65}
+        \task \ang{90}
+        \task \ang{60.38}
+    \end{tasks}
+
+    \section{Leyes de Kepler y el Sistema Solar.}
+    \question De la primera ley de Kepler ¿cuál es el espacio geométrico que explica la trayectoria de un planeta?
+    \begin{tasks}(4)
+        \task Círculo.
+        \task Parábola.
+        \task Elipse.
+        \task Hipérbola.
+    \end{tasks}
+    \question \rule{2cm}{0.1mm} es el sexto planeta del Sistema Solar considerando su posición a partir del Sol.
+    \begin{tasks}(4)
+        \task Marte.
+        \task Saturno.
+        \task Júpiter.
+        \task Neptuno.
+    \end{tasks}
+\end{questions}
+
+\newpage
+
+\textbf{\huge{Formulario.}}
+\begin{table}[H]
+    \centering
+    \setlength{\tabcolsep}{40pt}
+    \renewcommand{\arraystretch}{2.5}
+    \begin{tabular}{c  c}
+        \multicolumn{2}{c}{Movimiento Uniformemente Acelerado} \\
+        $v_{f} = v_{i} + a \, t$ & $d = \dfrac{1}{2} \big( v_{i} + v_{f} \big) \, t$ \\
+        $d = v_{i} \, t + \dfrac{1}{2} a \, t^{2}$ & $2 \, a \, d = v_{f}^{2} - v_{i}^{2}$ \\ \hline
+        \multicolumn{2}{c}{Caída libre y Tiro vertical} \\
+        $v_{f} = v_{i} + g \, t$ & $y = \dfrac{1}{2} \big( v_{i} + v_{f} \big) \, t$ \\
+        $y = v_{i} \, t + \dfrac{1}{2} g \, t^{2}$ & $2 \, g \, y = v_{f}^{2} - v_{i}^{2}$ \\ 
+        $y_{\text{máx}} = - \dfrac{v_{i}^{2}}{2 \, g}$ & $t_{\text{subida}} = - \dfrac{v_{i}}{g}$ \\ \hline
+        \multicolumn{2}{c}{Vectores} \\
+        $\abs{\va{R}} = \sqrt{R_{x}^{2} + R_{y}^{2}}$ & $\theta_{R} = \tan^{-1} \left( \dfrac{R_{y}}{R_{x}} \right)$ \\
+        $R_{x} = \cos \theta \cdot \abs{\va{R}}$ & $R_{x} = \text{sen} \, \theta \cdot \abs{\va{R}}$ \\ \hline
+        \multicolumn{2}{c}{Cantidades} \\
+        $g = \SI{9.81}{\meter\per\square\second}$ & $\SI{1}{\kilo\meter} = \SI{1000}{\meter}$  \\
+        $\SI{1}{\hour} = \SI{3600}{\second}$ &
+\end{tabular}
+\end{table}
+
+\newpage
+En este espacio deberás de incluir el desarrollo completo de los Problemas de Ejecución. Recuerda que si no se tiene el desarrollo, el problema no aportará puntaje aunque se tenga la respuesta correcta.
+
+\vspace*{0.5cm}
+Solución al Problema de Ejecución \ref{Problema_01}:
+
+\vspace*{6cm}
+\rule{0.9\textwidth}{0.3mm}
+
+Solución al Problema de Ejecución \ref{Problema_02}:
+
+\vspace*{6cm}
+\rule{0.9\textwidth}{0.3mm}
+
+Solución al Problema de Ejecución \ref{Problema_03}:
+
+\end{document}

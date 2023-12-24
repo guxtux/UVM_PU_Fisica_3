@@ -1,0 +1,83 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Calificación del examen parcial\vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+La calificación del examen parcial se obtiene de tres componentes, en la siguiente tabla se indica el porcentaje que representa cada uno:
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | l |} \hline
+Rubro & Componente \\ \hline
+\multirow{2}{*}{Teoría (70\%)} & 1. Evaluación Continua (40\%) \\
+ & 2. Examen (60\%) \\ \hline
+Laboratorio (30\%) & 3. Laboratorio \\ \hline
+\end{tabular}
+\end{table}
+Una vez conocidas las calificaciones de los tres componentes, podremos obtener la calificación del examen parcial:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| l | c | c | c |} \hline
+        Rubro & Calificación & Multiplicador & Puntaje \\ \hline
+        Evaluación Cont. &  & $0.4$ & $a) $ \\ \hline
+        Examen & & $0.6$ & $b)$ \\ \hline
+         & & Teoría ($a + b$) & $c)$ \\ \hline
+    \end{tabular}
+\end{table}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| l | c | c | c |} \hline
+        Rubro & Calificación & Multiplicador & Puntaje \\ \hline
+        Teoría $c)$ & & $0.7$ & $d)$ \\ \hline
+        Laboratorio & & $0.3$ & $e)$ \\ \hline
+         & & Calif. parcial $d + e$ & \\ \hline        
+    \end{tabular}
+\end{table}
+\noindent
+\textbf{Ejemplo.} Luego de la retroalimentación tanto de teoría como de laboratorio,  ya tengo las calificaciones:
+
+\vspace*{0.5cm}
+\noindent
+Evaluación Continua: $9.5$, Examen: $8.5$, Laboratorio: $10$
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| l | c | c | c |} \hline
+        Rubro & Calificación & Multiplicador & Puntaje \\ \hline
+        Evaluación Cont. & $9.5$ & $0.4$ & $a) \, 3.8$ \\ \hline
+        Examen & $8.5$ & $0.6$ & $b) \, 5.1$ \\ \hline
+         & & Teoría ($a + b$) & $c) \, 8.9$ \\ \hline
+    \end{tabular}
+\end{table}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| l | c | c | c |} \hline
+        Rubro & Calificación & Multiplicador & Puntaje \\ \hline
+        Teoría $c)$ & $8.9$ & $0.7$ & $d) \, 6.23$ \\ \hline
+        Laboratorio & $10$ & $0.3$ & $e) \, 3$ \\ \hline
+         & & Calif. parcial $d + e$ & $9.23$  \\ \hline        
+    \end{tabular}
+\end{table}
+La calificación para el curso de Física en mi historial académico será: \underline{$9.23$}
+\end{document}
