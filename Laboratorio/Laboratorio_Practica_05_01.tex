@@ -1,0 +1,112 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{calc}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\newlength{\depthofsumsign}
+\setlength{\depthofsumsign}{\depthof{$\sum$}}
+\newcommand{\nsum}[1][1.4]{% only for \displaystyle
+    \mathop{%
+        \raisebox
+            {-#1\depthofsumsign+1\depthofsumsign}
+            {\scalebox
+                {#1}
+                {$\displaystyle\sum$}%
+            }
+    }
+}
+
+\title{\vspace*{-2cm} Práctica 5 - Electrostática \\  Física III\vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Datos para la práctica.}
+
+\begin{itemize}
+\itemsep0em 
+\item  \textbf{Práctica:} 5.
+\item \textbf{Unidad:} Dos.
+\item \textbf{Temática:} Electricidad.
+\item \textbf{Nombre de la práctica:} Electrostática.
+\item \textbf{Número de sesiones que se requieren para la práctica:} Dos.
+\end{itemize}
+
+\section{Objetivo general.}
+
+Generar una carga eléctrica negativa mediante la fricción.
+
+\section{Objetivos específicos.}
+
+Entender el principio de funcionamiento y el manejo de:
+\begin{enumerate}
+\item El generador de Van de Graff.
+\item La máquina de Wimshurst.
+\end{enumerate}
+
+\section{Hipótesis.}
+
+Las cargas eléctricas que se generan por fricción son negativas (electrones).
+
+\section{Planteamiento del problema.}
+
+Todos los elementos de la naturaleza están compuestos de átomos y una de las partículas principales de todos los átomos son los electrones, los cuales se pueden desplazar de un átomo a otro, incluso entre materiales diferentes, formando \enquote{corrientes eléctricas} que recorren miles de kilómetros por segundo.
+
+La unidad para medir la corriente eléctrica es el \textbf{Ampere}, que equivale aproximadamente a un flujo de \num{6.25d18} electrones cada segundo.
+
+Todos los materiales conocidos, en mayor o menor grado, permiten el flujo de la corriente eléctrica a través de ellos, sin embargo, en todos los casos, también presentan una \enquote{resistencia} (o impedancia) al paso de dicha corriente. Mientras menos resistencia eléctrica presente un material, se considera un mejor conductor y mientras más resistencia presente será un mejor aislante.
+
+Los mejores conductores de electricidad son los metales como el oro, la plata, el cobre o el aluminio y los mejores aislantes son el vidrio, la mica y algunos materiales sintéticos, por ejemplo, el PVC. Entre los dos extremos están todos los otros materiales que conocemos como semiconductores, su conductividad o resistencia puede variar dependiendo de diversos factores. Por ejemplo, el agua salada es mucho mejor conductor que el agua pura, la arcilla es mejor conductor que la arena o el concreto, la madera es mejor conductora cuando está verde que cuando está seca, y la piel humana es mejor conductora cuando está húmeda.
+
+Hay muchos fenómenos físicos y químicos que incitan la formación de corrientes eléctricas. La forma más elemental de generar electricidad estática es frotando determinados materiales: por ejemplo, al frotar un peine de plástico con un paño, o nuestro cuerpo con ciertos vestidos o tapetes, o al rozar el viento seco y frío el automóvil en que viajamos. En cada caso, el peine, nuestro cuerpo o el automóvil se van cargando lentamente con electricidad estática, superando el \enquote{nivel normal} de la superficie terrestre o de los objetos circundantes.
+
+Debido a que ningún átomo se puede quedar sin electrones ni soportar más de los que le corresponden, la corriente eléctrica siempre tiende a circular. Si no existe ninguna fuerza externa (voltaje) que impulse a los electrones o si éstos no tienen un camino para regresar y completar el circuito, la corriente eléctrica simplemente \enquote{no circula}. La única excepción al movimiento circular de la corriente la constituye la electricidad estática, que consiste en el desplazamiento o la acumulación de partículas (iones) de ciertos materiales que tienen la capacidad de almacenar una carga eléctrica positiva o negativa.
+
+\section{Marco teórico.}
+
+Responde las siguientes preguntas:
+\begin{enumerate}
+\item ¿Cuál es el principio de funcionamiento del generador de Van de Graff?
+\item ¿Cuál es el principio de funcionamiento de la máquina de Wimshurst?
+\item ¿Qué científico nombró a las cargas como positivas y negativas?
+\item ¿Cómo identificarías si la carga eléctrica que se genera es positiva o negativa?
+\item ¿En qué consisten los métodos de generación de carga por contacto, inducción y fricción? Menciona ejemplos de cada uno de ellos.
+\end{enumerate}
+
+\section{Material.}
+
+\begin{enumerate}[label=\alph*)]
+\item 1 generador de Van de Graff.
+\item 1 máquina de Wimshurst.
+\item Globos.
+\end{enumerate}
+
+\section{Montaje experimental.}
+
+\begin{enumerate}
+\item Atiende las indicaciones del Profesor para la operación y manejo del generador de Van de Graff y de la máquina de Wimshurst.
+\item En tu cuaderno describe el fenómeno que se presenta cuando una persona toca la esfera del generador de Van de Graff.
+\item Responde la pregunta: ¿cuál de los dos aparatos produce una carga eléctrica de mayor intensidad? ¿de qué manera apoyas tu respuesta?
+\item Infla un globo en tu cabello, intenta colocarlo en la pared. Describe qué es lo que sucede, recuerda que tu enunciado debe de apoyarse con la física involucrada.
+\end{enumerate}
+
+\end{document}

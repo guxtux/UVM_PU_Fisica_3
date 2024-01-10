@@ -1,0 +1,302 @@
+\documentclass[14pt]{beamer}
+\usepackage{./Estilos/BeamerUVM}
+\usepackage{./Estilos/ColoresLatex}
+\input{Preambulos/preambulo_Beamer_Cambridge_wolverine}
+% \usefonttheme{serif}
+\usepackage[clock]{ifsym}
+\DeclareSIUnit\erg{erg}
+\DeclareSIUnit[number-unit-product = {\,}]\cal{cal}
+
+\sisetup{per-mode=symbol}
+\resetcounteronoverlays{saveenumi}
+
+% Macro para agregar el logo de UVM en cada slide de la presentación
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\coordinate (logo) at ([xshift=-1.5cm,yshift=-0.8cm]current page.north east);
+% \fill[devryblue] (logo) circle (.9cm);
+% \clip (logo) circle (.75cm);
+\node at (logo) {\includegraphics[width=2.1cm]{Imagenes/logo_UVM.png}};
+\end{tikzpicture}}
+
+
+\title{\Large{Electricidad y Magnetismo} \\ \normalsize{Física III}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Contenido}
+\frame[allowframebreaks]{\frametitle{Contenido} \tableofcontents[currentsection, hideallsubsections]}
+
+\section{Electricidad}
+\frame[allowframebreaks]{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Introducción}
+
+% \begin{frame}
+% \frametitle{Preguntas disparadoras}
+% ¿Te has imaginado vivir en un mundo sin energía eléctrica?
+% \\
+% \bigskip
+% \pause
+% Esto implicaría no usar aparatos electrónicos como radio, televisión, grabadora y otros más.
+% \end{frame}
+% \begin{frame}
+% \frametitle{Nooooo!}
+% \begin{figure}
+%     \centering
+%     \includegraphics[scale=0.1]{Imagenes/emoji_sorpresa.jpg}
+% \end{figure}
+% \end{frame}
+% \begin{frame}
+% \frametitle{Aprovechamiento de la electricidad}
+% Por lo tanto, \pause contar con un tipo de fuente de energía, empleando una propiedad física, \pause nos facilita y mejora nuestra calidad de vida, porque sin ella, no contaríamos con iluminación
+% y calor.
+% \end{frame}
+% \begin{frame}
+% \frametitle{Aprovechamiento de la electricidad}
+% Esto significa que con esta fuente de energía se ponen en marcha diferentes tipos de máquinas, artefactos y sistemas de transporte, por mencionar algunos.
+% \end{frame}
+\begin{frame}
+\frametitle{¿Qué es la electricidad?}
+La palabra electricidad se deriva de la raíz griega elektron, que significa ámbar.
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es la electricidad?}
+La electricidad se define como un fenómeno físico que se origina del \textocolor{flame}{movimiento de partículas subatómicas por medio de cargas eléctricas} a través de la atracción y repulsión de las mismas.
+\end{frame}
+\begin{frame}
+\frametitle{¿Qué es la electricidad?}
+La electricidad es una rama de la Física que estudia todos los \textocolor{ao}{enómenos relacionados con las cargas eléctricas} en reposo o movimiento.
+\end{frame}
+\begin{frame}
+\frametitle{Electrostática}
+Es la rama de la electricidad que se encarga de estudiar las \textocolor{folly}{cargas eléctricas en reposo}.
+\end{frame}
+\begin{frame}
+\frametitle{Electrodinámica}
+Es la rama de la electricidad que se encarga de estudiar las \textocolor{halayaube}{cargas eléctricas en movimiento}.
+\end{frame}
+\begin{frame}
+\frametitle{Propiedad fundamental}
+La \textocolor{hanpurple}{carga eléctrica} es una propiedad fundamental de la materia y base de todos los fenómenos de interacción eléctrica.
+\\
+\bigskip
+\pause
+Se representa con la letra $q$.
+\end{frame}
+\begin{frame}
+\frametitle{Tipos de carga eléctrica}
+Las cargas eléctricas son de dos tipos:
+\pause
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \node at (0, 0) {Tipos de carga};
+        \draw node at (4.75, 1) {Carga positiva};
+        \draw [-stealth] (2, 0) -- (3, 1);
+        \draw [fill, color=ao, text=white] (7.5, 1) circle (10pt) node {$+$};
+
+        \draw node at (4.75, -1) {Carga negativa};
+        \draw [-stealth] (2, 0) -- (3, -1);
+        \draw [fill, color=red, text=white] (7.5, -1) circle (10pt) node {$-$};
+        
+    \end{tikzpicture}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{La carga eléctrica}
+Se denomina \textocolor{ballblue}{carga eléctrica elemental} y se denota como:
+\pause
+\begin{itemize}
+\item Carga positiva $+e$, $e^{+}$
+\item Carga negativa $-e$, $e^{-}$
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{El valor de $e$}
+El valor de la carga eléctrica $e$ es:
+\pause
+\begin{align*}
+e = \SI{1.6d-19}{\coulomb}
+\end{align*}
+\pause
+Entonces:
+\begin{itemize}
+\item Carga positiva $+e, \, e^{+} = + \SI{1.6d-19}{\coulomb}$
+\item Carga negativa $-e, \, e^{-} = -\SI{1.6d-19}{\coulomb}$
+\end{itemize}    
+\end{frame}
+\begin{frame}
+\frametitle{Interacción entre cargas eléctricas}
+La relación entre cargas eléctricas con signo, se presenta a continuación:
+\end{frame}
+\begin{frame}
+\frametitle{Ley de atracción}
+\textocolor{airforceblue}{Cargas con signo contrario se atraen}.
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \draw [fill, color=ao, text=white] (0, 0) circle (10pt) node {$+$};
+        \draw[-{Triangle[width=18pt,length=8pt]}, line width=10pt](1, 0) -- (2, 0);
+        \draw[-{Triangle[width=18pt,length=8pt]}, line width=10pt](4, 0) -- (3, 0);
+        \draw [fill, color=red, text=white] (5, 0) circle (10pt) node {$-$};
+    \end{tikzpicture}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Ley de repulsión}
+\textocolor{ao(english)}{Cargas con signo igual se repelen}.
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \draw [fill, color=ao, text=white] (0, 0) circle (10pt) node {$+$};
+        \draw[-{Triangle[width=18pt,length=8pt]}, line width=10pt](-0.5, 0) -- (-1.5, 0);
+        \draw[-{Triangle[width=18pt,length=8pt]}, line width=10pt](3, 0) -- (4, 0);
+        \draw [fill, color=ao, text=white] (2.5, 0) circle (10pt) node {$+$};
+
+        \draw [fill, color=red, text=white] (0, -1.5) circle (10pt) node {$-$};
+        \draw[-{Triangle[width=18pt,length=8pt]}, line width=10pt](-0.5, -1.5) -- (-1.5, -1.5);
+        \draw[-{Triangle[width=18pt,length=8pt]}, line width=10pt](3, -1.5) -- (4, -1.5);
+        \draw [fill, color=red, text=white] (2.5, -1.5) circle (10pt) node {$-$};
+        
+    \end{tikzpicture}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Pregunta a responder}
+¿Por qué el núcleo de un átomo no se desintegra si dentro se tienen los protones? Es decir, partículas con carga positiva. 
+\end{frame}
+\begin{frame}
+\frametitle{La carga en la naturaleza}
+La experiencia nos dice que los materiales tienen un \textocolor{blue(pigment)}{equilibrio en su carga eléctrica}, \pause es decir, son \textocolor{byzantium}{neutros}.
+\end{frame}
+\begin{frame}
+\frametitle{¿De dónde viene la carga eléctrica?}
+La carga eléctrica de un cuerpo aparece cuando éste \textocolor{burgundy}{pierde} o \textocolor{carmine}{gana} electrones, \pause y se dice que cualquier carga eléctrica de magnitud $q$ es un múltiplo entero de la carga elemental $e$, es decir:
+\pause
+\begin{align*}
+q = n \, e \hspace{1cm} \left[ \unit{\coulomb} \,\, (\text{Coulomb}) \right]
+\end{align*}
+\end{frame}
+\begin{frame}
+    \frametitle{Una ley importante}
+    \textocolor{ceruleanblue}{Conservación de la carga eléctrica}.
+    \\
+    \bigskip
+    La carga eléctrica no se crea ni se destruye, solo se transforma de un cuerpo o material a otro.
+    \end{frame}
+    
+\section{Tipos de materiales}
+\frame[allowframebreaks]{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Conductor}
+
+\begin{frame}
+\frametitle{El material conductor}
+Un medio o material que \textocolor{burgundy}{permite el movimiento} de las cargas eléctricas (electrones)
+en respuesta a una fuerza eléctrica, se denomina \textocolor{cobalt}{conductor}.
+\end{frame}
+\begin{frame}
+\frametitle{El material conductor}    
+Los materiales conductores son los que se pueden electrizar en toda su superficie, debido a que los electrones se mueven libremente.
+\\
+\bigskip
+\pause
+Los metales por lo general son buenos conductores de la electricidad.
+\end{frame}
+\begin{frame}
+\frametitle{Materiales conductores}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.8]{Imagenes/Materiales_Conductores_01.jpg}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{La corriente eléctrica}
+El flujo de las partículas cargadas es lo que se conoce como \textocolor{red}{corriente eléctrica}.
+\end{frame}
+\begin{frame}
+\frametitle{La corriente eléctrica}
+Las partículas cargadas en una cierta dirección de un conductor chocan con los átomos, \pause produciendo una pérdida de energía que se manifiesta en forma de calor.
+\end{frame}
+\begin{frame}
+\frametitle{La resistencia eléctrica}
+Una medida de \textocolor{blue}{oposición} que presentan las partículas cargadas al moverse libremente en una cierta dirección de un material conductor \pause es lo que se conoce como \textocolor{cerise}{resistencia eléctrica}.
+\end{frame}
+\begin{frame}
+\frametitle{Materiales resistivos}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.3]{Imagenes/Materiales_Conductores_02.jpg}
+\end{figure}
+\end{frame}
+    
+\subsection{Aislante}
+
+\begin{frame}
+\frametitle{Los aislantes}
+Los materiales que no permiten que las partículas cargadas se muevan hacia otra región del material debido a una fuerza eléctrica, son llamados \textocolor{coolblack}{aislantes} por ejemplo, la madera.
+\end{frame}
+
+\subsection{Semiconductores}
+
+\begin{frame}
+\frametitle{Los materiales semiconductores}
+Existen otros tipos de materiales cuyas propiedades son intermedias entre los conductores y aislantes: \pause  se llaman \textocolor{cornellred}{semiconductores}.
+\end{frame}
+\begin{frame}
+\frametitle{Base de la electrónica}
+Los materiales semiconductores con mayor utilidad en la electrónica son el silicio y el germanio.
+\end{frame}
+
+\section{Plantas generadoras de electricidad}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Tipos de plantas}
+
+
+\begin{frame}
+\frametitle{Generando la electricidad}
+Existen diversos tipos de plantas generadoras de electricidad, cada una utilizando diferentes fuentes de energía y tecnologías.
+\end{frame}
+\begin{frame}
+\frametitle{Centrales Térmicas}
+\setbeamercolor{item projected}{bg=cadmiumgreen,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Térmicas de Carbón: Queman carbón para generar vapor y accionar turbinas conectadas a generadores eléctricos.
+\item Térmicas de Gas: Utilizan gas natural para producir vapor y generar electricidad.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Centrales Térmicas}
+\vspace*{-1cm}
+\begin{figure}
+    \centering
+    \includegraphics[scale=1.5]{Imagenes/Planta_Termica_01.png}
+\end{figure}
+\end{frame}
+% Centrales Hidroeléctricas:
+
+% Aprovechan la energía cinética del agua para hacer girar turbinas y generar electricidad. Pueden ser de embalse o de pasada.
+% Centrales Nucleares:
+
+% Utilizan la energía liberada en reacciones nucleares para generar calor, que a su vez produce vapor y activa turbinas.
+% Centrales Eólicas:
+
+% Convierten la energía cinética del viento en electricidad mediante aerogeneradores.
+% Centrales Solares:
+
+% Fotovoltaicas: Convierten la luz solar en electricidad utilizando celdas solares.
+% Térmicas: Utilizan la radiación solar para calentar un fluido y producir vapor para accionar turbinas.
+% Centrales de Biomasa:
+
+% Utilizan materiales orgánicos (madera, residuos agrícolas) para generar electricidad a través de procesos de combustión o gasificación.
+% Geotérmicas:
+
+% Aprovechan el calor interno de la Tierra para generar vapor y accionar turbinas conectadas a generadores eléctricos.
+% \end{frame}
+\end{document}

@@ -1,0 +1,172 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{calc}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\newlength{\depthofsumsign}
+\setlength{\depthofsumsign}{\depthof{$\sum$}}
+\newcommand{\nsum}[1][1.4]{% only for \displaystyle
+    \mathop{%
+        \raisebox
+            {-#1\depthofsumsign+1\depthofsumsign}
+            {\scalebox
+                {#1}
+                {$\displaystyle\sum$}%
+            }
+    }
+}
+
+\title{\vspace*{-2cm} Práctica 4 - Plano inclinado \\  Física III\vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+\section{Datos para la práctica.}
+
+\begin{itemize}
+\itemsep0em 
+\item  \textbf{Práctica:} 4.
+\item \textbf{Unidad:} Uno
+\item \textbf{Temática:} Movimiento uniformemente acelerado.
+\item \textbf{Nombre de la práctica:} Plano inclinado.
+\item \textbf{Número de sesiones que se requieren para la práctica:} Dos.
+\end{itemize}
+
+\section{Objetivo general.}
+
+Determinar la relación entre la distancia recorrida y el tiempo que tarda en desplazarse un balín sobre un plano inclinado.
+
+\section{Objetivos específicos.}
+
+Obtener la velocidad de un balín que se desliza sobre un plano inclinado a partir del registro de la distancia recorrida y el tiempo que requiere para ello.
+
+\section{Hipótesis.}
+
+El plano inclinado con el ángulo mayor permite que la velocidad del balín sea mayor en comparación con la inclinación de los otros ángulos.
+
+\section{Planteamiento del problema.}
+
+El plano inclinado es una situación clásica en física que se utiliza para analizar el movimiento de objetos bajo la influencia de la gravedad y la presencia de una superficie inclinada. Se puede describir de manera general de la siguiente manera:
+
+Descripción del Sistema:
+
+\begin{enumerate}
+\item Objeto en Reposo o en Movimiento: se considera un objeto que puede estar en reposo sobre el plano inclinado o que se mueve a lo largo de él.
+\item Plano Inclinado: El plano inclinado es una superficie plana que forma un ángulo $\theta$ con la horizontal. Puede ser liso o rugoso, y se asume que no hay fricción inicialmente.
+\item Ejes de Coordenadas: Establecer un sistema de coordenadas cartesianas con ejes $x$ e $y$. Generalmente, el eje $x$ se alinea con la superficie inclinada y el eje $y$ es perpendicular a ella.
+\end{enumerate}
+
+\section{Marco teórico.}
+
+Responde las siguientes preguntas apoyándote con la consulta de libros que deberás de incluir en el apartad de Bibliografía.
+
+\begin{enumerate}
+\item ¿Qué es el movimiento uniformemente acelerado (MUA)?
+\item ¿Qué científico utilizó el plano inclinado para observar el MUA?
+\item En términos de la física que ya conoces, explica el por qué se mueve un balín sobre un riel inclinado.
+\end{enumerate}
+
+\section{Material.}
+
+\begin{enumerate}
+\item Riel de \SI{150}{\centi\meter}
+\item Plano inclinado.
+\item Balín o canica.
+\item Cronómetro (puede ser el del celular)
+\end{enumerate}
+
+\section{Montaje.}
+
+\begin{enumerate}
+\item Se coloca la base del plano inclinado a un ángulo de \ang{10}, sujetando el tornillo mariposa de tal manera que la base quede fija.
+\item Colocamos el riel sobre el plano inclinado.
+\item Se va a registrar el tiempo que tarda en deslizarse una distancia de \SI{10}{\centi\meter}, para ello, un integante del equipo debe de soltar el balín en el extremo inicial del riel, otro integrante deberá de colocar un bolígrafo o un lápiz en la marca de los \SI{10}{\centi\meter}. Cuando se suelte el balín, deberá de avisarse para que el cronómetro se inicie y cuando el balín llegue a la marca de distancia, se deberá de avisar para deterner el cronómetro.
+\item El tiempo que se registre en el cronómetro, es el que se deberá de anotar en la tabla de datos.
+\item Para tener una medida uniforme en cada distancia, deberán de repetir 5 (cinco veces) el registro de tiempo.
+\item Se avanza a la siguiente marca de distancia, a \SI{20}{\centi\meter} y se repiten las cinco mediciones de tiempo.
+\item Se continua hasta completar una distancia de \SI{100}{\centi\meter}.
+\item Cuando se haya completado la tabla, se cambia el ángulo de la mesa a \ang{15} y se repite todo el procedimiento, esto considera que hay que elaborar una tabla de distancias y tiempos nuevamente.
+\item El registro considera también el cambio de ángulo a \ang{20} y \ang{25}, cada uno, con su respectiva tabla.
+\end{enumerate}
+
+\section{Resultados.}
+
+\begin{table}[H]
+\centering
+Tabla para un ángulo de \ang{10}
+
+\begin{tabular}{| c | >{\centering}p{1cm} | >{\centering}p{1cm} | >{\centering}p{1cm} | >{\centering}p{1cm} | >{\centering}p{1cm} | c |} \hline
+ & \multicolumn{5}{c|}{Tiempos} & \\ \hline
+Distancia & $t_{1}$ & $t_{2}$ & $t_{3}$ & $t_{4}$ & $t_{5}$ & $t$ Promedio \\ \hline
+\SI{10}{\centi\meter} & & & & & & \\ \hline
+\SI{20}{\centi\meter} & & & & & & \\ \hline
+\SI{30}{\centi\meter} & & & & & & \\ \hline
+\SI{40}{\centi\meter} & & & & & & \\ \hline
+\SI{50}{\centi\meter} & & & & & & \\ \hline
+\SI{60}{\centi\meter} & & & & & & \\ \hline
+\SI{70}{\centi\meter} & & & & & & \\ \hline
+\SI{80}{\centi\meter} & & & & & & \\ \hline
+\SI{90}{\centi\meter} & & & & & & \\ \hline
+\SI{100}{\centi\meter} & & & & & & \\ \hline
+\end{tabular}
+\end{table}
+
+Se deben de presentar cuatro tablas, una para cada ángulo: \ang{10}. \ang{15}, \ang{20} y \ang{25}.
+
+\section{Análisis de resultados.}
+
+Se debe de elaborar una gráfica por cada tabla de distancia y tiempo promedio, de tal manera que en el eje vertical se tenga la distancia y en el eje horizontal, el tiempo.
+
+Los puntos experimentales se deben de marcar, no hay que unirlos.
+
+Con la regla deberás de trazar una recta que se acerque lo más posible a todos los puntos, será un trabajo que hay que realizar con cuidado, ya que habrá algunos puntos que queden por arriba y otros que queden por abajo.
+
+Una vez trazada la recta, hay que calcular la pendiente de la misma, para ello, ocupamos la expresión que ya conocemos:
+\begin{align*}
+m = \dfrac{d_{f} - d_{i}}{t_{f} - t_{i}}
+\end{align*}
+donde $d_{f}$ representa un punto final de la recta, $d_{i}$ corresponde a un punto inicial, para los valores de tiempo, tendemos un tiempo final $t_{f}$ y un tiempo inicial $t_{i}$, respectivamente. El valor de $m$ quedará expresado en \unit{\meter\per\second}, ya que la distancia la hemos expresado en metros.
+
+Los valores de velocidad para cada plano inclinado los presentamos en la siguiente tabla:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| c | c |} \hline
+        Ángulo & Velocidad [\unit{\meter\per\second}] \\ \hline
+        \ang{10} & \\ \hline
+        \ang{15} & \\ \hline
+        \ang{20} & \\ \hline
+        \ang{25} & \\ \hline        
+    \end{tabular}
+\end{table}
+
+\section{Conclusiones.}
+
+Deberás de responder las siguientes preguntas:
+\begin{enumerate}
+\item ¿Se logró el objetivo de la práctica?
+\item ¿La hipótesis planteada se confirma?
+\item ¿Para qué ángulo la velocidad del balín es mayor?
+\end{enumerate}
+Recuerda que debes de extender tus respuestas de manera clara, evitando respuestas breves que no permitan reflejar el trabajo que realizaste.
+
+\end{document}
