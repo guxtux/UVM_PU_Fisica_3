@@ -21,7 +21,7 @@
 \end{tikzpicture}}
 
 
-\title{\Large{Electricidad y Magnetismo} \\ \normalsize{Física III}}
+\title{\Large{Electricidad} \\ \normalsize{Física III}}
 \date{}
 
 \begin{document}
@@ -68,7 +68,7 @@ La electricidad se define como un fenómeno físico que se origina del \textocol
 \end{frame}
 \begin{frame}
 \frametitle{¿Qué es la electricidad?}
-La electricidad es una rama de la Física que estudia todos los \textocolor{ao}{enómenos relacionados con las cargas eléctricas} en reposo o movimiento.
+La electricidad es una rama de la Física que estudia todos los \textocolor{ao}{fenómenos relacionados con las cargas eléctricas} en reposo o movimiento.
 \end{frame}
 \begin{frame}
 \frametitle{Electrostática}
@@ -177,7 +177,7 @@ La experiencia nos dice que los materiales tienen un \textocolor{blue(pigment)}{
 La carga eléctrica de un cuerpo aparece cuando éste \textocolor{burgundy}{pierde} o \textocolor{carmine}{gana} electrones, \pause y se dice que cualquier carga eléctrica de magnitud $q$ es un múltiplo entero de la carga elemental $e$, es decir:
 \pause
 \begin{align*}
-q = n \, e \hspace{1cm} \left[ \unit{\coulomb} \,\, (\text{Coulomb}) \right]
+q = n \, e \hspace{1cm} \left[ \si{\coulomb} \,\, (\text{Coulomb}) \right]
 \end{align*}
 \end{frame}
 \begin{frame}
@@ -213,18 +213,6 @@ Los metales por lo general son buenos conductores de la electricidad.
 \end{figure}
 \end{frame}
 \begin{frame}
-\frametitle{La corriente eléctrica}
-El flujo de las partículas cargadas es lo que se conoce como \textocolor{red}{corriente eléctrica}.
-\end{frame}
-\begin{frame}
-\frametitle{La corriente eléctrica}
-Las partículas cargadas en una cierta dirección de un conductor chocan con los átomos, \pause produciendo una pérdida de energía que se manifiesta en forma de calor.
-\end{frame}
-\begin{frame}
-\frametitle{La resistencia eléctrica}
-Una medida de \textocolor{blue}{oposición} que presentan las partículas cargadas al moverse libremente en una cierta dirección de un material conductor \pause es lo que se conoce como \textocolor{cerise}{resistencia eléctrica}.
-\end{frame}
-\begin{frame}
 \frametitle{Materiales resistivos}
 \begin{figure}
     \centering
@@ -248,6 +236,120 @@ Existen otros tipos de materiales cuyas propiedades son intermedias entre los co
 \begin{frame}
 \frametitle{Base de la electrónica}
 Los materiales semiconductores con mayor utilidad en la electrónica son el silicio y el germanio.
+\end{frame}
+
+\section{Ley de Ohm}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{La corriente}
+
+\begin{frame}
+\frametitle{La corriente eléctrica}
+El flujo de las partículas cargadas es lo que se conoce como \textocolor{red}{corriente eléctrica}.
+\end{frame}
+\begin{frame}
+\frametitle{La unidad de corriente}
+La unidad de corriente eléctrica es el \textocolor{ao}{Ampere}, su símbolo es \si{\ampere}
+\end{frame}
+\begin{frame}
+\frametitle{La corriente eléctrica}
+Las partículas cargadas en una cierta dirección de un conductor chocan con los átomos, \pause produciendo una pérdida de energía que se manifiesta en forma de calor.
+\end{frame}
+
+\subsection{El voltaje}
+
+\begin{frame}
+\frametitle{El voltaje}
+El \textocolor{cobalt}{voltaje}, \pause también conocido como \textocolor{amethyst}{diferencia de potencial eléctrico}.
+\end{frame}
+\begin{frame}
+\frametitle{El voltaje}
+El voltaje se puede ver como la \textocolor{cadmiumgreen}{fuerza impulsora} que permite que la corriente eléctrica fluya a través de los conductores.
+\end{frame}
+\begin{frame}
+\frametitle{El voltaje}
+Sus unidades son los \textocolor{brown(web)}{voltios} y su símbolo es \si{\volt}
+\end{frame}
+
+\subsection{La resistencia}
+
+\begin{frame}
+\frametitle{La resistencia eléctrica}
+Una medida de \textocolor{blue}{oposición} que presentan las partículas cargadas al moverse libremente en una cierta dirección de un material conductor \pause es lo que se conoce como \textocolor{cerise}{resistencia eléctrica}.
+\end{frame}
+\begin{frame}
+\frametitle{Unidades de la resistencia}
+La unidad de la resistencia eléctrica es el \textocolor{carnelian}{Ohm}.
+\\
+\bigskip
+\pause
+Su símbolo es $\Omega$
+\end{frame}
+
+\subsection{Relación entre las variables}
+
+\begin{frame}
+\frametitle{La ley de Ohm}
+La \textocolor{cornellred}{ley de Ohm} fue formulada por el físico alemán George Simon Ohm.
+\end{frame}
+\begin{frame}
+\frametitle{La ley de Ohm}
+En un circuito eléctrico describe la relación entre:
+\pause
+\setbeamercolor{item projected}{bg=corn,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item La corriente eléctrica $(I)$
+\item La diferencia de potencial o voltaje $(V)$
+\item La resistencia eléctrica $(R)$
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{La ley de Ohm}
+La ley de Ohm se expresa matemáticamente mediante la siguiente ecuación:
+\pause
+\begin{align*}
+V = I \, R
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Ejercicios}
+\setbeamercolor{item projected}{bg=denim,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Un tostador eléctrico tiene una resistencia de \SI{30}{\ohm} cuando está caliente. ¿Cuál será la intensidad de la corriente que fluirá al conectarlo a una línea de \SI{120}{\volt}?
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Ejercicios}
+\setbeamercolor{item projected}{bg=denim,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Determina la intensidad de la corriente eléctrica a través de una resistencia de \SI{50}{\ohm} al aplicarle una diferencia de potencial de \SI{120}{\volt}.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Ejercicios}
+\setbeamercolor{item projected}{bg=denim,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Un alambre conductor deja pasar \SI{7}{\ampere} al aplicarle una diferencia de potencial de \SI{110}{\volt}. ¿Cuál es su resistencia?
+\end{enumerate}
 \end{frame}
 
 \section{Plantas generadoras de electricidad}
@@ -279,24 +381,81 @@ Existen diversos tipos de plantas generadoras de electricidad, cada una utilizan
     \includegraphics[scale=1.5]{Imagenes/Planta_Termica_01.png}
 \end{figure}
 \end{frame}
-% Centrales Hidroeléctricas:
+\begin{frame}
+\frametitle{Centrales Hidroeléctricas}
+Aprovechan la energía cinética del agua para hacer girar turbinas y generar electricidad.
+\\
+\bigskip
+\pause
+Pueden ser de embalse o de pasada.
+\end{frame}
+\begin{frame}
+\frametitle{Centrales Hidroeléctrica}
+\vspace*{-1cm}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.35]{Imagenes/Planta_Hidroelectrica.png}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Centrales Nucleares}
+Utilizan la energía liberada en reacciones nucleares para generar calor, que a su vez produce vapor y activa turbinas.
+\end{frame}
+\begin{frame}
+\frametitle{Centrales Nucleares}
+\vspace*{-1cm}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.35]{Imagenes/Planta_Nuclear.jpeg}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Centrales Eólicas}
+Convierten la energía cinética del viento en electricidad mediante aerogeneradores.
+\end{frame}
+\begin{frame}
+\frametitle{Centrales Eólicas}
+\vspace*{-1cm}
+\begin{figure}
+    \centering
+    \includegraphics[scale=1]{Imagenes/Planta_Eolica_01.jpeg}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Centrales Eólicas}
+\vspace*{-1cm}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.3]{Imagenes/Planta_Eolica_02.jpeg}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Centrales Solares}
+Fotovoltaicas: Convierten la luz solar en electricidad utilizando celdas solares.
+\end{frame}
+\begin{frame}
+\frametitle{Centrales Solares}
+\vspace*{-1cm}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.75]{Imagenes/Planta_Solar_01.jpeg}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Centrales Solares}
+\vspace*{-1cm}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{Imagenes/Planta_Solar_02.jpeg}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Centrales de Biomasa}
+Utilizan materiales orgánicos (madera, residuos agrícolas) para generar electricidad a través de procesos de combustión o gasificación.
+\end{frame}
+\begin{frame}
+\frametitle{Centrales Geotérmicas}
+Aprovechan el calor interno de la Tierra para generar vapor y accionar turbinas conectadas a generadores eléctricos.
+\end{frame}
 
-% Aprovechan la energía cinética del agua para hacer girar turbinas y generar electricidad. Pueden ser de embalse o de pasada.
-% Centrales Nucleares:
-
-% Utilizan la energía liberada en reacciones nucleares para generar calor, que a su vez produce vapor y activa turbinas.
-% Centrales Eólicas:
-
-% Convierten la energía cinética del viento en electricidad mediante aerogeneradores.
-% Centrales Solares:
-
-% Fotovoltaicas: Convierten la luz solar en electricidad utilizando celdas solares.
-% Térmicas: Utilizan la radiación solar para calentar un fluido y producir vapor para accionar turbinas.
-% Centrales de Biomasa:
-
-% Utilizan materiales orgánicos (madera, residuos agrícolas) para generar electricidad a través de procesos de combustión o gasificación.
-% Geotérmicas:
-
-% Aprovechan el calor interno de la Tierra para generar vapor y accionar turbinas conectadas a generadores eléctricos.
-% \end{frame}
 \end{document}

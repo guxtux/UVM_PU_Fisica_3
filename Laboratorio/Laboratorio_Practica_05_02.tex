@@ -1,0 +1,80 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{calc}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\newlength{\depthofsumsign}
+\setlength{\depthofsumsign}{\depthof{$\sum$}}
+\newcommand{\nsum}[1][1.4]{% only for \displaystyle
+    \mathop{%
+        \raisebox
+            {-#1\depthofsumsign+1\depthofsumsign}
+            {\scalebox
+                {#1}
+                {$\displaystyle\sum$}%
+            }
+    }
+}
+
+\title{\vspace*{-2cm} Reporte Práctica 5 - Electrostática \\  Física III\vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\textbf{Importante:}
+\begin{enumerate}
+\item El reporte completo debe de estar en el formato de Word.
+\item Las tablas que presentes, deben de elaborarse en Word, no se evaluarán reportes que presenten las tablas como imágenes del cuaderno o de hojas.
+\item El reporte es individual.
+\end{enumerate}
+
+\section{Resultados.}
+
+Para este apartado responde las siguientes preguntas:
+\begin{enumerate}[label=\roman*)]
+\item El generador de Van de Graff que se ocupó en el Laboratorio, ¿cómo funciona? Describe lo que se tuvo que realizar para que el equipo proporcionara una carga eléctrica.
+\item De las dos máquinas de Whimshurt que se ocuparon en el Laboratorio, ¿funcionan de la misma manera que encontraste en el marco teórico?
+\end{enumerate}
+
+\section{Análisis de resultados.}
+
+Responde lo más claro las siguientes preguntas:
+\begin{enumerate}[label=\alph*)]
+\item Cuando el generador de Van de Graff ya estaba funcionando y al acercar la esfera pequeña, ¿por qué se presentó la chispa entre las esferas?
+\item En el momento en el que el Profesor acercó la mano extendida sobre la superficie de la esfera, ¿por qué se hizo una chispa?
+\item Cuando el/la voluntario/a tocó la esfera del generador apagado, y luego de que se encendió, ¿por qué se le levantó el cabello?
+\item ¿De qué manera llegó y se distribuyó la carga eléctrica en el cabello?
+\item Si alguien hubiera tocado el brazo opuesto del voluntario/a mientras estaba funcionando el generador de Van de Graff, ¿se hubiera presentado una chispa?
+\item Con la máquina de Whimshurt, consideras que la \enquote{intesidad} de la chispa que se vio ¿es mayor o menor en comparación con la chispa de la máquina de Whimshurt? ¿Por qué?
+\item Al separar los postes de la máquina de Whimshurt fue notorio que no se presentaba la chispa, ¿de qué manera podríamos tener una chispa sin que la distancia entre los postes sea un impedimento?
+\end{enumerate}
+
+\section{Conclusiones.}
+
+Para este apartado si tomaste evidencia con fotos, podrás incluirlas y responder de manera clara y no con monosílabos:
+\begin{enumerate}[label=\Roman*)]
+\item ¿Se logró el objetivo de la práctica?
+\item ¿La hipótesis se corrobora como cierta? Es decir, ¿se logró mediante fricción obtener carga eléctrica negativa? ¿Cómo sabemos que es carga negativa?
+\item Si por fricción obtenemos carga eléctrica a partir de un material (piensa en el generador de Van de Graff), éste se hace más positivo, es decir, tiene una deficiencia de electrones y una ganancia de carga positiva, ¿de qué manera el material recupera su estado de carga neutra?
+\end{enumerate}
+
+\end{document}
