@@ -1,0 +1,49 @@
+\documentclass[14pt]{beamer}
+\usepackage{./Estilos/BeamerUVM}
+\usepackage{./Estilos/ColoresLatex}
+\input{Preambulos/preambulo_Beamer_Berlin_beaver}
+% \usefonttheme{serif}
+\usepackage[clock]{ifsym}
+\DeclareSIUnit\erg{erg}
+\DeclareSIUnit[number-unit-product = {\,}]\cal{cal}
+
+\sisetup{per-mode=symbol}
+\resetcounteronoverlays{saveenumi}
+
+% Macro para agregar el logo de UVM en cada slide de la presentación
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\coordinate (logo) at ([xshift=-1.5cm,yshift=-0.8cm]current page.north east);
+% \fill[devryblue] (logo) circle (.9cm);
+% \clip (logo) circle (.75cm);
+\node at (logo) {\includegraphics[width=2.1cm]{Imagenes/logo_UVM.png}};
+\end{tikzpicture}}
+
+
+\title{\Large{Transformaciones de Energía} \\ \normalsize{Física III}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Contenido}
+\frame[allowframebreaks]{\frametitle{Contenido} \tableofcontents[currentsection, hideallsubsections]}
+
+\section{Transformaciones de energía}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Energía constante}
+
+\begin{frame}
+\frametitle{¿Qué son las trasnformaciones?}
+Las \textocolor{carnelian}{transformaciones de energía} se refieren a los cambios en la forma de la energía en un sistema.
+\end{frame}
+\begin{frame}
+\frametitle{Conservación de energía}
+La energía no se crea ni se destruye, pero puede cambiar de una forma a otra.
+\end{frame}
+
+
+
+
+\end{document}

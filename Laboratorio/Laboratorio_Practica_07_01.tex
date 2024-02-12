@@ -1,0 +1,159 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Práctica 7 - Medición de temperatura \\  Física III \vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+\renewcommand{\tablename}{Tabla}
+
+\section{Datos para la práctica.}
+
+\begin{itemize}
+\itemsep0em 
+\item  \textbf{Práctica:} 7.
+\item \textbf{Unidad:} Tres.
+\item \textbf{Temática:} Calor, Energía y Trabajo.
+\item \textbf{Nombre de la práctica:} Medición de temperatura.
+\item \textbf{Número de sesiones que se requieren para la práctica:} Tres.
+\item \textbf{Objetivo general: } Determinar la relación entre el ascenso y descenso de temperatura como función del tiempo.
+\item \textbf{Hipótesis: } El ascenso y descenso de la temperatura como función del tiempo es lineal. 
+\end{itemize}
+
+\section{Planteamiento del problema.} 
+
+\enquote{La sensación de calor o de frío está estrechamente relacionada con nuestra vida cotidiana, sin embargo, el calor es algo más que eso.}
+
+Es común utilizar las palabras calor y temperatura como si fueran sinónimos, pero no lo son. Calor es la energía que se transmite de un cuerpo a otro, en virtud de una diferencia de temperatura entre ellos. Temperatura es el promedio de la energía cinética de todas las moléculas que conforman un cuerpo.
+
+La temperatura de un cuerpo depende del tipo de material de que está formado y de la cantidad de masa que tenga, es por eso que, objetos sujetos a las mismas condiciones, pueden tener diferentes temperaturas.
+
+\section{Marco teórico.}
+
+\begin{enumerate}[label=\alph*)]
+\item ¿Qué es el calor?
+\item ¿Qué es la temperatura?
+\item ¿Cuántas escalas de temperatura se tienen?
+\item ¿Cuáles son los puntos de ebullición y de fusión del agua, del agua salina y del alcohol etílico?
+\item ¿De qué manera influye la altura sobre el nivel del mar con el punto de ebullición del agua?
+\item ¿Qué es una solución sobresaturada?
+\item Para una medida de \SI{60}{\milli\liter} de agua, ¿qué cantidad de sal se requiere para tener una solución saturada?
+\end{enumerate}
+
+\section{Material.}
+
+\begin{enumerate}[label=\roman*)]
+\begin{minipage}[t]{8cm}
+\item Vaso de precipitados de 100 ml.
+\item 2 Termómetros.
+\item 1 Parrilla eléctrica.
+\item 1 Rejilla de asbesto.
+\item Cronómetro.
+\end{minipage}
+\hspace{0.75cm}
+\begin{minipage}[t]{4.5cm}
+\item Agua.
+\item Sal.
+\item Carbonato de sodio.
+\item Par de guantes.
+\end{minipage}
+\end{enumerate}
+
+
+\section{Montaje experimental.}
+
+\subsection{Primera solución: agua.}
+
+\begin{enumerate}
+\item Atiende las indicaciones del Profesor para el manejo cuidadoso de la parrilla eléctrica.
+\item Vierte \SI{60}{\milli\liter} de agua en uno de los vasos de precipitado.
+\item Registra la temperatura inicial del agua: \rule{2cm}{0.1mm} en \si{\degreeCelsius}.
+\item Coloca el vaso de precipitado con agua y con el termómetro sobre la parrilla. Al momento de encender la parrilla, inicia el registro de tiempo con el cronómetro.
+\item Cada \num{15} segundos anota el valor de temperatura, no detengas el cronómetro. Se recomienda que anotes los datos en una tabla como la siguiente:
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c |} \hline
+Temperatura [\si{\degreeCelsius}] & tiempo [\si{\second}] \\ \hline
+ & \\ \hline
+ & \\ \hline
+ & \\ \hline
+\vdots & \\ \hline
+\end{tabular}
+\caption{Registro de ascenso de temperatura.}
+\end{table}
+\item Realiza el registro hasta llegar al punto de ebullición del agua.
+\item Apaga la parrilla. Coloca la rejilla de asbesto sobre la mesa, con cuidado y con los guantes puestos coloca el vaso de precipitado con el agua caliente y el termómetro sobre la rejilla.
+\item Ahora deberás de medir la temperatura del agua durante el descenso. Registra la temperatura cada \num{15} segundos hasta llegar a la temperatura inicial.
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c |} \hline
+Temperatura [\si{\degreeCelsius}] & tiempo [\si{\second}] \\ \hline
+ & \\ \hline
+ & \\ \hline
+ & \\ \hline
+\vdots & \\ \hline
+\end{tabular}
+\caption{Registro de descenso de temperatura.}
+\end{table}
+\end{enumerate}
+
+\subsection{Segunda solución: agua y sal.}
+
+\begin{enumerate}
+\item Vierte \SI{60}{\milli\liter} de agua en uno de los vasos de precipitado.
+\item Vacia sal en el vaso con agua y revuelve hasta conseguir una solución sobresaturada.
+\item Registra la temperatura inicial del agua: \rule{2cm}{0.1mm} en \si{\degreeCelsius}.
+\item Repite el procedimiento de medición del ascenso y descenso de temperatura del agua con sal cada \num{15} segundos.
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c |} \hline
+Temperatura [\si{\degreeCelsius}] & tiempo [\si{\second}] \\ \hline
+ & \\ \hline
+ & \\ \hline
+ & \\ \hline
+\vdots & \\ \hline
+\end{tabular}
+\caption{Registro de ascenso de temperatura para la solución de agua con sal.}
+\end{table}
+\item Realiza el registro hasta llegar al punto de ebullición del agua.
+\item Apaga la parrilla. Coloca la rejilla de asbesto sobre la mesa, con cuidado y con los guantes puestos coloca el vaso de precipitado con el agua caliente y el termómetro sobre la rejilla.
+\item Ahora deberás de medir la temperatura del agua durante el descenso. Registra la temperatura cada \num{15} segundos hasta llegar a la temperatura inicial.
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c |} \hline
+Temperatura [\si{\degreeCelsius}] & tiempo [\si{\second}] \\ \hline
+ & \\ \hline
+ & \\ \hline
+ & \\ \hline
+\vdots & \\ \hline
+\end{tabular}
+\caption{Registro de descenso de temperatura para la solución de agua con sal.}
+\end{table}
+\end{enumerate}
+
+\section{Manejo y disposicón de desechos.}
+
+Considera que en el apartado de manejo y disposición de desechos, se indicará que el agua utilizada se vertió en la tarja del Laboratorio, que el papel que se ocupó para secar los vasos de precipitado se colocaron en el bote correspondiente de papel.
+
+A partir de esta practica, se deberá de señalar el manejo de todo aquello que se haya usado en la clase: para limpiar la mesa de trabajo, recortar hojas del cuaderno, etc.
+
+\end{document}

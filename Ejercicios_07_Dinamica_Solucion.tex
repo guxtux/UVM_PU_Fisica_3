@@ -1,0 +1,261 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\renewcommand*{\theenumi}{\thesection.\arabic{enumi}}
+\renewcommand*{\theenumii}{\theenumi.\arabic{enumii}}
+
+\title{\vspace*{-2cm} Ejercicios de repaso - Solución \\  Evaluación Continua - Física III\vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Segunda ley de Newton.}
+
+Recordemos que las unidades del Newton deben de expresarse en las correspondientes unidades de masa y aceleración:
+\begin{align*}
+\SI{1}{\newton} = \SI[per-mode=fraction]{1}{\kilo\gram\meter\per\square\second}
+\end{align*}
+
+\begin{enumerate}
+\item Determina la fuerza que se necesita aplicar a un camión de \SI{2800}{\kilo\gram} para que éste se acelere \SI{6.5}{\meter\per\square\second}
+
+\begin{minipage}[t]{0.3\linewidth}
+\textbf{Datos:}
+\begin{align*}
+m &= \SI{2800}{\kilo\gram} \\
+a &= \SI{6.5}{\meter\per\square\second} \\
+F &= \, ?
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.3\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+F = m \, a
+\end{align*}
+\end{minipage}
+
+\textbf{Sustitución:}
+\begin{align*}
+F =  (\SI{2800}{\kilo\gram}) \left( \SI[per-mode=fraction]{6.5}{\meter\per\square\second} \right) = \SI[per-mode=fraction]{18200}{\kilo\gram\meter\per\square\second} = \SI{18200}{\newton}
+\end{align*}
+\item La fuerza resultante de las fuerzas que actúan sobre un cuerpo de \SI{70}{\kilo\gram}, es de \SI{123}{\newton}. ¿Cuál es el valor de la aceleración que posee este cuerpo?
+
+\begin{minipage}[t]{0.3\linewidth}
+\textbf{Datos:}
+\begin{align*}
+m &= \SI{70}{\kilo\gram} \\
+F &= \SI{123}{\newton} \\
+a &= \, ?
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.3\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+F = m \, a \hspace{0.4cm} \Rightarrow \hspace{0.4cm} a = \dfrac{F}{m}
+\end{align*}
+\end{minipage}
+
+\textbf{Sustitución:}
+\begin{align*}
+a = \dfrac{\SI{123}{\newton}}{\SI{70}{\kilo\gram}} = \num{1.75} \, \dfrac{\displaystyle \si[per-mode=fraction]{\kilo\gram\meter\per\square\second}}{\si{\kilo\gram}} = \num{1.75} \, \dfrac{\displaystyle \si[per-mode=fraction]{\kilo\gram\meter}}{\si{\kilo\gram\square\second}} = \SI[per-mode=fraction]{1.75}{\meter\per\square\second}
+\end{align*}
+
+\item ¿Cuál es la masa de un cuerpo si al aplicarle una fuerza de \SI{750}{\newton} adquiere una aceleración de \SI{9.3}{\meter\per\square\second}?
+
+\begin{minipage}[t]{0.3\linewidth}
+\textbf{Datos:}
+\begin{align*}
+F &= \SI{750}{\newton} \\
+a &= \SI{9.3}{\meter\per\square\second} \\
+m &= \, ?
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.3\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+F = m \, a \hspace{0.35cm} \Rightarrow \hspace{0.35cm} m = \dfrac{F}{a}
+\end{align*}
+\end{minipage}
+
+\textbf{Sustitución:}
+\begin{align*}
+m = \dfrac{\SI{750}{\newton}}{\displaystyle \SI[per-mode=fraction]{9.3}{\meter\per\square\second}} = \num{80.64} \, \dfrac{\displaystyle \si[per-mode=fraction]{\kilo\gram\meter\per\square\second}}{\displaystyle \si[per-mode=fraction]{\meter\per\square\second}} = \num{80.64} \, \dfrac{\displaystyle \si[per-mode=fraction]{\kilo\gram\meter\square\second}}{\si{\meter\square\second}} = \SI{80.64}{\kilo\gram}
+\end{align*}
+\item Qué fuerza ejerce el motor de un automóvil de \SI{1300}{\kilo\gram} para detenerlo completamente después de \SI{7}{\second} si iba a una velocidad de \SI{65}{\kilo\meter\per\hour}?
+\end{enumerate}
+
+\begin{minipage}[t]{0.3\linewidth}
+\textbf{Datos:}
+\begin{align*}
+m &= \SI{1300}{\kilo\gram} \\
+t &= \SI{7}{\second} \\
+v_{i} &= \SI{65}{\kilo\meter\per\hour} \\
+v_{f} &= \SI{0}{\kilo\meter\per\hour} \\
+F &= \, ?
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.3\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+a &= \dfrac{v_{f} - v_{i}}{t} \\[0.5em]
+F &= m \, a
+\end{align*}
+\end{minipage}
+
+\vspace*{0.4cm}
+Antes de utilizar la expresión, debemos de expresar la velocidad en \si{\meter\per\second}:
+\begin{align*}
+\SI[per-mode=fraction]{65}{\kilo\meter\per\hour} &= \left( \dfrac{\SI{1000}{\meter}}{\SI{1}{\kilo\meter}} \right) \left( \dfrac{\SI{1}{\hour}}{\SI{3600}{\second}} \right) = \SI[per-mode=fraction]{18.05}{\meter\per\second} \\[0.5em]
+\SI[per-mode=fraction]{0}{\kilo\meter\per\hour} &= \SI[per-mode=fraction]{0}{\meter\per\second}
+\end{align*}
+\textbf{Sustitución:}
+\begin{align*}
+a &= \dfrac{\displaystyle \SI[per-mode=fraction]{0}{\meter\per\second} - \SI[per-mode=fraction]{18.05}{\meter\per\second}}{\SI{7}{\second}} = \dfrac{\displaystyle - \SI[per-mode=fraction]{18.05}{\meter\per\second}}{\SI{7}{\second}} = - \SI[per-mode=fraction]{2.57}{\meter\per\square\second}
+\end{align*}
+El signo negativo nos indica que el automóvil va desacelerando y llega al alto total, para ocupar este valor de aceleración en el cálculo de la fuerza, podemos usar el valor con signo positivo.
+\begin{align*}
+F = (\SI{1300}{\kilo\gram}) \left( \SI[per-mode=fraction]{2.57}{\meter\per\square\second} \right) = \SI[per-mode=fraction]{3353.17}{\kilo\gram\meter\per\square\second} = \SI{3353.17}{\newton}
+\end{align*}
+\section{Ley de gravitación universal.}
+
+\begin{enumerate}
+\item Determina la fuerza gravitacional entre la Tierra y la Luna, sabiendo que sus masas son \SI{5.98d24}{\kilo\gram} y \SI{7.35d22}{\kilo\gram}, respectivamente, y están separadas una distancia de \SI{3.8d8}{\meter}.
+
+\begin{minipage}[t]{0.5\linewidth}
+\textbf{Datos:}
+\begin{align*}
+m_{1} &= \SI{5.98d24}{\kilo\gram} \\
+m_{2} &= \SI{7.35d22}{\kilo\gram} \\
+r &= \SI{3.8d8}{\meter} \\
+G &= \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\per\square\kilo\gram} \\
+F &= \, ?
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.3\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+F = \dfrac{G \, m_{1} \, m_{2}}{r^{2}}
+\end{align*}
+\end{minipage}
+
+\textbf{Sustitución:}
+\begin{align*}
+F &= \dfrac{\left( \displaystyle \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\per\square\kilo\gram} \right) \left( \SI{5.98d24}{\kilo\gram} \right) \left( \SI{7.35d22}{\kilo\gram} \right) }{\left( \SI{3.8d8}{\meter} \right)^{2} } = \\[0.75em]
+F &= \dfrac{ \displaystyle \SI[per-mode=fraction]{2.9316d37}{\newton\square\meter\square\kilo\gram\per\square\kilo\gram}}{\SI{1.444d17}{\square\meter}} = \\[0.75em]
+F &= \num{2.0301d20} \, \dfrac{\si{\newton\square\meter\square\kilo\gram}}{\si{\square\meter\square\kilo\gram}}  = \\[0.75em]
+F &= \SI{2.0301d20}{\newton}
+\end{align*}
+
+\item Calcula la distancia promedio entre la Tierra y el Sol, cuyas masas son \break \hfill \SI{5.98d24}{\kilo\gram} y \SI{2d30}{\kilo\gram}, respectivamente, si entre ellos existe una fuerza gravitacional de \SI{3.6d22}{\newton}.
+
+\begin{minipage}[t]{0.5\linewidth}
+\textbf{Datos:}
+\begin{align*}
+m_{1} &= \SI{5.98d24}{\kilo\gram} \\
+m_{2} &= \SI{2d30}{\kilo\gram} \\
+F &= \SI{3.6d22}{\newton} \\
+G &= \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\per\square\kilo\gram} \\
+r &= \, ? 
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.3\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+&F = \dfrac{G \, m_{1} \, m_{2}}{r^{2}} \\[0.5em]
+&\Rightarrow \, r^{2} = \dfrac{G \, m_{1} \, m_{2}}{F} \\[0.5em]
+&\Rightarrow \, r = \sqrt{\dfrac{G \, m_{1} \, m_{2}}{F}}
+\end{align*}
+\end{minipage}
+
+\textbf{Sustitución:}
+\begin{align*}
+r &= \sqrt{\dfrac{\left( \displaystyle \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\per\square\kilo\gram} \right) \left( \SI{5.98d24}{\kilo\gram} \right) \left( \SI{2d30}{\kilo\gram} \right)}{\SI{3.6d22}{\newton}}} \\[1em]
+r &= \sqrt{\dfrac{\displaystyle \SI[per-mode=fraction]{7.9773d44}{\newton\square\meter\square\kilo\gram\per\square\kilo\gram}}{\SI{3.6d22}{\newton}}} = \sqrt{\dfrac{\SI[per-mode=fraction]{7.9773d44}{\newton\square\meter}}{\SI{3.6d22}{\newton}}} \\[1em]
+r &= \sqrt{\SI{2.2159d22}{\square\meter}} \\[1em]
+r &= \SI{1.4885d11}{\meter}
+\end{align*}
+
+\item Un cuerpo de \SI{60}{\kilo\gram} se encuentra a una distancia de \SI{3.5}{\meter} de otro cuerpo, de manera que entre ellos se produce una fuerza de \SI{6.5d-7}{\newton}. Calcula la masa del otro cuerpo.
+
+\begin{minipage}[t]{0.5\linewidth}
+\textbf{Datos:}
+\begin{align*}
+m_{1} &= \SI{60}{\kilo\gram} \\
+r &= \SI{3.5}{\meter} \\
+F &= \SI{6.5d-7}{\newton} \\
+G &= \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\per\square\kilo\gram} \\
+m_{2} &= \, ?
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.3\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+&F = \dfrac{G \, m_{1} \, m_{2}}{r^{2}} \\[0.5em]
+&\Rightarrow \, F \, r^{2} = G \, m_{1} \, m_{2} \\[0.5em]
+&\Rightarrow \, m_{2} = \dfrac{F \, r^{2}}{G \, m_{1}}
+\end{align*}
+\end{minipage}
+
+\textbf{Expresión:}
+\begin{align*}
+m_{2} &= \dfrac{\left( \SI{6.5d-7}{\newton} \right) \left( \SI{3.5}{\meter} \right)^{2} }{\left( \displaystyle \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\per\square\kilo\gram}\right) \left(  \SI{60}{\kilo\gram} \right)} = \\[1em]
+m_{2} &= \dfrac{\left( \SI{6.5d-7}{\newton} \right) \left( \SI{12.25}{\square\meter} \right) }{\left( \displaystyle \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\per\square\kilo\gram}\right) \left(  \SI{60}{\kilo\gram} \right)} = \\[1em]
+m_{2} &= \dfrac{ \SI{7.9625d-6}{\newton\square\meter}}{\displaystyle \SI[per-mode=fraction]{4.002d-9}{\newton\square\meter\kilo\gram\per\square\kilo\gram} } = \\[1em]
+m_{2} &= \num{1989.63} \, \dfrac{\si{\newton\square\meter\square\kilo\gram}}{\si{\newton\square\meter\kilo\gram}} = \SI{1989.63}{\kilo\gram}
+\end{align*}
+\item Calcula la distancia a la que se deben de colocar dos masas iguales de \SI{1}{\kilo\gram} para que se atraigan con una fuerza de \SI{1}{\newton}.
+
+\begin{minipage}[t]{0.3\linewidth}
+\textbf{Datos:}
+\begin{align*}
+m_{1} &= \SI{1}{\kilo\gram} \\
+m_{2} &= \SI{1}{\kilo\gram} \\
+F &= \SI{1}{\newton} \\
+r &= \, ?
+\end{align*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[t]{0.3\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+&F = \dfrac{G \, m_{1} \, m_{2}}{r^{2}} \\[0.5em]
+&\Rightarrow \, r = \sqrt{\dfrac{G \, m_{1} \, m_{2}}{F}}
+\end{align*}
+\end{minipage}
+\end{enumerate}
+
+\textbf{Expresión:}
+\begin{align*}
+r &= \sqrt{\dfrac{\left( \displaystyle \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\per\square\kilo\gram} \right) \left( \SI{1}{\kilo\gram} \right) \left( \SI{1}{\kilo\gram} \right)}{\SI{1}{\newton}}} \\[1em]
+r &= \sqrt{\dfrac{\displaystyle \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\square\kilo\gram\per\square\kilo\gram}}{\SI{1}{\newton}}} = \sqrt{\dfrac{\SI[per-mode=fraction]{6.67d-11}{\newton\square\meter}}{\SI{1}{\newton}}} \\[1em]
+r &= \sqrt{\SI{6.67d-11}{\square\meter}} \\[1em]
+r &= \SI{8.1670d-6}{\meter}
+\end{align*}
+
+\end{document}
