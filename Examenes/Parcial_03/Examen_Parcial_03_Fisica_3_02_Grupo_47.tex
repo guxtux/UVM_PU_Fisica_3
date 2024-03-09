@@ -1,0 +1,274 @@
+\documentclass[12pt, letter]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{pdfpages}
+
+% \renewcommand{\questionlabel}{\thequestion}
+\decimalpoint
+
+\setlength{\belowdisplayskip}{-0.5pt}
+
+\usepackage{tasks}
+\settasks{
+    label=\Alph*), 
+    label-align=left,
+    item-indent={20pt}, 
+    column-sep={4pt},
+    label-width={16pt},
+}
+
+\newcommand{\Fahrenheit}[1]{${#1}^{\circ} \, \text{F}$}
+
+\sisetup{per-mode=symbol}
+\footer{}{\thepage}{}
+
+\begin{document}
+\includepdf[pages={1}]{Caratula_Examen_Parcial_03_PU_Fisica_3_02_Grupo_47.pdf}
+
+\newpage
+
+\begin{questions}
+    \section{(2 puntos) Dinámica.}
+
+    \question \textbf{(1 punto)} La segunda ley de Newton relaciona la fuerza de manera directamente proporcional con dos cantidades:
+    \begin{multicols}{2}
+    \begin{tasks}
+        \task Aceleración y distancia.
+        \task Masa y peso.
+        \task Masa y aceleración.
+        \task Masa y velocidad.
+    \end{tasks}
+    \end{multicols}
+    \question \textbf{(1 punto)} \label{Problema_01} \textbf{Problema de ejecución: } Calcula la distancia a la que se deben de colocar una masa de \SI{15000}{\kilo\gram} y otra de \SI{25000}{\kilo\gram} para que se atraigan con una fuerza de \SI{5d-5}{\newton}.
+    \begin{tasks}(4)
+        \task $\SI{500.25}{\meter}$
+        \task $\SI{250.25}{\meter}$
+        \task $\SI{1000.00}{\meter}$
+        \task $\SI{258.2}{\meter}$
+    \end{tasks}
+    
+    \section{(6 puntos) Calor, Trabajo y Energía.}
+    
+    \question\textbf{(1 punto)} En un problema de energía cinética se nos pide obtener la masa del objeto, ¿qué expresión es la que debemos de utilizar?
+    \begin{tasks}(4)
+        \task $m = \dfrac{v^{2}}{2 \, E_{k}}$
+        \task $m = \dfrac{2 \, E_{k}}{v^{2}}$
+        \task $m = \dfrac{2}{E_{k} \, v^{2}}$
+        \task $m = \dfrac{E_{k}}{2 \, v^{2}}$
+    \end{tasks}
+    \question\textbf{(1 punto)} Es la capacidad de un sistema físico para realizar un trabajo:
+    \begin{tasks}(4)
+        \task Potencia.
+        \task Movimiento.
+        \task Energía.
+        \task Fuerza.
+    \end{tasks}
+    \question\textbf{(1 punto)} La energía total de un sistema es:
+    \begin{tasks}
+        \task La diferencia de la energía potencial y la energía cinética.
+        \task El producto de la energía potencial y la energía térmica.
+        \task La suma de la energía potencial y la energía eléctrica.
+        \task La suma de la energía potencial y la energía cinética.
+    \end{tasks}
+    \question\textbf{(1 punto)} \rule{2cm}{0.1mm} es una forma de energía que se transfiere entre dos sistemas (o entre partes de un sistema) debido a \rule{2cm}{0.1mm}.
+    \begin{tasks}
+        \task El calor - una diferencia de temperatura.
+        \task La energía cinética - al incremento de calor.
+        \task El calor - una suma de temperatura.
+        \task La energía cinética - a un descenso de temperatura.
+    \end{tasks}
+    \question\textbf{(1 punto)} El punto de fusión del metano es de \SI{-182.5}{\degreeCelsius}. ¿Cuánto equivale esa temperatura en grados Fahrenheit?
+    \begin{tasks}(4)
+        \task \Fahrenheit{541.3}
+        \task \Fahrenheit{-300.6}
+        \task \Fahrenheit{-296.5}
+        \task \Fahrenheit{202.5}
+    \end{tasks}
+    \question\textbf{(1 punto)} En la siguiente figura se presentan los mecanismos de transferencia de calor, identifica cada letra de la figura con el inciso correspondiente de cada mecanismo.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.2]{Transferencia_Calor_01.jpg}
+    \end{figure}
+    \begin{multicols}{4}
+    \begin{enumerate}[label=\Roman*)]
+        \item Ebullición.
+        \item Convección.
+        \item Conducción.
+        \item Radiación.
+    \end{enumerate}
+    \end{multicols}
+    \begin{tasks}
+        \task A - IV, B - I, C - II
+        \task A - III, B - II, C - I
+        \task A - I, B - II, C - III
+        \task A - III, B - II, C - IV
+    \end{tasks}
+
+    \section{(8 puntos) Electricidad.}
+
+    \question\textbf{(1 punto)} \label{Problema_02} \textbf{Ejercicio de ejecución: } Determina la intensidad de la corriente eléctrica a través de una resistencia de \SI{2}{\kilo\ohm} al aplicarle una diferencia de potencial de \SI{300}{\volt}.
+    \begin{tasks}(4)
+        \task \SI{0.25}{\ampere}
+        \task \SI{0.15}{\ampere}
+        \task \SI{1.0}{\ampere}
+        \task \SI{1.5}{\ampere}
+    \end{tasks}
+    \question\textbf{(1 punto)} Relaciona las unidades de las siguientes cantidades, una columna con la otra.
+    \\
+    \begin{minipage}[t]{0.4\linewidth}
+        \begin{enumerate}[label=\arabic*)]
+            \item Corriente.
+            \item Resistencia.
+            \item Voltaje.
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\linewidth}
+        \begin{enumerate}[label=\alph*)]
+            \item Ohm (\si{\ohm})
+            \item Tesla (T)
+            \item Ampere (\si{\ampere})
+            \item Volt (\si{\volt})
+        \end{enumerate}
+    \end{minipage}
+    \begin{tasks}(4)
+        \task 1-d, 2-a, 3-c
+        \task 1-a, 2-d, 3-c
+        \task 1-a, 2-c, 3-b
+        \task 1-c, 2-a, 3-d
+    \end{tasks}
+    \question\textbf{(1 punto)} El flujo de las partículas cargadas en un conductor es lo que se conoce como \rule{2cm}{0.1mm}.
+    \begin{tasks}(4)
+        \task Corriente.
+        \task Potencia.
+        \task Voltaje.
+        \task Resistencia.
+    \end{tasks}
+
+    \newpage
+
+    \question\textbf{(1 punto)} Por experiencia sabemos que los materiales tienen un equilibrio en su carga eléctrica, es decir, son \rule{2cm}{0.1mm}.
+    \begin{tasks}(4)
+        \task Negativos.
+        \task Neutros.
+        \task Positivos.
+        \task Aislantes.
+    \end{tasks}
+    \question\textbf{(1 punto)} Son aquellas plantas que generan electricidad por medio de la energía cinética de un volumen de agua:
+    \begin{tasks}(4)
+        \task Eólicas.
+        \task Térmicas.
+        \task Nucleares.
+        \task Hidroeléctricas.
+    \end{tasks}
+    \question\textbf{(1 punto)} La capacidad de transmisión de energía eléctrica de una línea se determina por \rule{2cm}{0.1mm} de los conductores y \rule{2cm}{0.1mm} entre las torres.
+    \begin{multicols}{2}
+    \begin{tasks}
+        \task la densidad - la forma.
+        \task el diámetro - la altura.
+        \task la capacidad de carga - la distancia.
+        \task el material - la red.
+    \end{tasks}
+    \end{multicols}
+    \question\textbf{(1 punto)} Nombre del científico a quien se le asocia el principio de inducción por el cual la energía mecánica de un generador se transforma en energía eléctrica.
+    \begin{tasks}(4)
+        \task Faraday.
+        \task Raleigh.
+        \task Fermat.
+        \task Ampere.
+    \end{tasks}
+    \question\textbf{(1 punto)} La ley de inducción electromagnética establece que la variación \rule{2cm}{0.1mm} en una bobina induce \rule{2cm}{0.1mm}
+    \begin{tasks}
+        \task de la energía potencial - una corriente eléctrica.
+        \task del flujo magnético - una corriente eléctrica.
+        \task del flujo cinético - una corriente eléctrica.
+        \task del flujo eléctrico - una intensidad magnética.
+    \end{tasks}
+    
+    \section{(4 puntos) Transferencia de energía.}
+
+    \question \textbf{(1 punto)} La eficiencia de una máquina (expresada en porcentaje) se define como:
+    \begin{tasks}(4)
+        \task $\eta = W_{e} \cdot W_{s}$
+        \task $\eta = \dfrac{W_{s}}{W_{e}}$
+        \task $\eta = (W_{e})^2 (W_{s})^2$
+        \task $\eta = \dfrac{W_{e}}{W_{s}}$
+    \end{tasks}
+    \question \textbf{(1 punto)} La eficiencia de una máquina ideal es:
+    \begin{tasks}(4)
+        \task $\eta < 100 \%$
+        \task $\eta > 100 \%$
+        \task $\eta = 100 \%$
+        \task $\eta = 0 \%$
+    \end{tasks}
+    \question \textbf{(1 punto)} Las máquinas reales experimentan pérdidas de energía, que en conformidad con la ley de conservación de energía, a menudo \rule{2cm}{0.1mm}
+    \begin{multicols}{2}
+    \begin{tasks}
+        \task se transforma en electricidad.
+        \task aumentan su energía potencial.
+        \task incrementan su velocidad angular.
+        \task se disipan en forma de calor.
+    \end{tasks}
+    \end{multicols}
+    \question \textbf{(1 punto)} Una planta hidroeléctrica transforma la energía \rule{2cm}{0.1mm} del agua en energía eléctrica.
+    \begin{tasks}(4)
+        \task potencial.
+        \task cinética.
+        \task nuclear.
+        \task eólica.
+    \end{tasks}
+    % \question Un aerogenerador transforma la energía \rule{2cm}{0.1mm} del viento en energía eléctrica.
+    % \begin{tasks}(4)
+    %     \task cinética.
+    %     \task solar.
+    %     \task calorífica.
+    %     \task potencial.
+    % \end{tasks}
+\end{questions}
+
+\vspace{1cm}
+
+\textbf{\huge{Formulario.}}
+\begin{table}[H]
+    \centering
+    \setlength{\tabcolsep}{40pt}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{c  c}
+        \multicolumn{2}{c}{Dinámica} \\
+        $F = m \cdot a$ & $F = G \, \dfrac{m_{1} \cdot m_{2}}{r^{2}}$ \\
+        $G = \displaystyle \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\per\square\kilo\gram}$ &  \\ \hline
+        \multicolumn{2}{c}{Electricidad} \\
+        $q = n \cdot e$ & $e = \SI{1.6d-19}{\coulomb}$ \\
+        $V = I \cdot R$ & \\
+        \hline
+        \multicolumn{2}{c}{Calor, energía y trabajo} \\
+        $T = F \cdot d$ & $g = \displaystyle \SI{9.81}{\meter\per\square\second}$ \\
+        $E_{k} = \dfrac{1}{2} \, m \, v^{2}$ & $E_{p} = m \, g \, h$ \\
+        $\unit{\degreeCelsius} = \dfrac{5}{9} \left( ^{\circ}\text{F} - 32 \right)$ & $^{\circ}\text{F} = \dfrac{9}{5} \, \unit{\degreeCelsius} + 32$ \\
+        $K = \unit{\degreeCelsius} + 273.15$ & $\unit{\degreeCelsius} = K - 273.15$ \\
+        $R = \, ^{\circ}\text{F} + 460$ & \\
+    \end{tabular}
+    \end{table}
+
+En este espacio deberás de incluir el desarrollo completo de los Problemas de Ejecución. El problema se califica de la siguiente manera: \textbf{a) Datos: 0.25 puntos}, \textbf{b) Expresión(es): 0.25 puntos}, \textbf{c) Sustitución: 0.25 puntos} y \textbf{d) Manejo de unidades: 0.25 puntos}.
+
+\vspace*{0.5cm}
+Solución al Problema de Ejecución \ref{Problema_01}:
+
+\vspace*{3.5cm}
+\rule{0.9\textwidth}{0.3mm}
+
+Solución al Problema de Ejecución \ref{Problema_02}:
+
+\end{document}

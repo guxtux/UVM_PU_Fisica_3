@@ -369,10 +369,11 @@ E_{k} &= \SI{555444.45}{\joule}
 \end{frame}
 \begin{frame}
 \frametitle{Enunciado de otro ejercicio}
-Calcula la velocidad a la que va trotando una persona de \SI{65}{\kilo\gram} que adquiera una energía cinética de \SI{700}{\joule}.
+Calcula la velocidad a la que va trotando una persona de \SI{65}{\kilo\gram} para que adquiera una energía cinética de \SI{700}{\joule}.
 \end{frame}
 \begin{frame}
 \frametitle{Resolviendo el ejercicio}
+\vspace*{-1cm}
 \textocolor{red}{Datos:} \pause m = \SI{65}{\kilo\gram}, \pause $E_{k} = \SI{700}{\joule}$
 \\
 \bigskip
@@ -380,7 +381,8 @@ Calcula la velocidad a la que va trotando una persona de \SI{65}{\kilo\gram} que
 \textocolor{red}{Expresión:}
 \begin{eqnarray*}
 \begin{aligned}
-E_{k} &= \dfrac{1}{2} m \, v^{2} \\[0.5em] \pause
+E_{k} &= \dfrac{1}{2} m \, v^{2} \pause \hspace{1cm} \Rightarrow \hspace{0.5cm} \, v^{2} = 2 \, E_{k} \\[0.5em] \pause
+\Rightarrow v^{2} &= \dfrac{2 \, E_{k}}{m} \\[0.5em] \pause
 v &= \sqrt{\dfrac{2 \, E_{k}}{m}}
 \end{aligned}
 \end{eqnarray*}
@@ -392,7 +394,7 @@ v &= \sqrt{\dfrac{2 \, E_{k}}{m}}
 \begin{eqnarray*}
 \begin{aligned}
 v &= \sqrt{\dfrac{2 \, \SI{700}{\joule}}{\SI{65}{\kilo\gram}}} = \pause \sqrt{\dfrac{2 \, \SI{700}{\newton\meter}}{\SI{65}{\kilo\gram}}} = \\[0.5em]\pause 
-v &= \sqrt{\dfrac{2 \, \SI[per-mode=fraction]{700}{\kilo\gram\square\meter\per\square\second}}{\SI{65}{\kilo\gram}}} = \pause \sqrt{\num{21.53} \, \dfrac{\text{kg m}^{2}}{\text{kg s}^{2}}} = \\[0.5em] \pause
+v &= \sqrt{\dfrac{\displaystyle 2 \, \SI[per-mode=fraction]{700}{\kilo\gram\square\meter\per\square\second}}{\SI{65}{\kilo\gram}}} = \pause \sqrt{\num{21.53} \, \dfrac{\text{kg m}^{2}}{\text{kg s}^{2}}} = \\[0.5em] \pause
 v &= \SI[per-mode=fraction]{4.64}{\meter\per\second}
 \end{aligned}
 \end{eqnarray*}
@@ -418,7 +420,7 @@ Calcula la energía potencial que posee un libro de \SI{500}{\gram} de masa que 
 \end{frame}
 \begin{frame}
 \frametitle{Resolviendo el ejercicio}
-\textocolor{red}{Datos:} \pause m = \SI{50}{\gram}, \pause $h = \SI{80}{\centi\meter}$
+\textocolor{red}{Datos:} \pause m = \SI{50}{\gram}, \pause \hspace{0.5cm} $h = \SI{80}{\centi\meter}$, \pause \hspace{0.5cm} $g = \SI{9.81}{\meter\per\square\second}$
 \\
 \bigskip
 \pause
@@ -440,47 +442,47 @@ E_{p} &= \SI{3.92}{\joule}
 \end{aligned}
 \end{eqnarray*}
 \end{frame}
-\begin{frame}
-\frametitle{Ejercicio por resolver}
-¿En qué piso de un estacionamiento se encuentra un auto de \SI{840}{\kilo\gram} para que se energía potencial sea de \SI{39600}{\joule}?
-\\
-\bigskip
-Cada piso mide \SI{2.4}{\meter}
-\end{frame}
-\begin{frame}
-\frametitle{Ejercicio por resolver}
-Calcula la masa de un objeto que se levanta hasta una altura de \SI{12}{\meter} que adquiere una energía potencial de \SI{2120}{\joule}.
-\end{frame}
-\begin{frame}
-\frametitle{Ejercicio por resolver}
-Un balón de \SI{600}{\gram} se patea hacia arriba con una velocidad de \SI{35}{\meter\per\second}. \pause Calcula:
-\pause
-\setbeamercolor{item projected}{bg=bananayellow,fg=black}
-\setbeamertemplate{enumerate items}{%
-\usebeamercolor[bg]{item projected}%
-\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
-}
-\begin{enumerate}[<+->]
-\item El valor inicial de las energías cinética y potencial.
-\seti
-\end{enumerate}
-\end{frame}
-\begin{frame}
-\frametitle{Ejercicio por resolver}
-\setbeamercolor{item projected}{bg=bananayellow,fg=black}
-\setbeamertemplate{enumerate items}{%
-\usebeamercolor[bg]{item projected}%
-\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
-}
-\begin{enumerate}[<+->]    
-\conti
-\item La energía cinética y potencial a los \SI{20}{\meter} de altura.
-\item Demuestra que la energía mecánica se conserva.
-\end{enumerate}
-\end{frame}
+% \begin{frame}
+% \frametitle{Ejercicio por resolver}
+% ¿En qué piso de un estacionamiento se encuentra un auto de \SI{840}{\kilo\gram} para que se energía potencial sea de \SI{39600}{\joule}?
+% \\
+% \bigskip
+% Cada piso mide \SI{2.4}{\meter}
+% \end{frame}
+% \begin{frame}
+% \frametitle{Ejercicio por resolver}
+% Calcula la masa de un objeto que se levanta hasta una altura de \SI{12}{\meter} que adquiere una energía potencial de \SI{2120}{\joule}.
+% \end{frame}
+% \begin{frame}
+% \frametitle{Ejercicio por resolver}
+% Un balón de \SI{600}{\gram} se patea hacia arriba con una velocidad de \SI{35}{\meter\per\second}. \pause Calcula:
+% \pause
+% \setbeamercolor{item projected}{bg=bananayellow,fg=black}
+% \setbeamertemplate{enumerate items}{%
+% \usebeamercolor[bg]{item projected}%
+% \raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+% }
+% \begin{enumerate}[<+->]
+% \item El valor inicial de las energías cinética y potencial.
+% \seti
+% \end{enumerate}
+% \end{frame}
+% \begin{frame}
+% \frametitle{Ejercicio por resolver}
+% \setbeamercolor{item projected}{bg=bananayellow,fg=black}
+% \setbeamertemplate{enumerate items}{%
+% \usebeamercolor[bg]{item projected}%
+% \raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+% }
+% \begin{enumerate}[<+->]    
+% \conti
+% \item La energía cinética y potencial a los \SI{20}{\meter} de altura.
+% \item Demuestra que la energía mecánica se conserva.
+% \end{enumerate}
+% \end{frame}
 
-\section{Calor y temperatura}
-\frame{\tableofcontents[currentsection, hideothersubsections]}
+\section{Temperatura}
+\frame[allowframebreaks]{\tableofcontents[currentsection, hideothersubsections]}
 \subsection{La temperatura}
 
 \begin{frame}
@@ -509,7 +511,206 @@ Para medir la temperatura hay diferentes escalas, la más usuales son:
 \end{enumerate}
 \end{frame}
 
-\subsection{El Calor}
+\subsection{Escala Celsius}
+
+\begin{frame}
+\frametitle{La escala Celsius}
+Para medir la temperatura hay diferentes escalas, la más usual es la \textocolor{brown(web)}{escala Celsius}, \pause que marca \SI{0}{\degreeCelsius} cuando el agua se congela \pause y \SI{100}{\degreeCelsius} cuando ésta hierve.
+\end{frame}
+\begin{frame}
+\frametitle{La escala Celsius}
+La distancia entre los dos límites se divide en cien partes iguales. 
+\\
+\bigskip
+\pause
+Cada una corresponde a un grado centígrado.
+\end{frame}
+
+\subsection{Escala Fahrenheit}
+
+\begin{frame}
+\frametitle{La escala Fahrenheit}
+En Estados Unidos y en Europa se utiliza la \textocolor{burgundy}{escala Fahrenheit}.%; \pause fue establecida por el físico holandés-alemán Gabriel Daniel Fahrenheit en 1724.
+\end{frame}
+\begin{frame}
+\frametitle{Conversión entre escalas}
+Para convertir temperaturas entre las escalas Celsius y Fahrenheit, se utilizan las siguientes expresiones:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\unit{\degreeCelsius} &= \dfrac{5}{9} \left( ^{\circ}\text{F} - 32 \right) \\[0.5em] \pause
+^{\circ}\text{F} &= \dfrac{9}{5} \, \unit{\degreeCelsius} + 32
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Ejercicio 1}
+Si la temperatura interior de una casa es de \SI{10}{\degreeCelsius}.
+\\
+\bigskip
+\pause
+¿Cuál será la temperatura en escala Fahrenheit?
+\end{frame}
+\begin{frame}
+\frametitle{Solución al ejercicio}
+Datos del enunciado: $T = \SI{10}{\degreeCelsius}$
+\\
+\bigskip
+\pause
+Expresión:
+\pause
+\begin{align*}
+^{\circ}\text{F} &= \dfrac{9}{5} \, \unit{\degreeCelsius} + 32
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Solución al ejercicio}
+Sustitución:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+^{\circ}\text{F} &= \left( \dfrac{9}{5}\right) \left( \SI{10}{\degreeCelsius} \right) + 32 = \\[0.5em] \pause
+&= 18 + 32 = \\[0.5em] \pause
+&=50 ^{\circ} \text{F}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Ejercicio 2}
+La temperatura en verano en la ciudad de Puerto Vallarta ha llegado a alcanzar los $110 ^{\circ} \text{F}$.
+\\
+\bigskip
+\pause
+Expresa esta temperatura en grados Celsius.
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el Ejercicio}
+Datos: $T = 110 ^{\circ} \text{F}$
+\\
+\bigskip
+\pause
+Expresión:
+\pause
+\begin{align*}
+\unit{\degreeCelsius} &= \dfrac{5}{9} \left( ^{\circ}\text{F} - 32 \right)
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el Ejercicio}
+Sustitución:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\unit{\degreeCelsius} &= \left( \dfrac{5}{9} \right) \left( 110 - 32 \right) = \\[0.5em] \pause
+&= \left( \dfrac{5}{9} \right) \left( 78 \right) = \\[0.5em] \pause
+&= \SI{43.33}{\degreeCelsius}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+
+\subsection{Escala Kelvin}
+
+\begin{frame}
+\frametitle{Definiendo la escala Kelvin}
+Las unidades en la escala Kelvin son de la misma equivalencia que las unidades de la escala Celsius y se simbolizan con la letra K.
+\end{frame}
+\begin{frame}
+\frametitle{Definiendo la escala Kelvin}    
+La temperatura de fusión del hielo es de \SI{273.15}{\kelvin}, \pause de tal forma que cero grados Kelvin corresponden a \SI{-273.15}{\degreeCelsius}. 
+\end{frame}
+\begin{frame}
+\frametitle{Relación entre escalas}
+La relación entre la escala Celsius y la escala Kelvin es:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+K &= \unit{\degreeCelsius} + 273.15 \\[0.5em]
+\unit{\degreeCelsius} &= K - 273.15
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Ejercicio a cuenta}
+Resuelve las siguientes conversiones de temperatura, indicando todo el procedimiento necesario:
+\pause
+\begin{multicols}{2}
+\setbeamercolor{item projected}{bg=blue,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}
+\item \SI{50}{\degreeCelsius} a \unit{\kelvin}
+\item \SI{120}{\degreeCelsius} a \unit{\kelvin}
+\item \SI{380}{\kelvin} a \unit{\degreeCelsius}
+\item \SI{210}{\kelvin} a \unit{\degreeCelsius}
+\item \SI{60}{\degreeCelsius} a $^{\circ}$F
+\item \SI{98}{\degreeCelsius} a $^{\circ}$F
+\item $50^{\circ}$ F a \unit{\degreeCelsius}
+\item $130^{\circ}$ F a \unit{\degreeCelsius}    
+\end{enumerate}
+\end{multicols}
+\end{frame}
+
+\subsection{Escala Rankine}
+
+\begin{frame}
+\frametitle{Definiendo la escala Rankine}
+La \textocolor{byzantium}{escala Rankine} se define midiendo en grados Fahrenheit sobre el cero absoluto.
+\end{frame}
+\begin{frame}
+\frametitle{Definiendo la escala Rankine}
+En esta escala tampoco se introducen valores negativos de temperatura, \pause por lo que ambas se consideran escalas de temperatura absoluta.
+\end{frame}
+\begin{frame}
+\frametitle{Relación entre escalas}
+La relación entre la escala Rankine y la escala Fahrenheit es:
+\pause
+\begin{align*}
+R = \, ^{\circ}\text{F} + 460
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Ejercicio}
+La temperatura de ebullición del agua es de $212 ^{\circ}\text{F}$,
+\\
+\bigskip
+\pause
+¿Cuál será la temperatura en escala Rankine?
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Datos:} $T = 212 ^{\circ}\text{F}$  \\[0.5em]\pause
+\textocolor{red}{Expresión:} $R = \, ^{\circ}\text{F} + 460$ \\[0.5em]\pause
+\textocolor{red}{Sustitución:} $R = 212 + 460 = 672 \, R$
+\end{frame}
+% \begin{frame}
+% \frametitle{Ejercicio a cuenta}
+% Completa la siguiente tabla, escribiendo en cada celda el valor de temperatura correspondiente.
+% \\
+% \bigskip
+% \pause
+% Deberás de incluir las operaciones necesarias.
+% \end{frame}
+% \begin{frame}
+% \frametitle{Ejercicio a cuenta}
+% \begin{table}
+% \fontsize{10}{10}\selectfont
+% \centering
+% \begin{tabular}{| l | c | c | c | c |} \hline
+% Temperatura & \unit{\degreeCelsius} & $^{\circ}$ F & K & R \\ \hline
+% Ebullición del oro & & & $3129$ & \\ \hline
+% Ebullición del n-butanol & $117.4$ & & & \\ \hline
+% Temperatura corporal del cuerpo humano & & $98.6$ & & \\ \hline
+% Ebullición del agua en la ciudad de Puebla & & & $366$ & \\ \hline
+% Temperatura ambiente en la ciudad de Puebla & & & & $18$ \\ \hline
+% \end{tabular}
+% \end{table}
+% \end{frame}
+
+\section{El calor}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Definición}
 
 \begin{frame}
 \frametitle{Definición de calor}
