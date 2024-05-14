@@ -1,4 +1,4 @@
-\documentclass[14pt]{extarticle}
+\documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish,es-lcroman]{babel}
@@ -21,7 +21,7 @@
 \usepackage{Estilos/ColoresLatex}
 \usepackage{makecell}
 \usepackage{wrapfig}
-\usepackage{titlesec}
+% \usepackage{titlesec}
 \usetikzlibrary{angles,quotes}
 \newcommand{\sectionbreak}{\clearpage}
 
@@ -62,11 +62,12 @@ Para un mejor entendimiento del movimiento circular se requiere el manejo de dis
     \centering
     \begin{tikzpicture}
         \draw [line width=2pt] (0,0) circle (2.3cm);
-        \draw [line width=2pt] (0,0)-- (1.882349956410611,1.3216499693946844);
+        % \draw [line width=2pt] (0,0)-- (1.882349956410611,1.3216499693946844);
         \draw [fill=black] (0,0) circle (0.5pt);
+        \draw [fill] (0, 0) circle (0.05cm);
     \end{tikzpicture}    
 \end{figure}
-\item Se define como el círculo al área o superficie plana contenida dentro de una circunferencia.
+\item Se define como el círculo al área o superficie plana contenida dentro de una circunferencia, en la imagen que se muestra a continuación, el área se presenta de color gris.
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}
@@ -530,7 +531,7 @@ T &= \, ? \\
 d &= \, ? \\
 v_{T} &= \, ? \\
 a_{C} &= \, ? \\
-\theta &= \, ?
+\omega &= \, ?
 \end{align*}
 \end{minipage}
 \begin{minipage}[t]{0.4\linewidth}
@@ -555,21 +556,95 @@ Inciso ii):
 d = 2 \, \pi \left( \SI{100}{\meter} \right) = \SI{628.31}{\meter}
 \end{align*}
 Inciso iii):
-
+\begin{align*}
+v_{T} = \dfrac{2 \, \pi (\SI{100}{\meter})}{\SI{30}{\second}} = \dfrac{\SI{628.31}{\meter}}{\SI{30}{\second}} = \SI[per-mode=fraction]{20.94}{\meter\per\second}
+\end{align*}
+inciso iv):
+\begin{align*}
+a_{C} = \dfrac{\displaystyle \left( \SI[per-mode=fraction]{20.94}{\meter\per\second} \right)^{2}}{\SI{100}{\meter}} = \dfrac{\displaystyle \SI[per-mode=fraction]{438.48}{\square\meter\per\square\second}}{\SI{100}{\meter}} = \SI[per-mode=fraction]{4.38}{\meter\per\square\second}
+\end{align*}
+inciso v):
+\begin{align*}
+\omega = \dfrac{2 \, \pi \, \unit{\radian}}{\SI{30}{\second}} = \SI[per-mode=fraction]{0.2094}{\radian\per\second}
+\end{align*}
 
 
 \item Ejercicio 2.
 
 Una polea motriz de \SI{6}{\centi\meter} de diámetro se hace girar a 9 rev/s.
 \begin{enumerate}[label=\alph*)]
-\item ¿Cuál es la aceleración centrípeta en un punto localizado en el borde de la polea?
 \item ¿Cuál sería la velocidad lineal de una banda accionada por la polea?
+\item ¿Cuál es la aceleración centrípeta en un punto localizado en el borde de la polea?
 \end{enumerate}
+
+Para obtener la velocidad lineal, ahora ocuparemos la expresión que la relaciona con la frecuencia de giro de la polea.
+
+\vspace*{0.5cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+d &= \SI{6}{\centi\meter} = \SI{0.06}{\meter} \\
+\hspace{0.2cm} \Rightarrow \hspace{0.2cm} r &= \SI{0.03}{\meter} \\
+f &= 9 \, \text{rps} = \SI{9}{\hertz} \\
+v_{T} &= \, ? \\
+a_{C} &= \, ? \\
+\omega &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresiones:}
+\begin{align*}
+\omega &= 2 \, \pi \, f \\
+v_{T} &= \omega \, r \\
+a_{C} &= \dfrac{(v_{t})^{2}}{r}
+\end{align*}
+\end{minipage}
+
+\textbf{Sustitución:}
+
+inciso i) 
+\begin{align*}
+\omega &= 2 \, \pi \, \left( \SI{9}{\hertz} \right) \unit{\radian} = \SI[per-mode=fraction]{56.54}{\radian\per\second} \\[0.5em]
+v_{T} &= \left( \SI[per-mode=fraction]{56.54}{\radian\per\second} \right) (\SI{0.03}{\meter}) = \SI[per-mode=fraction]{1.69}{\meter\per\second} \\[0.5em]
+a_{C} &= \dfrac{\displaystyle \left( \SI[per-mode=fraction]{1.69}{\meter\per\second} \right)^{2}}{\SI{0.03}{\meter}} = \dfrac{\displaystyle \SI[per-mode=fraction]{2.85}{\square\meter\per\square\second}}{\SI{0.03}{\meter}} = \SI[per-mode=fraction]{95.20}{\meter\per\square\second}
+\end{align*}
+
+
 \item Ejercicio 3.
 
 Un objeto está atado a una cuerda y se mueve en un círculo horizontal de \SI{90}{\centi\meter} de radio. Sin considerar los efectos de la gravedad y supóngamos que el objeto gira con una frecuencia de 80 rpm.
 
 Determina la velocidad lineal $(v_{T})$ y la aceleración centrípeta $(a_{c})$.
+
+\vspace*{0.5cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+r &= \SI{90}{\centi\meter} = \SI{0.9}{\meter} \\
+f &= 80 \, \text{rpm} = 1.33 \, \text{rps} \\
+f &= \SI{1.33}{\hertz} \\
+v_{T} &= \, ? \\
+a_{C} &= \, ? \\
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresiones:}
+\begin{align*}
+\omega &= 2 \, \pi \, f \\
+v_{T} &= \omega \, r \\
+a_{C} &= \dfrac{(v_{t})^{2}}{r}
+\end{align*}
+\end{minipage}
+
+\textbf{Sustitución:}
+
+Hay que ocupar la expresión para obtener la velocidad angular y con ella, obtener primero la velocidad tangencial:
+\begin{align*}
+    \omega &= 2 \, \pi \, \left( \SI{1.33}{\hertz} \right) \unit{\radian} = \SI[per-mode=fraction]{8.35}{\radian\per\second} \\[0.5em]
+    v_{T} &= \left( \SI[per-mode=fraction]{8.35}{\radian\per\second} \right) (\SI{0.9}{\meter}) = \SI[per-mode=fraction]{7.52}{\meter\per\second} \\[0.5em]
+    a_{C} &= \dfrac{\displaystyle \left( \SI[per-mode=fraction]{7.52}{\meter\per\second} \right)^{2}}{\SI{0.9}{\meter}} = \dfrac{\displaystyle \SI[per-mode=fraction]{56.56}{\square\meter\per\square\second}}{\SI{0.9}{\meter}} = \SI[per-mode=fraction]{62.85}{\meter\per\square\second}
+    \end{align*}
+
 \item Ejercicio 4.
 
 Un ventilador gira dando $120$ vueltas en \SI{1}{\minute}, si la longitud de cada aspa es de \SI{30}{\centi\meter}, y al apagarse se detiene después de \SI{80}{\second}:
@@ -577,6 +652,52 @@ Un ventilador gira dando $120$ vueltas en \SI{1}{\minute}, si la longitud de cad
 \item ¿Cuál es su aceleración angular?
 \item ¿Cuál es la aceleración centrípeta de un punto a la mitad del aspa?
 \end{enumerate}
+
+
+Consideraciones. El enunciado nos dice que:
+\begin{enumerate}
+\item El ventilador se apaga y se detiene, es decir, deja de girar luego de \SI{80}{\second}, por lo que su velocidad angular final $(\omega_{f})$ vale cero.
+\item El aspa mide de largo \SI{30}{\centi\meter}, entendiendo que va del centro del ventilador al extremo, es decir, la longitud del aspa a partir del centro corresponde al radio.
 \end{enumerate}
 
+\vspace*{0.5cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+f &= 120 \, \text{rpm} = 2 \, \text{rps} = \SI{2}{\hertz} \\
+r &= \SI{30}{\centi\meter} = \SI{0.3}{\meter} \\
+\Rightarrow \hspace{0.2cm} r &= \SI{15}{\centi\meter} = \SI{0.15}{\meter} \\
+t &= \SI{80}{\second} \\
+\omega_{f} &= 0 \\
+\alpha &= \, ? \\
+a_{C} &= \, ? \\
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresiones:}
+\begin{align*}
+\omega &= 2 \, \pi \, f \\[0.5em]
+\alpha &= \dfrac{\omega_{f} - \omega_{0}}{t} \\[0.5em]
+v_{T} &= \omega \, r \\[0.5em]
+a_{C} &= \dfrac{(v_{t})^{2}}{r}
+\end{align*}
+\end{minipage}
+\end{enumerate}
+
+Sustitución:
+
+inciso i):
+
+Un punto en la mitad del aspa, está ubicado en la mitad del radio: \SI{0.15}{\meter}.
+\begin{align*}
+\omega &= 2 \, \pi \, \left( \SI{2}{\hertz} \right) \, \unit{\radian} = \SI[per-mode=fraction]{12.56}{\radian\per\second} \\
+\alpha &= \dfrac{ \displaystyle0 - \SI[per-mode=fraction]{12.56}{\radian\per\second}}{\SI{80}{\second}} = - \SI[per-mode=fraction]{0.157}{\radian\per\square\second}
+\end{align*}
+El signo negativo de la aceleración angular $(\alpha)$ nos indica que las aspas del ventilador se están desacelerando. 
+
+\vspace*{0.5cm}
+inciso ii):
+\begin{align*}
+a_{c} = \dfrac{\displaystyle \left( \SI[per-mode=fraction]{12.56}{\radian\per\second} \right)^{2}}{\SI{0.15}{\meter}} = \dfrac{\displaystyle \SI[per-mode=fraction]{157.75}{\square\meter\per\square\second}}{\SI{0.15}{\meter}} = \SI[per-mode=fraction]{1051.69}{\meter\per\square\second}
+\end{align*}
 \end{document}

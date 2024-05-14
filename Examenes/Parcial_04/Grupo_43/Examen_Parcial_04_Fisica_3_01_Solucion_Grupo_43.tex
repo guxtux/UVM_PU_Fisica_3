@@ -1,0 +1,143 @@
+\documentclass[12pt, letter]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{pdfpages}
+
+% \renewcommand{\questionlabel}{\thequestion}
+\decimalpoint
+
+\setlength{\belowdisplayskip}{-0.5pt}
+
+\usepackage{tasks}
+\settasks{
+    label=\Alph*), 
+    label-align=left,
+    item-indent={20pt}, 
+    column-sep={4pt},
+    label-width={16pt},
+}
+
+\sisetup{per-mode=symbol}
+\footer{}{\thepage}{}
+\date{}
+
+\title{Solución a los ejercicios de ejecución - Versión A \\ Cuarto Examen Parcial de Física III - Grupo 43}
+
+\begin{document}
+\maketitle
+
+\setcounter{page}{2}
+
+\begin{questions}
+    \section{Movimiento circular.}
+
+    \setcounter{question}{4} \question \textbf{Ejercicio de ejecución: } Convierte 2.18 radianes a grados.
+
+    \begin{minipage}[t]{0.35\linewidth}
+    Datos: 
+    \begin{align*}
+    \theta = \SI{2.18}{\radian}
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    Expresión:
+    \begin{align*}
+    \ang{360} = 2 \, \pi \, \unit{\radian}
+    \end{align*}
+    \end{minipage}
+
+    Sustitución:
+    \begin{align*}
+    \SI{2.18}{\radian} \left( \dfrac{\ang{360}}{2 \, \pi \, \unit{\radian}} \right) = \ang{124.90}
+    \end{align*}
+
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task \ang{100.47}
+        \task \fbox{\ang{124.90}}
+        \task \ang{249.80}
+        \task \ang{392.40}
+    \end{tasks}
+    \question \label{Ejercicio_02} \textbf{Ejercicio de ejecución: } Un ventilador gira a de 900 rpm (rev/min). Determina la velocidad tangencial del extremo del aspa, si la distancia desde el centro al extremo es de \SI{20.0}{\centi\meter}.
+
+    \begin{minipage}[t]{0.4\linewidth}
+    Datos: 
+    \begin{align*}
+    f &= 900 \, \text{rpm} = \SI{15}{\hertz} \\
+    r &= \SI{20.0}{\centi\meter} = \SI{0.2}{\meter} \\
+    \omega &= \, ? \\
+    v_{T} &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    Expresiones:
+    \begin{align*}
+    \omega &= 2 \, \pi \, f \\
+    v_{T} &= \omega \, r
+    \end{align*}
+    \end{minipage}
+
+    Sustitución:
+    \begin{align*}
+    \omega &= 2 \, \pi (\SI{15}{\hertz}) \, \unit{\radian} = \SI{94.2}{\radian\per\second} \\
+    v_{T} &= \left( \SI{94.2}{\radian\per\second} \right) (\SI{0.2}{\meter}) = \SI{18.8}{\meter\per\second}
+    \end{align*}
+
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task \SI{12.9}{\meter\per\second}
+        \task \SI{17.4}{\meter\per\second}
+        \task \fbox{\SI{18.8}{\meter\per\second}}
+        \task \SI{29.5}{\meter\per\second}
+    \end{tasks}
+    \question \label{Ejercicio_03} \textbf{Ejercicio de ejecución: } Una centrifugadora acelera desde el reposo hasta \num{20000} rpm en \SI{30}{\second} ¿Cuál es su aceleración angular?
+
+    \begin{minipage}[t]{0.4\linewidth}
+    Datos: 
+    \begin{align*}
+    f &= 20000 \, \text{rpm} = \SI{333.33}{\hertz} \\
+    t &= \SI{30}{\second} \\
+    \omega_{0} &= 0 \\
+    \alpha &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    Expresiones:
+    \begin{align*}
+    \omega &= 2 \, \pi \, f \\
+    \alpha &= \dfrac{\omega_{f} - \omega_{0}}{t}
+    \end{align*}
+    \end{minipage}
+
+    Sustitución:
+    \begin{align*}
+    \omega_{f} &= 2 \, \pi (\SI{333.33}{\hertz}) \, \unit{\radian} = \SI[per-mode=fraction]{2094.39}{\radian\per\second} \\[0.5em]
+    \alpha &= \dfrac{ \SI{2094.39}{\radian\per\second} - 0 }{\SI{30}{\second}} = \SI[per-mode=fraction]{69.81}{\radian\per\square\second}
+    \end{align*}
+
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task \fbox{$\displaystyle \SI[per-mode=fraction]{69.81}{\radian\per\square\second}$}
+        \task $\displaystyle \SI[per-mode=fraction]{100.43}{\radian\per\square\second}$
+        \task $\displaystyle \SI[per-mode=fraction]{210.04}{\radian\per\square\second}$
+        \task $\displaystyle \SI[per-mode=fraction]{350.18}{\radian\per\square\second}$
+    \end{tasks}
+
+
+\end{questions}
+\end{document}

@@ -1,0 +1,336 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\renewcommand*{\theenumi}{\thesection.\arabic{enumi}}
+\renewcommand*{\theenumii}{\theenumi.\arabic{enumii}}
+
+\title{\vspace*{-2cm} Ejercicios Movimiento Circular - Solución\\  Evaluación Continua - Física III\vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\vspace*{0.75cm}
+
+\section{Ejercicios.}
+
+\begin{enumerate}
+\item Expresa en radianes los siguientes ángulos: a) \ang{45.0}, b) \ang{60.0}, c) \ang{90.0}, \break d) \ang{390.0} y e) \ang{445.0}? Reporta los valores como valores numéricos (valores con decimales) y como fracciones de $\pi$ (como múltiplos de $\pi$).
+
+Para resolver este ejecicio hay que recordar la relación:
+\begin{align*}
+\ang{360} = 2 \, \pi \, \unit{\radian}
+\end{align*}
+Por lo que expresar la solución de cada inciso ya sea en decimales o como fracciones de $\pi$, será más fácil:
+
+Inciso a) \ang{45.0}
+\begin{align*}
+\ang{45} \left( \dfrac{2 \, \pi \, \unit{\radian}}{\ang{360}} \right) = \SI{0.785}{\radian}
+\end{align*}
+Para expresar el valor en múltiplos de $\pi$, simplificamos la fracción:
+\begin{align*}
+\ang{45} \left( \dfrac{2 \, \pi \, \unit{\radian}}{\ang{360}} \right) = \dfrac{\ang{90} \, \pi \, \unit{\radian}}{\ang{360}} = \dfrac{\pi}{4} \unit{\radian}
+\end{align*}
+En la fracción anterior, dividimos tanto el numerador como el denominador entre \num{90}.
+
+Inciso b) \ang{60.0}
+\begin{align*}
+\ang{60} \left( \dfrac{2 \, \pi \, \unit{\radian}}{\ang{360}} \right) = \SI{1.047}{\radian}
+\end{align*}
+Para expresar el valor en múltiplos de $\pi$, simplificamos la fracción:
+\begin{align*}
+\ang{60} \left( \dfrac{2 \, \pi \, \unit{\radian}}{\ang{360}} \right) = \dfrac{\ang{120} \, \pi \, \unit{\radian}}{\ang{360}} = \dfrac{\pi}{3} \unit{\radian}
+\end{align*}
+
+Inciso c) \ang{90.0}
+\begin{align*}
+\ang{90} \left( \dfrac{2 \, \pi \, \unit{\radian}}{\ang{360}} \right) = \SI{1.570}{\radian}
+\end{align*}
+Para expresar el valor en múltiplos de $\pi$, simplificamos la fracción:
+\begin{align*}
+\ang{90} \left( \dfrac{2 \, \pi \, \unit{\radian}}{\ang{360}} \right) = \dfrac{\ang{180} \, \pi \, \unit{\radian}}{\ang{360}} = \dfrac{\pi}{2} \unit{\radian}
+\end{align*}
+
+Inciso d) \ang{390.0}
+\begin{align*}
+\ang{390} \left( \dfrac{2 \, \pi \, \unit{\radian}}{\ang{360}} \right) = \SI{6.806}{\radian}
+\end{align*}
+Para expresar el valor en múltiplos de $\pi$, simplificamos la fracción:
+\begin{align*}
+\ang{390} \left( \dfrac{2 \, \pi \, \unit{\radian}}{\ang{360}} \right) = \dfrac{\ang{780} \, \pi \, \unit{\radian}}{\ang{360}} = \dfrac{13 \, \pi}{6} \unit{\radian}
+\end{align*}
+
+Inciso e) \ang{445.0}
+\begin{align*}
+\ang{445} \left( \dfrac{2 \, \pi \, \unit{\radian}}{\ang{360}} \right) = \SI{7.766}{\radian}
+\end{align*}
+Para expresar el valor en múltiplos de $\pi$, simplificamos la fracción:
+\begin{align*}
+\ang{445} \left( \dfrac{2 \, \pi \, \unit{\radian}}{\ang{360}} \right) = \dfrac{\ang{890} \, \pi \, \unit{\radian}}{\ang{360}} = \dfrac{89 \,\pi}{36} \unit{\radian}
+\end{align*}
+\item Un disco compacto tuvo una magnitud de aceleración angular de \SI{5}{\radian\per\square\second} durante \SI{6}{\second}. ¿Qué magnitud de velocidad angular final adquirió?
+
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+\alpha &= \SI{5}{\radian\per\square\second} \\
+t &= \SI{6}{\second} \\
+\omega_{f} &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+\alpha = \dfrac{\omega}{t} \hspace{0.2cm} \Rightarrow \hspace{0.2cm} \omega = \alpha \,  t
+\end{align*}
+\end{minipage}
+
+\textbf{Sustitución:}
+\begin{align*}
+\omega = \left( \SI[per-mode=fraction]{5}{\radian\per\square\second} \right) \left( \SI{6}{\second} \right) = \SI[per-mode=fraction]{30}{\radian\per\second}
+\end{align*}
+\item Si una hélice con una magnitud de velocidad angular inicial de \SI{15}{\radian\per\second} recibe una aceleración angular cuya magnitud es de \SI{7}{\radian\per\second} durante \SI{0.2}{\minute}, ¿cuáles son las magnitudes de la velocidad angular final y del desplazamiento angular que alcanzó a los \SI{0.2}{\minute}?
+
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+\omega_{0} &= \SI{15}{\radian\per\second} \\
+\alpha &= \SI{7}{\radian\per\square\second} \\
+t &= \SI{0.2}{\minute} = \SI{12}{\second} \\
+\omega_{f} &= \, ? \\
+\theta &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresiones}
+\begin{align*}
+\omega_{f} &= \omega_{0} + \alpha \, t \\
+\theta &= \omega_{0} \, t + \dfrac{\alpha \, t^{2}}{2}
+\end{align*}
+\end{minipage}
+
+\textbf{Sustitución:}
+\begin{align*}
+\omega_{f} &= \left( \SI[per-mode=fraction]{15}{\radian\per\second} \right) + \left( \SI[per-mode=fraction]{7}{\radian\per\square\second} \right) \left(  \SI{12}{\second} \right) = \SI[per-mode=fraction]{99}{\radian\per\second} \\[0.5em]
+\theta &= \left( \SI[per-mode=fraction]{15}{\radian\per\second} \right) \left(  \SI{12}{\second} \right) + \dfrac{\left( \displaystyle \SI[per-mode=fraction]{7}{\radian\per\square\second} \right) \left( \SI{12}{\second} \right)^{2}}{2} = \\[0.5em]
+\theta &= \left( \SI{180}{\radian} \right) + \dfrac{\left( \displaystyle \SI[per-mode=fraction]{7}{\radian\per\square\second} \right) \left( \SI{144}{\square\second} \right)}{2} \\[0.5em]
+\theta &= \SI{180}{\radian} + \SI{504}{\radian} = \SI{684}{\radian}
+\end{align*}
+\item Un rehilete aumentó la magnitud de su velocidad angular de \SI{12}{\radian\per\second} a \SI{60}{\radian\per\second} en \SI{4}{\second}. ¿Cuál fue la magnitud de su aceleración angular?
+
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+\omega_{0} &= \SI{12}{\radian\per\second} \\
+\omega_{f} &= \SI{60}{\radian\per\second} \\
+t &= \SI{4}{\second} \\
+\alpha &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+\alpha = \dfrac{\omega_{f} - \omega_{0}}{t}
+\end{align*}
+\end{minipage}
+
+\textbf{Sustitución:}
+\begin{align*}
+\alpha = \dfrac{\displaystyle \SI[per-mode=fraction]{60}{\radian\per\second} - \SI[per-mode=fraction]{12}{\radian\per\second}}{\SI{4}{\second}} = \dfrac{\displaystyle \SI[per-mode=fraction]{48}{\radian\per\second}}{\SI{4}{\second}} = \SI[per-mode=fraction]{12}{\radian\per\square\second}
+\end{align*}
+\item Una rueda gira con una magnitud de velocidad angular inicial de \SI{12}{\radian\per\second} y recibe una aceleración angular cuya magnitud es de \SI{6}{\radian\per\square\second} durante \SI{13}{\second}.
+
+Calcula:
+\begin{enumerate}[label=\alph*)]
+\item ¿Qué magnitud de velocidad angular lleva al cabo de los \num{13} segundos?
+\item ¿Qué magnitud de desplazamiento angular tuvo?
+\end{enumerate}
+
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+\omega_{0} &= \SI{12}{\radian\per\second} \\
+\alpha &= \SI{6}{\radian\per\square\second} \\
+t &= \SI{13}{\second} \\
+\omega_{f} &= \, ? \\
+\theta &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresiones:}
+\begin{align*}
+\omega_{f} &= \omega_{0} + \alpha \, t \\
+\theta &= \omega_{0} \, t + \dfrac{\alpha \, t^{2}}{2}
+\end{align*}
+\end{minipage}
+
+\textbf{Sustitución:}
+
+Inciso a)
+\begin{align*}
+\omega_{f} = \SI[per-mode=fraction]{12}{\radian\per\second} + \left( \SI[per-mode=fraction]{6}{\radian\per\square\second} \right) \left( \SI{13}{\second} \right) = \SI[per-mode=fraction]{12}{\radian\per\second} + \SI[per-mode=fraction]{78}{\radian\per\second} = \SI[per-mode=fraction]{90}{\radian\per\second}
+\end{align*}
+
+Inciso b)
+\begin{align*}
+\theta &= \left( \SI[per-mode=fraction]{12}{\radian\per\second} \right) \left( \SI{13}{\second} \right) + \dfrac{ \displaystyle \left( \SI[per-mode=fraction]{6}{\radian\per\square\second} \right) \left( \SI{13}{\second} \right)^{2}}{2} = \\[0.5em]
+\theta &= \SI[per-mode=fraction]{156}{\radian\per\second} + \dfrac{\displaystyle \left( \SI[per-mode=fraction]{6}{\radian\per\square\second} \right) \left( \SI{169}{\square\second} \right)}{2} = \\[0.5em]
+&= \SI[per-mode=fraction]{156}{\radian\per\second} + \dfrac{\SI{1014}{\radian}}{2} = \SI{663}{\radian}
+\end{align*}
+
+\item Un disco que gira a \num{2}  rev/s aumenta su frecuencia a \num{50} rev/s en \SI{3}{\second}. Determina cuál fue la magnitud de su aceleración angular en \unit{\radian\per\square\second}.
+
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+f_{0} &= 2 \, \text{rps} = \SI{2}{\hertz} \\
+f_{f} &= 50 \, \text{rps} = \SI{50}{\hertz}\\
+t &= \SI{3}{\second} \\
+\alpha &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresiones:}
+\begin{align*}
+\omega &= 2 \, \pi \, f \\
+\alpha &= \dfrac{\omega_{f} - \omega_{0}}{t}
+\end{align*}
+\end{minipage}
+
+\textbf{Sustitución:}
+\begin{align*}
+\omega_{0} &= 2 \, \pi (\SI{2}{\hertz}) = \SI[per-mode=fraction]{12.56}{\radian\per\second} \\[0.5em]
+\omega_{f} &= 2 \, \pi (\SI{50}{\hertz}) = \SI[per-mode=fraction]{314.15}{\radian\per\second} \\[0.5em]
+\alpha &= \dfrac{\displaystyle \SI[per-mode=fraction]{314.15}{\radian\per\second} - \SI[per-mode=fraction]{12.56}{\radian\per\second}}{\SI{3}{\second}} = \dfrac{\displaystyle \SI[per-mode=fraction]{301.59}{\radian\per\second}}{\SI{3}{\second}} = \SI[per-mode=fraction]{100.53}{\radian\per\square\second}
+\end{align*}
+\item Una rueda de la fortuna gira inicialmente con una magnitud de velocidad angular de \SI{2}{\radian\per\second}. Si recibe una aceleración angular cuya magnitud es de \SI{1.5}{\radian\per\second} durante \num{5} segundos.
+
+Calcula.
+\begin{enumerate}[label=\alph*)]
+\item ¿Cuál será la magnitud de su velocidad angular a los \SI{5}{\second}?
+\item ¿Cuál será la magnitud de su desplazamiento angular?
+\item ¿Cuántas revoluciones habrá dado al término de los \SI{5}{\second}?
+\end{enumerate}
+
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+\omega_{0} &= \SI{2}{\radian\per\second} \\
+\alpha &= \SI{1.5}{\radian\per\square\second} \\
+t &= \SI{5}{\second} \\
+\omega_{f} &= \, ? \\
+\theta &= \, ? \\
+\text{rev} &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresiones:}
+\begin{align*}
+\omega_{f} &= \omega_{0} + \alpha \, t \\
+\theta &= \omega_{0} \, t + \dfrac{\alpha \, t^{2}}{2} \\
+\text{rev} &= \dfrac{\theta}{2 \, \pi \, \unit{\radian}}
+\end{align*}
+\end{minipage}
+
+\textbf{Sustitución:}
+
+Inciso a)
+\begin{align*}
+\omega_{f} &= \SI[per-mode=fraction]{2}{\radian\per\second} + \left( \SI[per-mode=fraction]{1.5}{\radian\per\square\second} \right) \left( \SI[per-mode=fraction]{5}{\second} \right) = \\[0.5em]
+\omega_{f} &= \SI[per-mode=fraction]{2}{\radian\per\second} + \SI[per-mode=fraction]{7.5}{\radian\per\second} = \SI[per-mode=fraction]{9.5}{\radian\per\second}
+\end{align*}
+
+Inciso b)
+\begin{align*}
+\theta &= \left( \SI[per-mode=fraction]{2}{\radian\per\second} \right) \left( \SI{5}{\second} \right) + \dfrac{\displaystyle \left( \SI[per-mode=fraction]{1.5}{\radian\per\square\second} \right)\left( \SI{5}{\second} \right)^{2}}{2} = \\[0.5em]
+\theta &= \SI[per-mode=fraction]{10}{\radian} + \dfrac{ \displaystyle \left( \SI[per-mode=fraction]{1.5}{\radian\per\square\second} \right)\left( \SI{25}{\square\second} \right) }{2} = \\[0.5em]
+\theta &= \SI{10}{\radian} + \SI{18.75}{\radian} = \SI{28.75}{\radian}
+\end{align*}
+
+Inciso c) Como ya conocemos el desplazamiento angular, y sabemos que una revolución completa es igual a $2 \, \pi \, \unit{\radian}$, por lo que el valor de $\theta$ se divide:
+\begin{align*}
+\text{rev} = \dfrac{\SI{28.75}{\radian}}{2 \, \pi \, \unit{\radian}} = 4.57 \, \text{rev}
+\end{align*}
+\item En un juego mecánico, los pasajeros viajan con velocidad constante en un círculo de \SI{5.0}{\meter} de radio, dando una vuelta completa cada \SI{4.0}{\second}. ¿Qué aceleración centrípeta tienen?
+
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+r &= \SI{5.0}{\meter} \\
+T &= \SI{4.0}{\second} \\
+a_{C} &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresiones:}
+\begin{align*}
+v_{T} &= \dfrac{2 \, \pi \, r}{T} \\[0.5em]
+a_{C} &= \dfrac{v_{T}^{2}}{r}
+\end{align*}
+\end{minipage}
+
+\textbf{Sustitución:}
+\begin{align*}
+v_{T} &= \dfrac{2 \, \pi \left( \SI{5.0}{\meter} \right)}{\SI{4.0}{\second}} = \SI[per-mode=fraction]{7.85}{\meter\per\second} \\[0.5em]
+a_{C} &= \dfrac{\left( \displaystyle \SI[per-mode=fraction]{7.85}{\meter\per\second} \right)^{2}}{\SI{5.0}{\meter}} = \dfrac{\displaystyle \SI[per-mode=fraction]{61.68}{\square\meter\per\square\second}}{\SI{5.0}{\meter}} = \SI[per-mode=fraction]{12.33}{\meter\per\square\second}
+\end{align*}
+\item El radio de la órbita terrestre alrededor del Sol (suponiendo que fuera circular) es de \SI{1.5d8}{\kilo\meter} y la Tierra la recorre en \num{365} días.
+\begin{enumerate}[label=\alph*)]
+\item Calcula la magnitud de la velocidad tangencial de la Tierra.
+\item Calcula la aceleración centrípeta de la Tierra hacia el Sol.
+\end{enumerate}
+
+Los datos del radio de la Tierra que están en kilómetros, los pasamos a metros, así como el periodo que está en días, lo pasamos a segundos.
+
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+r &= \SI{1.5d8}{\kilo\meter} = \\
+r &= \SI{1.5d11}{\meter} \\
+T &= \SI{365}{\day} = \\
+T &= \SI{31.536d6}{\second} \\
+a_{C} &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresiones:}
+\begin{align*}
+v_{T} &= \dfrac{2 \, \pi \, r}{T} \\[0.5em]
+a_{C} &= \dfrac{v_{T}^{2}}{r}
+\end{align*}
+\end{minipage}
+
+
+\textbf{Sustitución:}    
+
+Inciso a)
+\begin{align*}
+v_{T} = \dfrac{2 \, \pi \left( \SI{1.5d11}{\meter} \right)}{ \SI{31.536d6}{\second} } = \dfrac{\SI{9.424d11}{\meter}}{\SI{31.536d6}{\second}} = \SI[per-mode=fraction]{2.9885d4}{\meter\per\second}
+\end{align*}
+
+Inciso b)
+\begin{align*}
+a_{C} &= \dfrac{\displaystyle \left( \SI[per-mode=fraction]{2.9885d4}{\meter\per\second} \right)^{2}}{\SI{1.5d11}{\meter}} = \dfrac{ \displaystyle \SI[per-mode=fraction]{8.9311d8}{\square\meter\per\square\second}}{\SI{1.5d11}{\meter}} = \\[0.5em]
+a_{C} &= \SI[per-mode=fraction]{5.954d-3}{\meter\per\square\second}
+\end{align*}
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,149 @@
+\documentclass[12pt, letter]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{pdfpages}
+\usepackage{wasysym}
+
+% \renewcommand{\questionlabel}{\thequestion}
+\decimalpoint
+
+\setlength{\belowdisplayskip}{-0.5pt}
+
+\usepackage{tasks}
+\settasks{
+    label=\Alph*), 
+    label-align=left,
+    item-indent={20pt}, 
+    column-sep={4pt},
+    label-width={16pt},
+}
+
+\sisetup{per-mode=symbol}
+\footer{}{\thepage}{}
+\date{}
+
+\title{Solución a los ejercicios de ejecución - Versión C \\ Cuarto Examen Parcial de Física III  - Grupo 47}
+
+\begin{document}
+\maketitle
+
+\setcounter{page}{2}
+
+\begin{questions}
+    \section{Movimiento circular.}
+
+    \setcounter{question}{4} \question \label{Ejercicio_02} \textbf{Ejercicio de ejecución: }  Una rueda de \SI{40}{\centi\meter} de radio gira sobre un eje fijo. Su velocidad aumenta uniformemente desde el reposo hasta  alcanzar \num{900} rpm en un tiempo de \SI{20}{\second}. ¿Cuál es la aceleración angular de la rueda?
+
+    \begin{minipage}[t]{0.4\linewidth}
+    Datos: 
+    \begin{align*}
+    r &= \SI{40.0}{\centi\meter} = \SI{0.4}{\meter} \\
+    \omega_{0} &= 0 \\
+    f_{f} &= 900 \, \text{rpm} = \SI{15}{\hertz} \\
+    t &= \SI{20}{\second} \\
+    \omega_{f} &= \, ? \\
+    \alpha &= \, ??
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    Expresiones:
+    \begin{align*}
+    \omega &= 2 \, \pi \, f \\
+    \alpha &= \dfrac{\omega_{f} - \omega_{0}}{t}
+    \end{align*}
+    \end{minipage}
+
+    Sustitución:
+    \begin{align*}
+    \omega_{f} &= 2 \, \pi (\SI{15}{\hertz}) \, \unit{\radian} = \SI[per-mode=fraction]{94.24}{\radian\per\second} \\
+    \alpha &= \dfrac{ \displaystyle \SI[per-mode=fraction]{94.24}{\radian\per\second} - 0 }{\SI{20}{\second}} = \SI[per-mode=fraction]{4.71}{\radian\per\square\second}
+    \end{align*}
+
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task $\displaystyle \SI[per-mode=fraction]{2.47}{\meter\per\square\second}$
+        \task $\displaystyle \SI[per-mode=fraction]{3.02}{\meter\per\square\second}$
+        \task \fbox{$\displaystyle \SI[per-mode=fraction]{4.71}{\meter\per\square\second}$}
+        \task $\displaystyle \SI[per-mode=fraction]{8.82}{\meter\per\square\second}$
+    \end{tasks}
+
+    \question \textbf{Ejercicio de ejecución: } La velocidad angular de un disco disminuye uniformemente de \SI{12.00}{\radian\per\second} a \SI{4.00}{\radian\per\second} en \SI{16}{\second}. Calcula la aceleración angular.    
+    
+    \begin{minipage}[t]{0.4\linewidth}
+    Datos: 
+    \begin{align*}
+    \omega_{0} &= \SI{12}{\radian\per\second} \\
+    \omega_{f} &= \SI{4}{\radian\per\second} \\
+    t &= \SI{4}{\second} \\
+    \alpha &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    Expresiones:
+    \begin{align*}
+    \alpha &= \dfrac{\omega_{f} - \omega_{0}}{t}
+    \end{align*}
+    \end{minipage}
+
+    Sustitución:
+    \begin{align*}
+    \alpha &= \dfrac{ \displaystyle \SI[per-mode=fraction]{4}{\radian\per\second} - \SI[per-mode=fraction]{12}{\radian\per\second} }{\SI{16}{\second}} = - \SI[per-mode=fraction]{0.5}{\radian\per\square\second}
+    \end{align*}
+
+    \begin{tasks}(4)
+        \task $\displaystyle -\SI[per-mode=fraction]{0.1}{\radian\per\square\second}$
+        \task $\displaystyle -\SI[per-mode=fraction]{0.7}{\radian\per\square\second}$
+        \task \fbox{$\displaystyle -\SI[per-mode=fraction]{0.5}{\radian\per\square\second}$}
+        \task $\displaystyle -\SI[per-mode=fraction]{0.8}{\radian\per\square\second}$
+    \end{tasks}
+   
+    \question \label{Ejercicio_03} \textbf{Ejercicio de ejecución: } Partiendo desde el reposo una piedra abrasiva tiene una aceleración angular constante de \SI{3.2}{\radian\per\square\second}. Calcula el desplazamiento angular de piedra abrasiva \SI{2.7}{\second} después de que comenzó a girar.
+
+    \begin{minipage}[t]{0.4\linewidth}
+    Datos: 
+    \begin{align*}
+    \theta_{0} &= 0 \\
+    \omega_{i} &= 0 \\
+    \alpha &= \SI{3.2}{\radian\per\square\second} \\
+    t &= \SI{2.7}{\second} \\
+    \theta &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    Expresión:
+    \begin{align*}
+    \theta = \omega_{0} \, t + \dfrac{1}{2} \, \alpha \,  t^{2}
+    \end{align*}
+    \end{minipage}
+
+    Sustitución:
+    \begin{align*}
+    \theta &= \dfrac{1}{2} \left( \SI[per-mode=fraction]{3.2}{\radian\per\square\second} \right) \left( \SI{2.7}{\second} \right)^{2} = 0.5 \left( \SI[per-mode=fraction]{3.2}{\radian\per\square\second} \right) \left( \SI{7.29}{\square\second} \right) = \SI{11.66}{\radian}
+    \end{align*}
+
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task $\displaystyle \SI[per-mode=fraction]{14.29}{\radian}$
+        \task $\displaystyle \SI[per-mode=fraction]{20.75}{\radian}$
+        \task $\displaystyle \SI[per-mode=fraction]{58.94}{\radian}$
+        \task \fbox{$\displaystyle \SI[per-mode=fraction]{11.66}{\radian}$}
+    \end{tasks}
+
+
+\end{questions}
+\end{document}

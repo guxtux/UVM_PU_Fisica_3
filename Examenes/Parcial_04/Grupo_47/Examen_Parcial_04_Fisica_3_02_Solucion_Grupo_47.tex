@@ -1,0 +1,154 @@
+\documentclass[12pt, letter]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{pdfpages}
+\usepackage{wasysym}
+
+% \renewcommand{\questionlabel}{\thequestion}
+\decimalpoint
+
+\setlength{\belowdisplayskip}{-0.5pt}
+
+\usepackage{tasks}
+\settasks{
+    label=\Alph*), 
+    label-align=left,
+    item-indent={20pt}, 
+    column-sep={4pt},
+    label-width={16pt},
+}
+
+\sisetup{per-mode=symbol}
+\footer{}{\thepage}{}
+\date{}
+
+\title{Solución a los ejercicios de ejecución - Versión B \\ Cuarto Examen Parcial de Física III  - Grupo 47}
+
+\begin{document}
+\maketitle
+
+\setcounter{page}{2}
+
+\begin{questions}
+    \section{Movimiento circular.}
+
+    \setcounter{question}{4} \question \label{Ejercicio_02} \textbf{Ejercicio de ejecución: }  Un ventilador gira a 10 rps (rev/seg). Determina la aceleración centrípeta del extremo del aspa, si la distancia desde el centro al extremo es de \SI{30.0}{\centi\meter}.
+
+    \begin{minipage}[t]{0.4\linewidth}
+    Datos: 
+    \begin{align*}
+    f &= 10 \, \text{rps} = \SI{10}{\hertz} \\
+    r &= \SI{30.0}{\centi\meter} = \SI{0.3}{\meter} \\
+    \omega &= \, ? \\
+    v_{T} &= \, \\
+    a_{C} &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    Expresiones:
+    \begin{align*}
+    \omega &= 2 \, \pi \, f \\
+    v_{T} &= \omega \, r \\
+    a_{C} &= \dfrac{v_{T}^{2}}{r}
+    \end{align*}
+    \end{minipage}
+
+    Sustitución:
+    \begin{align*}
+    \omega &= 2 \, \pi (\SI{10}{\hertz}) \, \unit{\radian} = \SI[per-mode=fraction]{62.83}{\radian\per\second} \\
+    v_{T} &= \left( \SI[per-mode=fraction]{62.83}{\radian\per\second} \right) (\SI{0.3}{\meter}) = \SI[per-mode=fraction]{18.84}{\meter\per\second} \\
+    a_{C} &= \dfrac{\left( \displaystyle \SI[per-mode=fraction]{18.84}{\meter\per\second} \right)^{2}}{\SI{0.3}{\meter}} = \SI[per-mode=fraction]{1184.35}{\meter\per\square\second}
+    \end{align*}
+
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task $\displaystyle \SI[per-mode=fraction]{247.68}{\meter\per\square\second}$
+        \task $\displaystyle \SI[per-mode=fraction]{523.02}{\meter\per\square\second}$
+        \task \fbox{$\displaystyle \SI[per-mode=fraction]{1184.35}{\meter\per\square\second}$}
+        \task $\displaystyle \SI[per-mode=fraction]{2188.82}{\meter\per\square\second}$
+    \end{tasks}
+
+    \question \textbf{Ejercicio de ejecución: } Convierte \ang{1500} a radianes.
+    
+     
+    \begin{minipage}[t]{0.35\linewidth}
+    Datos: 
+    \begin{align*}
+    \varangle{\ang{1500}}
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    Expresión:
+    \begin{align*}
+    \ang{360} = 2 \, \pi \, \unit{\radian}
+    \end{align*}
+    \end{minipage}
+
+    Sustitución:
+    \begin{align*}
+    \dfrac{ \ang{1500} (2 \, \pi)}{\ang{360}} = \SI{26.17}{\radian}
+    \end{align*}
+
+    \vspace{0.3cm}
+    
+    \begin{tasks}(4)
+        \task \fbox{\SI{26.17}{\radian}}
+        \task \SI{38.78}{\radian}
+        \task \SI{61.99}{\radian}
+        \task \SI{135.38}{\radian}
+    \end{tasks}
+
+    \question \label{Ejercicio_03} \textbf{Ejercicio de ejecución: } Una centrifugadora está girando a 20000 rpm y un cambio de velocidad reduce a 15000 rpm en \SI{25}{\second} ¿Cuál es su aceleración angular?
+
+    \begin{minipage}[t]{0.4\linewidth}
+    Datos: 
+    \begin{align*}
+    f_{f} &= 20000 \, \text{rpm} = \SI{333.33}{\hertz} \\
+    f_{0} &= 15000 \, \text{rpm} = \SI{250}{\hertz} \\
+    t &= \SI{25}{\second} \\
+    \omega_{0} &= \, ? \\
+    \omega_{f} &= \, ? \\
+    \alpha &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    Expresiones:
+    \begin{align*}
+    \omega &= 2 \, \pi \, f \\
+    \alpha &= \dfrac{\omega_{f} - \omega_{0}}{t}
+    \end{align*}
+    \end{minipage}
+
+    Sustitución:
+    \begin{align*}
+    \omega_{0} &= 2 \, \pi (\SI{333.33}{\hertz}) \, \unit{\radian} = \SI[per-mode=fraction]{2094.37}{\radian\per\second} \\[0.5em]
+    \omega_{f} &= 2 \, \pi (\SI{250}{\hertz}) \, \unit{\radian} = \SI[per-mode=fraction]{1570.79}{\radian\per\second} \\[0.5em]
+    \alpha &= \dfrac{ \displaystyle \SI[per-mode=fraction]{1570.79}{\radian\per\second} - \SI[per-mode=fraction]{2094.39}{\radian\per\second} }{\SI{25}{\second}} = - \SI[per-mode=fraction]{20.94}{\radian\per\square\second}
+    \end{align*}
+
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task $\displaystyle -\SI[per-mode=fraction]{11.04}{\radian\per\square\second}$
+        \task $\displaystyle -\SI[per-mode=fraction]{16.75}{\radian\per\square\second}$
+        \task \fbox{$\displaystyle -\SI[per-mode=fraction]{20.94}{\radian\per\square\second}$}
+        \task $\displaystyle -\SI[per-mode=fraction]{58.11}{\radian\per\square\second}$
+    \end{tasks}
+
+
+\end{questions}
+\end{document}

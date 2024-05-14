@@ -1,0 +1,148 @@
+\documentclass[12pt, letter]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{pdfpages}
+
+% \renewcommand{\questionlabel}{\thequestion}
+\decimalpoint
+
+\setlength{\belowdisplayskip}{-0.5pt}
+
+\usepackage{tasks}
+\settasks{
+    label=\Alph*), 
+    label-align=left,
+    item-indent={20pt}, 
+    column-sep={4pt},
+    label-width={16pt},
+}
+
+\sisetup{per-mode=symbol}
+\footer{}{\thepage}{}
+\date{}
+
+\title{Solución a los ejercicios de ejecución - Versión C \\ Cuarto Examen Parcial de Física III - Grupo 43}
+
+\begin{document}
+\maketitle
+
+\setcounter{page}{2}
+
+\begin{questions}
+    \section{Movimiento circular.}
+
+    \setcounter{question}{4} \question \textbf{Ejercicio de ejecución: } Convierte $4.5 \, \pi$ radianes a grados.
+
+    \begin{minipage}[t]{0.35\linewidth}
+    Datos: 
+    \begin{align*}
+    \theta = 4.5 \, \pi \, \unit{\radian}
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    Expresión:
+    \begin{align*}
+    \ang{360} = 2 \, \pi \, \unit{\radian}
+    \end{align*}
+    \end{minipage}
+
+    Sustitución:
+    \begin{align*}
+    4.5 \, \pi \, \unit{\radian} \left( \dfrac{\ang{360}}{2 \, \pi \, \unit{\radian}} \right) = \ang{810}
+    \end{align*}
+
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task \ang{720}
+        \task \fbox{\ang{810}}
+        \task \ang{900}
+        \task \ang{990}
+    \end{tasks}
+
+    \question \label{Ejercicio_02} \textbf{Ejercicio de ejecución: } Las aspas de una licuadora giran a razón de \num{6500} rpm. Cuando el motor se apaga durante la operación, las aspas frenan hasta llegar al reposo en \SI{4.0}{\second}. ¿Cuál es la aceleración angular conforme frenan las aspas?
+    
+    \begin{minipage}[t]{0.4\linewidth}
+    Datos: 
+    \begin{align*}
+    f &= 6500 \, \text{rpm} = \SI{108.33}{\hertz} \\
+    \omega_{f} &= 0 \\
+    t &= \SI{4}{\second} \\
+    \omega_{i} &= \, ? \\
+    \alpha &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    Expresiones:
+    \begin{align*}
+    \omega &= 2 \, \pi \, f \\
+    \alpha &= \dfrac{\omega_{f} - \omega_{0}}{t}
+    \end{align*}
+    \end{minipage}
+
+    Sustitución:
+    \begin{align*}
+    \omega &= 2 \, \pi (\SI{108.33}{\hertz}) \, \unit{\radian} = \SI{680.67}{\radian\per\second} \\[0.5em]
+    \alpha &= \dfrac{ 0 - \SI{680.67}{\radian\per\second}}{\SI{4}{\second}} = - \SI[per-mode=fraction]{170.16}{\radian\per\square\second}
+    \end{align*}
+
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task \fbox{$\displaystyle - \SI{170.16}{\radian\per\square\second}$}
+        \task $\displaystyle - \SI{190.44}{\radian\per\square\second}$
+        \task $\displaystyle - \SI{242.93}{\radian\per\square\second}$
+        \task $\displaystyle - \SI{258.62}{\radian\per\square\second}$
+    \end{tasks}
+    \question \label{Ejercicio_03} \textbf{Ejercicio de ejecución: } Una rueda de molino de \SI{0.35}{\meter} de diámetro gira a \num{2500} rpm. ¿Cuál es la aceleración centrípeta de un punto localizado en el borde de la rueda de molino?
+    
+    \begin{minipage}[t]{0.4\linewidth}
+    Datos: 
+    \begin{align*}
+    d &= \SI{0.35}{\meter} \hspace{0.2cm} \Rightarrow \hspace{0.2cm} r = \SI{0.175}{\meter} \\
+    f &= 2500 \, \text{rpm} = \SI{41.66}{\hertz} \\
+    \omega &= \, ? \\
+    v_{T} &= \, ? \\
+    a_{C} &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    Expresiones:
+    \begin{align*}
+    \omega &= 2 \, \pi \, f \\
+    v_{T} &= \omega \, r \\
+    a_{C} &= \dfrac{\left( v_{T} \right)^{2}}{r}
+    \end{align*}
+    \end{minipage}
+
+    Sustitución:
+    \begin{align*}
+    \omega &= 2 \, \pi (\SI{41.66}{\hertz}) \, \unit{\radian} = \SI[per-mode=fraction]{261.75}{\radian\per\second} \\[0.5em]
+    v_{T} &= \left( \SI[per-mode=fraction]{261.75}{\radian\per\second} \right) \left( \SI{0.175}{\meter} \right) = \SI[per-mode=fraction]{45.80}{\meter\per\second} \\[0.5em]
+    a_{C} &= \dfrac{\left( \displaystyle \SI[per-mode=fraction]{45.80}{\meter\per\second} \right)^{2}}{\SI{0.175}{\meter}} = \SI[per-mode=fraction]{11990.47}{\meter\per\square\second}
+    \end{align*}
+
+    \vspace{0.3cm}
+    \begin{tasks}(4)
+        \task $\displaystyle \SI[per-mode=fraction]{978.89}{\meter\per\square\second}$
+        \task $\displaystyle \SI[per-mode=fraction]{10500.19}{\meter\per\square\second}$
+        \task $\displaystyle \SI[per-mode=fraction]{11564.24}{\meter\per\square\second}$
+        \task \fbox{$\displaystyle \SI[per-mode=fraction]{11990.47}{\meter\per\square\second}$}
+    \end{tasks}
+
+\end{questions}
+\end{document}
