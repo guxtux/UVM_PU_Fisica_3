@@ -1,0 +1,948 @@
+\documentclass[12pt, letter]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{pdfpages}
+
+% \renewcommand{\questionlabel}{\thequestion}
+\decimalpoint
+
+\setlength{\belowdisplayskip}{-0.5pt}
+
+\usepackage{tasks}
+\settasks{
+    label=\Alph*), 
+    label-align=left,
+    item-indent={20pt}, 
+    column-sep={4pt},
+    label-width={16pt},
+}
+
+\sisetup{per-mode=symbol}
+\footer{}{\thepage}{}
+\date{}
+
+\title{Solución a los ejercicios de ejecución \\ Examen Extraordinario de Física III}
+
+\begin{document}
+\maketitle
+
+\setcounter{page}{2}
+
+\begin{questions}
+    \section{Sistema Internacional de Unidades y Conversión de unidades.}
+    \setcounter{question}{1} \question \textbf{Ejercicio de ejecución.} ¿Cuántos nanosegundos (\num{d-9}) hay un año de $365$ días?
+    \begin{align*}
+        365 \, \text{días} \left( \dfrac{\SI{24}{\hour}}{1 \, \text{día}} \right) \left( \dfrac{\SI{60}{\minute}}{\SI{1}{\hour}} \right) \left( \dfrac{\SI{60}{\second}}{\SI{1}{\minute}} \right) \left( \dfrac{\SI{1}{\nano\second}}{\SI{d-9}{\second}} \right) = \SI{3.1536d16}{\nano\second}
+    \end{align*}
+    \begin{tasks}(4)
+        \task \SI{3.1536d12}{\nano\second}
+        \task \SI{3.1536d14}{\nano\second}
+        \task \SI{3.1536d15}{\nano\second}
+        \task \fbox{\SI{3.1536d16}{\nano\second}}
+    \end{tasks}
+    % \setcounter{question}{1} \question \textbf{Ejercicio de ejecución.} Si la velocidad del tren bala es de \SI{603}{\kilo\meter\per\hour}. ¿Qué distancia en metros ha recorrido en \SI{1}{\minute}?
+    
+    % \vspace*{0.5cm}
+    % Hacemos primero la conversión a \unit{\meter\per\second} de la velocidad del tren:
+    % \begin{align*}
+    %     \SI[per-mode=fraction]{603}{\kilo\meter\per\hour} \left( \dfrac{\SI{1000}{\meter}}{\SI{1}{\kilo\meter}} \right) \left( \dfrac{\SI{1}{\hour}}{\SI{3600}{\second}} \right) = \SI[per-mode=fraction]{167.5}{\meter\per\second}
+    % \end{align*}
+    % Luego calculamos la distancia que recorre en \SI{1}{\minute} = \SI{60}{\second}:
+    % \begin{align*}
+    %     \SI[per-mode=fraction]{167.5}{\meter\per\second} \bigg( \SI{60}{\second} \bigg) = \SI{10050}{\meter}
+    % \end{align*}
+    % \begin{tasks}(4)
+    %     \task \SI{10015}{\meter}
+    %     \task \fbox{\SI{10050}{\meter}}
+    %     \task \SI{10055}{\meter}
+    %     \task \SI{11050}{\meter}
+    % \end{tasks}
+    % \setcounter{question}{5} \question \textbf{Ejercicio de ejecución:} Un conductor fue detenido en la carretera, la policía le comenta que rebasó el límite de velocidad que es de \SI{100}{\kilo\meter\per\hour}, el conductor argumenta que manejaba a \break $1.25$ millas/minuto (Recuerda que 1 milla = \SI{1.609}{\kilo\meter}) ¿A qué velocidad en \unit{\kilo\meter\per\hour} iba conduciendo el auto?
+    % \begin{align*}
+    %     1.25 \, \dfrac{\text{milla}}{\unit{\minute}} \left( \dfrac{\SI{1.609}{\kilo\meter}}{1 \, \text{milla}} \right) \left( \dfrac{\SI{60}{\minute}}{\SI{1}{\hour}} \right) = \SI[per-mode=fraction]{120.67}{\kilo\meter\per\hour}
+    % \end{align*}
+    % \begin{tasks}(4)
+    %     \task \fbox{\SI{120.67}{\kilo\meter\per\hour}}
+    %     \task \SI{125.35}{\kilo\meter\per\hour}
+    %     \task \SI{132.78}{\kilo\meter\per\hour}
+    %     \task \SI{100.00}{\kilo\meter\per\hour}
+    % \end{tasks}
+
+    \section{Movimiento rectilíneo uniforme.}
+
+    % \setcounter{question}{4} \question  \label{Ejercicio_02} \textbf{Ejercicio de ejecución. } Se tienen $4$ objetos en movimiento con los siguientes datos de velocidad y tiempo: \\[0.3em]
+    % Objeto 1: $v = \SI{16}{\meter\per\second}, \, t = \SI{5}{\second}$ \\[0.3em]
+    % Objeto 2: $v = \SI{15}{\meter\per\second}, \, t = \SI{6}{\second}$ \\[0.3em]
+    % Objeto 3: $v = \SI{24}{\meter\per\second}, \, t = \SI{3}{\second}$ \\[0.3em]
+    % Objeto 4: $v = \SI{4}{\meter\per\second}, \, t = \SI{22}{\second}$ \\[0.3em]
+    % ¿Cuál de los objetos es el que recorrió la mayor distancia? 
+    
+    % \vspace*{1cm}
+    % Para revolver este ejercicio, se calcula la distancia que recorre cada objeto:
+    % \begin{align*}
+    % v = \dfrac{d}{t} \hspace{0.5cm} \Rightarrow \hspace{0.5cm} d = v \, t
+    % \end{align*}
+    % \begin{table}[H]
+    %     \centering
+    %     \renewcommand{\arraystretch}{2}
+    %     \begin{tabular}{c | c | c}
+    %         Objeto & Sustitución & Distancia \\ \hline
+    %         Objeto 1 & $d = \left( \displaystyle \SI[per-mode=fraction]{16}{\meter\per\second} \right) (\SI{5}{\second})$ & $\SI{80}{\meter}$ \\ \hline
+    %         Objeto 2 & $d = \left( \displaystyle \SI[per-mode=fraction]{15}{\meter\per\second} \right) (\SI{6}{\second})$ & $\SI{90}{\meter}$ \\ \hline
+    %         Objeto 3 & $d = \left( \displaystyle \SI[per-mode=fraction]{24}{\meter\per\second} \right) (\SI{3}{\second})$ & $\SI{72}{\meter}$ \\ \hline
+    %         Objeto 4 & $d = \left( \displaystyle \SI[per-mode=fraction]{4}{\meter\per\second} \right) (\SI{22}{\second})$ & $\SI{88}{\meter}$ \\ \hline
+    %     \end{tabular}
+    % \end{table}
+    % Por lo que el Objeto 2 es el que recorre una distancia mayor.
+    % \begin{tasks}(4)
+    %     \task Objeto 1
+    %     \task \fbox{Objeto 2}
+    %     \task Objeto 3
+    %     \task Objeto 4        
+    % \end{tasks}
+    \setcounter{question}{4} \question \textbf{Ejercicio de ejecución. } Calcula el tiempo en segundos que tardará un automóvil en desplazarse \SI{3}{\kilo\meter} en línea recta hacia el sur con una velocidad cuya magnitud es de \SI{70}{\kilo\meter\per\hour}.
+
+    \vspace*{0.25cm}
+    Convertimos la velocidad del automóvil de \unit{\kilo\meter\per\hour} a \unit{\meter\per\second}:
+    \begin{align*}
+        \SI[per-mode=fraction]{70}{\kilo\meter\per\hour} \left( \dfrac{\SI{1000}{\meter}}{\SI{1}{\kilo\meter}} \right) \left( \dfrac{\SI{1}{\hour}}{\SI{3600}{\second}} \right) = \SI[per-mode=fraction]{19.44}{\meter\per\second}
+    \end{align*}
+    Ahora pasamos a resolver el ejercicio:
+
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos: }
+    \begin{align*}
+    v &= \SI{19.44}{\meter\per\second} \\
+    d &= \SI{3}{\kilo\meter} = \SI{3000}{\meter} \\
+    t &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    v &= \dfrac{d}{t} \hspace{0.5cm} \Rightarrow \hspace{0.5cm} t = \dfrac{d}{v} \\[0.5em]
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    t &= \dfrac{\SI{3000}{\meter}}{\displaystyle \SI[per-mode=fraction]{19.44}{\meter\per\second}} = \SI{154.28}{\second}
+    \end{align*}
+    \begin{tasks}(4)
+        \task \SI{23.33}{\second}
+        \task \SI{72.24}{\second}
+        \task \fbox{\SI{154.28}{\second}}
+        \task \SI{175.15}{\second}
+    \end{tasks}
+
+    % \newpage
+
+    \section{Movimiento uniformemente acelerado.}
+
+    \setcounter{question}{6} \question \textbf{Ejercicio de ejecución.} Un auto deportivo acelera desde el reposo hasta alcanzar \SI{95}{\kilo\meter\per\hour} en \SI{4.5}{\second}. ¿Cuál es su aceleración?
+
+    \vspace*{0.25cm}
+    Convertimos la velocidad del automóvil de \unit{\kilo\meter\per\hour} a \unit{\meter\per\second}:
+    \begin{align*}
+        \SI[per-mode=fraction]{95}{\kilo\meter\per\hour} \left( \dfrac{\SI{1000}{\meter}}{\SI{1}{\kilo\meter}} \right) \left( \dfrac{\SI{1}{\hour}}{\SI{3600}{\second}} \right) = \SI[per-mode=fraction]{26.38}{\meter\per\second}
+    \end{align*}
+    Ahora pasamos a resolver el ejercicio:
+
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos: }
+    \begin{align*}
+    v_{i} &= 0 \\
+    v_{f} &= \SI{26.38}{\meter\per\second} \\
+    t &= \SI{4.5}{\second} \\
+    a &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    a = \dfrac{v_{f} - v_{i}}{t}
+    \end{align*}
+    \end{minipage}
+    
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    a &= \dfrac{\displaystyle \SI[per-mode=fraction]{26.38}{\meter\per\second}}{\SI{4.5}{\second}} = \SI[per-mode=fraction]{5.86}{\meter\per\square\second}
+    \end{align*}
+
+    \begin{tasks}(4)
+        \task \SI{3.11}{\meter\per\square\second}
+        \task \fbox{\SI{5.86}{\meter\per\square\second}}
+        \task \SI{22.11}{\meter\per\square\second}
+        \task \SI{26.38}{\meter\per\square\second}
+    \end{tasks}
+    \setcounter{question}{7} \question \label{Ejercicio_04} \textbf{Ejercicio de ejecución.} Un camión lleva una velocidad inicial de \SI{6}{\meter\per\second} al sur, a los \num{10} segundos su velocidad se incrementa a \SI{8}{\meter\per\second} también hacia el sur. ¿Qué distancia recorre en ese tiempo de \SI{10}{\second}?
+
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.35\linewidth}
+    \textbf{Datos: }
+    \begin{align*}
+    v_{i} &= \SI{6}{\meter\per\second} \\
+    v_{f} &= \SI{8}{\meter\per\second} \\
+    t &= \SI{10}{\second} \\
+    d &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresiones:}
+    \begin{align*}
+    a &= \dfrac{v_{f} - v_{i}}{t} \\
+    d &= v_{i} \, t + \dfrac{1}{2} \, a \, t^{2}
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    a &= \dfrac{\displaystyle \SI[per-mode=fraction]{8}{\meter\per\second} - \SI[per-mode=fraction]{6}{\meter\per\second}}{\SI{10}{\second}} = \SI[per-mode=fraction]{0.2}{\meter\per\square\second} \\[0.5em]
+    d &= \left( \SI[per-mode=fraction]{6}{\meter\per\second} \right)\left( \SI{8}{\second} \right) + \dfrac{1}{2} \left( \SI[per-mode=fraction]{0.2}{\meter\per\square\second} \right) \left( \SI{10}{\second} \right)^{2} \\[0.5em]
+    d &= \SI{48}{\meter} + \dfrac{1}{2} \left( \SI[per-mode=fraction]{0.2}{\meter\per\square\second} \right) \left( \SI{100}{\square\second} \right) \\
+    d &= \SI{48}{\meter} + \dfrac{\SI{20}{\meter}}{2} \\
+    d &= \SI{48}{\meter} + \SI{10}{\meter} = \SI{58}{\meter}
+    \end{align*}
+     \begin{tasks}(4)
+        \task \SI{48}{\meter}
+        \task \fbox{\SI{58}{\meter}}
+        \task \SI{68}{\meter}
+        \task \SI{78}{\meter}
+    \end{tasks}
+    % \setcounter{question}{7} \question \label{Ejercicio_04} \textbf{Ejercicio de ejecución. } Una persona viaja en motocicleta a una velocidad de \SI{3}{\meter\per\second} y acelera constantemente a razón de \SI{0.4}{\meter\per\square\second}. ¿Qué distancia recorrerá después de 1 minuto?
+    
+    % \begin{minipage}[t]{0.35\linewidth}
+    % Datos: 
+    % \begin{align*}
+    % v_{i} &= \SI{3}{\meter\per\second} \\
+    % a &= \SI{0.4}{\meter\per\square\second} \\
+    % t &= \SI{1}{\minute} = \SI{60}{\second} \\
+    % d &= \, ?
+    % \end{align*}
+    % \end{minipage}
+    % \hspace{1cm}
+    % \begin{minipage}[t]{0.4\linewidth}
+    % Expresión:
+    % \begin{align*}
+    % d = v_{i} \, t + \dfrac{1}{2} \, a \, t^{2}
+    % \end{align*}
+    % \end{minipage}
+
+    % Sustitución:
+    % \begin{align*}
+    % d &= \left( \SI[per-mode=fraction]{3}{\meter\per\second} \right) \left( \SI{60}{\second} \right) + \dfrac{1}{2} \, \left( \SI[per-mode=fraction]{0.4}{\meter\per\square\second} \right) \left( \SI{60}{\second} \right)^{2} \\[0.5em]
+    % d &= \SI{180}{\meter} + \dfrac{1}{2} \, \left( \SI[per-mode=fraction]{0.4}{\meter\per\square\second} \right) \left( \SI{3600}{\square\second} \right) \\[0.5em]
+    % d &= \SI{180}{\meter} + \dfrac{\SI{1440}{\meter}}{2} \\[0.5em]
+    % d &= \SI{180}{\meter} + \SI{720}{\meter} = \SI{900}{\meter}
+    % \end{align*}
+    % \begin{tasks}(4)
+    %     \task \fbox{\SI{900}{\meter}}
+    %     \task \SI{1000}{\meter}
+    %     \task \SI{1500}{\meter}
+    %     \task \SI{2000}{\meter}
+    % \end{tasks}
+
+    % \newpage
+
+    \section{Caída libre y tiro vertical.}
+
+    \setcounter{question}{8} \question \label{Ejercicio_05} \textbf{Ejercicio de ejecución.} Se lanza verticalmente hacia abajo una pelota al vacío con una velocidad inicial de \SI{2}{\meter\per\second}. ¿Qué magnitud de la velocidad llevará a los \SI{10}{\second} de su caída?
+    
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    v_{i} &= \SI{2}{\meter\per\second} \\
+    t &= \SI{10}{\second} \\
+    g &= \SI{9.81}{\meter\per\square\second} \\
+    v_{f} &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    v_{f} = v_{i} + g \, t
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    v_{f} = \SI[per-mode=fraction]{2}{\meter\per\second} + \left( - \SI[per-mode=fraction]{9.81}{\meter\per\square\second} \right)\left( \SI{10}{\second} \right) =  \SI[per-mode=fraction]{2}{\meter\per\second} - \SI[per-mode=fraction]{98.1}{\meter\per\second} = - \SI[per-mode=fraction]{96.1}{\meter\per\second}
+    \end{align*}
+    \begin{tasks}(4)
+        \task \SI{98.1}{\meter\per\second}
+        \task \SI{96.1}{\meter\per\second}
+        \task \fbox{\SI{-96.1}{\meter\per\second}}
+        \task \SI{-98.1}{\meter\per\second}
+    \end{tasks}
+
+    \setcounter{question}{9} \question \label{Ejercicio_06} \textbf{Ejercicio de ejecución.} Un balón de voleibol que se encuentra al nivel del suelo es lanzado verticalmente hacia arriba con una velocidad de \SI{25.5}{\meter\per\second}. ¿Cuánto tiempo permanece en el aire?
+
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    v_{i} &= \SI{25.5}{\meter\per\second} \\
+    g &= \SI{9.81}{\meter\per\square\second} \\
+    t &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    t_{\text{subida}} &= - \dfrac{v_{i}}{g} \\
+    t_{\text{vuelo}} &= 2 \, t_{\text{subida}}
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    t_{\text{subida}} &= - \dfrac{\displaystyle \SI[per-mode=fraction]{25.5}{\meter\per\second}}{\displaystyle \SI[per-mode=fraction]{-9.81}{\meter\per\square\second}} = \SI{2.59}{\second} \\[0.5em]
+    t_{\text{subida}} &= 2 \left( \SI{2.59}{\second} \right) = \SI{5.19}{\second}
+    \end{align*}
+    \begin{tasks}(4)
+        \task \SI{2.59}{\second}
+        \task \fbox{\SI{5.19}{\second}}
+        \task \SI{7.78}{\second}
+        \task \SI{12.97}{\second}
+    \end{tasks}
+    % \question \label{Ejercicio_05} \textbf{Ejercicio de ejecución. } En su visita a la Torre Latinoamericana, Tobías dejó caer un muñeco desde el piso \num{44} y tardó \SI{5.81}{\second} en caer al piso (suponiendo que no hubo algún obstáculo durante la caída). Calcula la altura del piso \num{44}.
+    % \begin{minipage}[t]{0.35\linewidth}
+    % Datos: 
+    % \begin{align*}
+    % v_{i} &= 0 \\
+    % t &= \SI{5.81}{\second} \\
+    % g &= \SI{9.81}{\meter\per\square\second} \\
+    % y &= \, ?
+    % \end{align*}
+    % \end{minipage}
+    % \hspace{1cm}
+    % \begin{minipage}[t]{0.4\linewidth}
+    % Expresión:
+    % \begin{align*}
+    % y = v_{i} \, t + \dfrac{1}{2} g \, t^{2}
+    % \end{align*}
+    % \end{minipage}
+
+    % Sustitución:
+    % \begin{align*}
+    % y &= \left( \displaystyle \SI[per-mode=fraction]{0}{\meter\per\second} \right) (\SI{5.81}{\second}) + \dfrac{1}{2} \, \left( \displaystyle -\SI[per-mode=fraction]{9.81}{\meter\per\square\second} \right) \left(\SI{5.81}{\second} \right)^{2} \\[0.5em]
+    % y &= \dfrac{1}{2} \, \left( \displaystyle -\SI[per-mode=fraction]{9.81}{\meter\per\square\second} \right) \left(\SI{33.75}{\square\second} \right) \\[0.5em]
+    % y &= - \dfrac{\SI{331.14}{\meter}}{2} = - \SI{165.57}{\meter}
+    % \end{align*}
+    % Nota: el signo menos indica que la distancia que recorrió el objeto parte del punto inicial en dirección negativa del eje $y$.
+    % \begin{tasks}(4)
+    %     \task \SI{160.21}{\meter}
+    %     \task \fbox{\SI{165.57}{\meter}}
+    %     \task \SI{307.18}{\meter}
+    %     \task \SI{331.14}{\meter}
+    % \end{tasks}
+    % \setcounter{question}{9} \question \label{Ejercicio_06} \textbf{Ejercicio de ejecución. } Se lanza verticalmente hacia arriba una esfera metálica con una velocidad cuya magnitud es de \SI{20}{\meter\per\second}. ¿Qué distancia recorre a los \num{2} segundos?
+
+    % \begin{minipage}[t]{0.35\linewidth}
+    % Datos: 
+    % \begin{align*}
+    % v_{i} &= \SI{20}{\meter\per\second} \\
+    % t &= \SI{2}{\second} \\
+    % g &= \SI{9.81}{\meter\per\square\second} \\
+    % y &= \, ?
+    % \end{align*}
+    % \end{minipage}
+    % \hspace{1cm}
+    % \begin{minipage}[t]{0.4\linewidth}
+    % Expresión:
+    % \begin{align*}
+    % y = v_{i} \, t + \dfrac{1}{2} g \, t^{2}
+    % \end{align*}
+    % \end{minipage}
+
+    % Sustitución:
+    % \begin{align*}
+    % y &= \left( \displaystyle \SI[per-mode=fraction]{20}{\meter\per\second} \right) (\SI{2}{\second}) + \dfrac{1}{2} \, \left( \displaystyle -\SI[per-mode=fraction]{9.81}{\meter\per\square\second} \right) \left(\SI{2}{\second} \right)^{2} \\[0.5em]
+    % y &= \SI{40}{\meter} - \dfrac{1}{2} \, \left( \displaystyle \SI[per-mode=fraction]{9.81}{\meter\per\square\second} \right) \left(\SI{4}{\square\second} \right) \\[0.5em]
+    % y &= \SI{40}{\meter} - \dfrac{\SI{39.24}{\meter}}{2} \\[0.5em]
+    % y &= \SI{40}{\meter} - \SI{19.62}{\meter} = \SI{20.38}{\meter}
+    % \end{align*}
+    % \begin{tasks}(4)
+    %     \task \SI{15.09}{\meter}
+    %     \task \fbox{\SI{20.38}{\meter}}
+    %     \task \SI{51.19}{\meter}
+    %     \task \SI{59.62}{\meter}
+    % \end{tasks}
+
+    \section{Movimiento circular.}
+
+    \setcounter{question}{10} \question \textbf{Ejercicio de ejecución.} Nuestro amigo Tobías se sube en una rueda de la fortuna, que tiene una trayectoria circular y recorre \ang{3600}. ¿Cuántos radianes fueron?
+
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    \theta_{\text{grados}} &= \ang{3600} \\[0.5em]
+    \theta_{\text{\unit{rad}}} &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    \ang{360} &= 2 \, \pi \, \unit{\radian} \\
+    \SI{1}{\radian} &= \ang{57.29}
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    \theta = \left( \ang{3600}  \right) \left( \dfrac{\SI{1}{\radian}}{\ang{57.29}} \right) = \SI{62.83}{\radian}
+    \end{align*}
+    \begin{tasks}(4)
+        \task \SI{50.00}{\radian}
+        \task \fbox{\SI{62.83}{\radian}}
+        \task \SI{71.23}{\radian}
+        \task \SI{85.39}{\radian}
+    \end{tasks}
+    % La turbina de una planta hidroeléctrica gira a razón de 75 rpm. ¿Cuál es el desplazamiento angular en radianes de la punta de una de las hélices de la turbina durante un minuto?
+    
+    \setcounter{question}{11} \question \textbf{Ejercicio de ejecución.} Una pelota de esponja está atada a una cuerda y se mueve en un círculo horizontal de \SI{90}{\centi\meter} de radio. Sin considerar los efectos de la gravedad, si la pelota tiene una frecuencia de \num{80} r.p.m. -revoluciones por minuto- ¿Cuál es la velocidad lineal que experimenta?
+
+    \vspace*{0.3cm}
+    El problema nos indica la frecuenca de \num{80} r.p.m., por lo que hay que pasar ese valor a segundos:
+    \begin{align*}
+        80 \, \dfrac{\text{rev}}{\unit{\minute}} \left( \dfrac{\SI{1}{\minute}}{\SI{60}{\second}} \right) = \SI{1.33}{\hertz}
+    \end{align*}
+    
+    Regresamos a la solución del problema:
+    
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    r &= \SI{90}{\centi\meter} = \SI{0.9}{\meter} \\
+    f &= \SI{1.33}{\hertz}
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresiones:}
+    \begin{align*}
+    \omega &= 2 \, \pi \, f \\
+    v_{T} &= \omega \, r
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    \omega &= (2 \, \pi) \left( \SI{1.33}{\hertz} \right) = \SI[per-mode=fraction]{8.37}{\radian\per\second} \\[0.5em]
+    v_{T} &= \left( \SI[per-mode=fraction]{8.37}{\radian\per\second} \right) \left( \SI{0.9}{\meter} \right) = \SI[per-mode=fraction]{7.53}{\meter\per\second}
+    \end{align*}
+    \begin{tasks}(4)
+        \task \SI{4.77}{\meter\per\second}
+        \task \fbox{\SI{7.53}{\meter\per\second}}
+        \task \SI{8.45}{\meter\per\second}
+        \task \SI{9.81}{\meter\per\second}
+    \end{tasks}
+
+    \newpage
+    
+    \setcounter{question}{12} \question \textbf{Ejercicio de ejecución.} Un motor eléctrico incrementó la magnitud de su velocidad angular de \SI{20}{\radian\per\second} a \SI{120}{\radian\per\second} en \SI{0.5}{\second}. ¿Cuál fue la magnitud de su desplazamiento angular en ese tiempo?
+
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    \omega_{0} &= \SI{20}{\radian\per\second} \\
+    \omega_{f} &= \SI{210}{\radian\per\second} \\
+    t &= \SI{0.5}{\second} \\
+    \theta &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresiones:}
+    \begin{align*}
+    \alpha &= \dfrac{\omega_{f} - \omega_{0}}{t} \\[0.5em]
+    \theta &= \omega_{0} \, t +\dfrac{1}{2} \alpha \, t^{2}
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    \alpha &= \dfrac{\displaystyle \SI[per-mode=fraction]{120}{\radian\per\second} - \SI[per-mode=fraction]{20}{\radian\per\second}}{\SI{0.5}{\second}} = \SI[per-mode=fraction]{200}{\radian\per\square\second} \\[0.5em]
+    \theta &= \left(\SI[per-mode=fraction]{20}{\radian\per\second}\right)(\SI{0.5}{\second}) + \dfrac{1}{2} \left( \SI[per-mode=fraction]{200}{\radian\per\square\second} \right) \left( \SI{0.5}{\second} \right)^{2} = \\[0.5em]
+    \theta &= \SI{10}{\radian} + \dfrac{1}{2} \left( \SI[per-mode=fraction]{200}{\radian\per\square\second} \right) \left( \SI{0.25}{\square\second} \right) = \\[0.5em]
+    \theta &= \SI{10}{\radian} + \dfrac{\SI{50}{\radian}}{2} = \SI{10}{\radian} + \SI{25}{\radian} = \\[0.5em]
+    \theta &= \SI{35}{\radian}
+    \end{align*}
+    \begin{tasks}(4)
+        \task \SI{30}{\radian}
+        \task \fbox{\SI{35}{\radian}}
+        \task \SI{60}{\radian}
+        \task \SI{65}{\radian}
+    \end{tasks}
+
+    % \setcounter{question}{11} \question \label{Ejercicio_07} \textbf{Ejercicio de ejecución. } La turbina de una planta hidroeléctrica gira a razón de 75 rpm. ¿Cuál es el desplazamiento angular en radianes de la punta de una de las hélices de la turbina durante un minuto?
+    % \begin{align*}
+    %     1 \, \text{rpm} &= 2 \, \pi \unit{\radian} \\[0.5em]
+    %     \Rightarrow \hspace{0.3cm} 75 \, \text{rpm} &= \, ? \, \unit{\radian} \\[0.5em]
+    %     \Rightarrow \hspace{0.3cm} \dfrac{\left( 75 \, \text{rpm} \right) (2 \, \pi \unit{\radian})}{1 \, \text{rpm}} &= \SI{471.23}{\radian}
+    % \end{align*}
+    % \begin{tasks}(4)
+    %     \task \SI{150.00}{\radian}
+    %     \task \SI{235.61}{\radian}
+    %     \task \fbox{\SI{471.23}{\radian}}
+    %     \task \SI{785.39}{\radian}
+    % \end{tasks}
+    % \setcounter{question}{15} \question \label{Ejercicio_08} \textbf{Ejercicio de ejecución. } Un objeto está atado a una cuerda y se mueve en un círculo horizontal de \SI{90}{\centi\meter} de radio. Sin considerar los efectos de la gravedad, el objeto tiene una frecuencia de \num{80} rpm. ¿Cuál es la velocidad lineal que experimenta?
+
+    % \begin{minipage}[t]{0.35\linewidth}
+    % Datos: 
+    % \begin{align*}
+    % r &= \SI{90}{\centi\meter} = \SI{0.9}{\meter} \\
+    % f &= \num{80} \, \text{rpm} = \SI{80}{\hertz} \\
+    % v_{L} &= \, ?
+    % \end{align*}
+    % \end{minipage}
+    % \hspace{1cm}
+    % \begin{minipage}[t]{0.4\linewidth}
+    % Expresiones:
+    % \begin{align*}
+    % T &= \dfrac{1}{f} \\[0.5em]
+    % v_{L} &= \dfrac{2 \, \pi \, r}{T}
+    % \end{align*}
+    % \end{minipage}
+
+    % Sustitución:
+    % \begin{align*}
+    % T &= \dfrac{1}{\SI{80}{\hertz}} = \SI{0.0125}{\second} \\[0.5em]
+    % v_{L} &= \dfrac{2 \, \pi \left( \SI{0.9}{\meter} \right)}{\SI{0.0125}{\second}} = \dfrac{\SI{5.65}{\meter}}{\SI{0.0125}{\second}} = \SI[per-mode=fraction]{452.38}{\meter\per\second}
+    % \end{align*}
+    % \begin{tasks}(4)
+    %     \task \SI{7.53}{\meter\per\second}
+    %     \task \SI{47.37}{\meter\per\second}
+    %     \task \fbox{\SI{452.38}{\meter\per\second}}
+    %     \task \SI{753.98}{\meter\per\second}
+    % \end{tasks}
+    % \setcounter{question}{12} \question \label{Ejercicio_09} \textbf{Ejercicio de ejecución. } Una hélice gira inicialmente con una velocidad angular cuya magnitud es de \SI{10}{\radian\per\second} y recibe una aceleración constante cuya magnitud es de \SI{3}{\radian\per\square\second}. ¿Cuál será la magnitud de su velocidad angular después de \num{7} segundos?
+
+    % \begin{minipage}[t]{0.35\linewidth}
+    % Datos: 
+    % \begin{align*}
+    % \omega_{i} &= \SI{10}{\radian\per\second} \\
+    % \alpha &= \SI{3}{\radian\per\square\second} \\
+    % t &= \SI{7}{\second} \\
+    % \omega_{f} &= \, ?
+    % \end{align*}
+    % \end{minipage}
+    % \hspace{1cm}
+    % \begin{minipage}[t]{0.4\linewidth}
+    % Expresión:
+    % \begin{align*}
+    % \omega_{f} = \omega_{i} + \alpha \, t
+    % \end{align*}
+    % \end{minipage}
+
+    % Sustitución:
+    % \begin{align*}
+    % \omega_{f} = \SI[per-mode=fraction]{10}{\radian\per\second} + \left( \SI[per-mode=fraction]{3}{\radian\per\square\second} \right) \left( \SI{7}{\second} \right) \\[0.5em]
+    % \omega_{f} = \SI[per-mode=fraction]{10}{\radian\per\second} + \SI[per-mode=fraction]{21}{\radian\per\second} = \SI[per-mode=fraction]{31}{\radian\per\second}
+    % \end{align*}
+    % \begin{tasks}(4)
+    %     \task \SI{30}{\radian\per\second}
+    %     \task \fbox{\SI{31}{\radian\per\second}}
+    %     \task \SI{35}{\radian\per\second}
+    %     \task \SI{36}{\radian\per\second}
+    % \end{tasks}
+
+    \section{Leyes de Newton.}
+
+    \setcounter{question}{15} \question \textbf{Ejercicio de ejecución.} Calcula la magnitud de la aceleración que produce una fuerza cuya magnitud es de \SI{250}{\newton} a un triciclo cuya masa es de \SI{7500}{\gram}. Expresa el resultado en \unit{\meter\per\square\second}.
+    
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    F &= \SI{250}{\newton} \\
+    m &= \SI{7500}{\gram} = \SI{7.5}{\kilo\gram} \\
+    a &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    F = m \, a \hspace{0.2cm} \Rightarrow \hspace{0.2cm} a = \dfrac{F}{m}
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    a = \dfrac{\SI{250}{\newton}}{\SI{7.5}{\kilo\gram}} = \num{33.33} \, \dfrac{\displaystyle \unit[per-mode=fraction]{\kilo\gram\meter\per\square\meter}}{\unit{\kilo\gram}} = \SI[per-mode=fraction]{33.33}{\meter\per\square\second}
+    \end{align*}
+    \begin{tasks}(4)
+        \task \SI{0.033}{\meter\per\square\second}
+        \task \SI{3.33}{\meter\per\square\second}
+        \task \fbox{\SI{33.33}{\meter\per\square\second}}
+        \task \SI{330.33}{\meter\per\square\second}
+    \end{tasks}
+
+    % Calcula la masa de una caja en kilogramos, si al recibir una fuerza cuya magnitud es de \SI{300}{\newton} le produce una aceleración con una magnitud de \SI{150}{\centi\meter\per\square\second}.
+
+    %  \question \label{Ejercicio_10} \textbf{Ejercicio de ejecución. } Calcula la masa de una caja en kilogramos, si al recibir una fuerza cuya magnitud es de \SI{300}{\newton} le produce una aceleración con una magnitud de \SI{150}{\centi\meter\per\square\second}.
+    
+    % \begin{minipage}[t]{0.35\linewidth}
+    % Datos: 
+    % \begin{align*}
+    % F &= \SI{300}{\newton} \\
+    % a &= \SI{150}{\centi\meter\per\square\second} \\
+    % m &= \, ?
+    % \end{align*}
+    % \end{minipage}
+    % \hspace{1cm}
+    % \begin{minipage}[t]{0.4\linewidth}
+    % Expresión:
+    % \begin{align*}
+    % F = m \, a \hspace{0.3cm} \Rightarrow \hspace{0.3cm} m = \dfrac{F}{a}
+    % \end{align*}
+    % \end{minipage}
+
+    % Se expresa la aceleración en \unit{\meter\per\second}:
+    % \begin{align*}
+    %     a &= \SI[per-mode=fraction]{150}{\centi\meter\per\square\second} \left( \dfrac{\SI{1}{\meter}}{\SI{100}{\centi\meter}} \right) = \SI[per-mode=fraction]{1.5}{\meter\per\square\second}
+    % \end{align*}
+    % Sustitución:
+    % \begin{align*}
+    % m = \dfrac{\SI{300}{\newton}}{\displaystyle \SI[per-mode=fraction]{1.5}{\meter\per\square\second}} = \num{200} \, \dfrac{\displaystyle \unit[per-mode=fraction]{\kilo\gram\meter\per\square\second}}{\displaystyle \unit[per-mode=fraction]{\meter\per\square\second}} = \SI{200}{\kilo\gram}
+    % \end{align*}
+        
+    % \begin{tasks}(4)
+    %     \task \SI{2}{\kilo\gram}
+    %     \task \SI{10}{\kilo\gram}
+    %     \task \SI{100}{\kilo\gram}
+    %     \task \fbox{\SI{200}{\kilo\gram}}
+    % \end{tasks}
+
+    \section{Ley de gravitación universal.}
+
+    \setcounter{question}{17} \question \textbf{Ejercicio de ejecución.} Calcula la distancia a la que se deben de colocar dos masas iguales de \SI{100}{\kilo\gram} para que se atraigan con una fuerza gravitacional de \SI{100}{\newton}.
+
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    m_{1} &= \SI{100}{\kilo\gram} \\
+    m_{2} &= \SI{100}{\kilo\gram} \\
+    F &= \SI{100}{\newton} \\
+    G &= \SI{6.67d-11}{\newton\square\meter\per\square\kilo\gram} \\
+    r &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    F &= \dfrac{G \, m_{1} \, m_{2}}{r^{2}} \\
+    \Rightarrow \hspace{0.2cm} r &= \sqrt{\dfrac{G \, m_{1} \, m_{2}}{F}}
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    d &= \sqrt{\dfrac{\displaystyle \left( \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\per\square\kilo\gram} \right) \left( \SI{100}{\kilo\gram} \right) \left(\SI{100}{\kilo\gram}\right)}{\SI{100}{\newton}}} = \\[0.5em]
+    d &= \sqrt{\dfrac{\displaystyle \left( \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\per\square\kilo\gram} \right) \left( \SI{1000}{\square\kilo\gram} \right)}{\SI{100}{\newton}}} = \\[0.5em]
+    d &= \sqrt{\dfrac{\displaystyle \SI[per-mode=fraction]{6.67d-7}{\newton\square\meter}}{\SI{100}{\newton}}} = \\[0.5em]
+    d &= \sqrt{\SI[per-mode=fraction]{6.67d-9}{\square\meter}} = \\[0.5em]
+    d &= \SI{8.16d-5}{\meter}
+    \end{align*}
+    \begin{tasks}(4)
+        \task \fbox{$\SI{8.16d-5}{\meter}$}
+        \task $\SI{9.81d-5}{\meter}$
+        \task $\SI{6.67d-9}{\meter}$
+        \task $\SI{6.67d-11}{\meter}$
+    \end{tasks}
+    %  \question \label{Ejercicio_11} \textbf{Ejercicio de ejecución. } Una barra metálica cuyo peso tiene una magnitud de \SI{800}{\newton} se acerca a otra de \SI{1200}{\newton} hasta que la distancia entre sus centros es de \SI{80}{\centi\meter}. ¿Con qué magnitud de fuerza gravitacional se atraen?
+
+    % \begin{minipage}[t]{0.35\linewidth}
+    % Datos: 
+    % \begin{align*}
+    % W_{1} &= \SI{800}{\newton} \\
+    % W_{2} &= \SI{1200}{\newton} \\
+    % r &= \SI{80}{\centi\meter} = \SI{0.8}{\meter} \\
+    % g &= \SI{9.81}{\meter\per\square\second} \\
+    % G &= \SI{6.67d-11}{\newton\square\meter\per\square\kilo\gram} \\
+    % F &= \, ?
+    % \end{align*}
+    % \end{minipage}
+    % \hspace{1cm}
+    % \begin{minipage}[t]{0.4\linewidth}
+    % Expresión:
+    % \begin{align*}
+    % F = \dfrac{G \, m_{1} \, m_{2}}{r^{2}}
+    % \end{align*}
+    % \end{minipage}
+
+    % Convertimos los pesos de las barras de Newtons, a su masa en kilogramos:
+    % \begin{align*}
+    % W &= m \, g \hspace{0.3cm} \Rightarrow \hspace{0.3cm} m = \dfrac{W}{g} \\
+    % m_{1} &= \dfrac{\SI{800}{\newton}}{\displaystyle \SI[per-mode=fraction]{9.81}{\meter\per\square\second}} = \num{81.54} \dfrac{\displaystyle \unit[per-mode=fraction]{\kilo\gram\meter\per\square\second}}{\displaystyle \unit[per-mode=fraction]{\meter\per\square\second}} = \SI{81.54}{\kilo\gram} \\[1em]
+    % m_{2} &= \dfrac{\SI{1200}{\newton}}{\displaystyle \SI[per-mode=fraction]{9.81}{\meter\per\square\second}} = \num{122.32} \dfrac{\displaystyle \unit[per-mode=fraction]{\kilo\gram\meter\per\square\second}}{\displaystyle \unit[per-mode=fraction]{\meter\per\square\second}} = \SI{122.32}{\kilo\gram}
+    % \end{align*}
+
+    % Sustitución:
+    % \begin{align*}
+    % F &= \dfrac{\left( \displaystyle \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\per\square\kilo\gram} \right) \left( \SI{81.54}{\kilo\gram} \right) \left( \SI{122.32}{\kilo\gram} \right)}{\left( \SI{0.8}{\meter} \right)^{2}} \\[0.5em]
+    % F &= \dfrac{\SI{6.652d-7}{\newton\per\square\meter}}{\SI{0.64}{\square\meter}} = \SI{1.039d-6}{\newton}
+    % \end{align*}
+    
+    % \begin{tasks}(4)
+    %     \task \SI{1.039d-5}{\newton}
+    %     \task \fbox{\SI{1.039d-6}{\newton}}
+    %     \task \SI{8.317d-7}{\newton}
+    %     \task \SI{1.000d-8}{\newton}
+    % \end{tasks}
+
+    \setcounter{section}{11}
+
+    \section{Calor, Trabajo y Energía.}
+
+    \setcounter{question}{29} \question \textbf{Ejercicio de ejecución.} Se realiza un trabajo mecánico de \SI{3500}{\joule} para elevar una cubeta con arena cuyo peso tiene una magnitud de \SI{350}{\newton}. Determina la altura a la que se elevó la cubeta.
+
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    T &= \SI{3500}{\joule} \\
+    W &= \SI{350}{\newton} \\
+    h &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    T = F \, d \hspace{0.2cm} \Rightarrow \hspace{0.2cm} d = \dfrac{T}{F}
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+        d = \dfrac{\SI{3500}{\joule}}{\SI{350}{\newton}} = \num{10} \dfrac{\unit{\newton\metre}}{\unit{\newton}} = \SI{10}{\meter}
+    \end{align*}
+    \begin{tasks}(4)
+        \task \SI{5}{\meter}
+        \task \fbox{\SI{10}{\meter}}
+        \task \SI{15}{\meter}
+        \task \SI{20}{\meter}
+    \end{tasks}
+    \setcounter{question}{30} \question \textbf{Ejercicio de ejecución.} El flúor es un elemento químico que está en el grupo de los halógenos. Su punto de ebullición de encuentra en los \SI{85.03}{\kelvin}. ¿Cuánto equivale esa temperatura en grados Celsius?
+
+    \vspace*{0.3cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    T &=  \SI{85.03}{\kelvin} \\
+    T &= \, ? \, \unit{\degreeCelsius}
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    \unit{\degreeCelsius} = K - 273.15
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+        \SI{85.03}{\kelvin} -273.15 = \SI{-188.12}{\degreeCelsius}
+    \end{align*}
+
+    \begin{tasks}(4)
+        \task \SI{30.15}{\degreeCelsius}
+        \task \SI{-56.15}{\degreeCelsius}
+        \task \fbox{\SI{-188.12}{\degreeCelsius}}
+        \task \SI{-600.15}{\degreeCelsius}
+    \end{tasks}
+    \setcounter{question}{31} \question \textbf{Ejercicio de ejecución.} ¿Cuál es la energía cinética de un balón de futbol que pesa \SI{4.4}{\newton} y lleva una velocidad cuya magnitud es de \SI{12}{\meter\per\second}?
+
+    \vspace*{0.3cm}
+    El balón tiene un peso $W = \SI{4.4}{\newton}$, por lo que hay que expresar su masa en \unit{\kilo\gram}.
+    \begin{align*}
+    m = \dfrac{W}{g} = \dfrac{\SI{4.4}{\newton} }{\SI{9.81}{\meter\per\square\second}} = \SI{0.44}{\kilo\gram}
+    \end{align*}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Datos:}
+    \begin{align*}
+    m &= \SI{0.44}{\kilo\gram} \\
+    v &= \SI{12}{\meter\per\second} \\
+    E_{k} &= \, ?
+    \end{align*}
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.4\linewidth}
+    \textbf{Expresión:}
+    \begin{align*}
+    E_{k} = \dfrac{1}{2} m \, v^{2}
+    \end{align*}
+    \end{minipage}
+
+    \vspace*{0.3cm}
+    \textbf{Sustitución:}
+    \begin{align*}
+    E_{k} &= \dfrac{1}{2} \left( \SI{0.44}{\kilo\gram} \right) \left( \SI[per-mode=fraction]{12}{\meter\per\second} \right)^{2} = \\[0.5em]
+    E_{k} &= \dfrac{1}{2} \left( \SI{0.44}{\kilo\gram} \right) \left( \SI[per-mode=fraction]{144}{\square\meter\per\square\second} \right) = \\[0.5em]
+    E_{k} &= \dfrac{1}{2} \left( \num{63.36} \, \dfrac{\displaystyle \unit[per-mode=fraction]{\kilo\gram\square\meter\per\square\second}}{2} \right) = \\[0.5em]
+    E_{k} &= \num{31.68} \, \unit[per-mode=fraction]{\kilo\gram\meter\per\square\second} \unit{\meter} = \SI{31.68}{\newton\meter} = \SI{31.68}{\joule}
+    \end{align*}
+    \begin{tasks}(4)
+        \task \fbox{\SI{31.68}{\joule}}
+        \task \SI{63.36}{\joule}
+        \task \SI{206.58}{\joule}
+        \task \SI{316.80}{\joule}
+    \end{tasks}
+    %  \question \label{Ejercicio_12} \textbf{Ejercicio de ejecución. } Calcula la magnitud de la velocidad de una caja cuya masa es de \SI{4}{\kilo\gram} y tiene una energía cinética de \SI{100}{\joule}.
+
+    % \begin{minipage}[t]{0.35\linewidth}
+    % Datos: 
+    % \begin{align*}
+    % m &= \SI{4}{\kilo\gram} \\
+    % E_{k} &= \SI{100}{\joule} \\
+    % v &= \, ?
+    % \end{align*}
+    % \end{minipage}
+    % \hspace{1cm}
+    % \begin{minipage}[t]{0.4\linewidth}
+    % Expresión:
+    % \begin{align*}
+    % E_{k} = \dfrac{1}{2} \, m \, v^{2} \hspace{0.3cm} \Rightarrow \hspace{0.3cm} v = \sqrt{\dfrac{2 \, E_{k}}{m}}
+    % \end{align*}
+    % \end{minipage}
+
+    % Sustitución:
+    % \begin{align*}
+    % v &= \sqrt{\dfrac{2 \left( \SI{100}{\joule} \right)}{\SI{4}{\kilo\gram}}} = \sqrt{\dfrac{\SI{200}{\newton\meter}}{\SI{4}{\kilo\gram}}} = \sqrt{50 \, \dfrac{\displaystyle \unit[per-mode=fraction]{\kilo\gram\square\meter\per\square\second}}{\unit{\kilo\gram}}} = \sqrt{\SI[per-mode=fraction]{50}{\square\meter\per\square\second}} \\[0.5em]
+    % v &= \SI[per-mode=fraction]{7.07}{\meter\per\second}
+    % \end{align*}
+    % \begin{tasks}(4)
+    %     \task \SI{4.07}{\meter\per\second}
+    %     \task \SI{5.07}{\meter\per\second}
+    %     \task \SI{6.07}{\meter\per\second}
+    %     \task \fbox{\SI{7.07}{\meter\per\second}}
+    % \end{tasks}
+
+    % \setcounter{question}{34} \question \label{Ejercicio_13} \textbf{Ejercicio de ejecución. } La novela de ciencia ficción \textit{Fahrenheit 451} del escritor Rad Bradbury, el título hace referencia a la temperatura en la que el papel de los libros se inflama. ¿Cuánto equivale esa temperatura $(451 ^{\circ}\text{F})$ en grados Celsius?
+
+    % Expresión: $\unit{\degreeCelsius} = \dfrac{5}{9} \left( ^{\circ}\text{F} - 32 \right)$
+
+    % Sustitución:
+    % \begin{align*}
+    %     \unit{\degreeCelsius} = \dfrac{5}{9} \left( 451 - 32 \right) = \dfrac{5}{9} \left( 419\right) = \SI{232.77}{\degreeCelsius}
+    % \end{align*}
+    % \begin{tasks}(4)
+    %     \task \SI{200.46}{\degreeCelsius}
+    %     \task \fbox{\SI{232.77}{\degreeCelsius}}
+    %     \task \SI{350.63}{\degreeCelsius}
+    %     \task \SI{500.45}{\degreeCelsius}
+    % \end{tasks}
+    % \setcounter{question}{43} \question \label{Ejercicio_14} \textbf{Ejercicio de ejecución. } A una temperatura de \SI{15}{\degreeCelsius} una varilla de hierro tiene una longitud de \SI{5}{\meter}. ¿Cuál será la longitud de la varilla al aumentar la temperatura a \SI{25}{\degreeCelsius}?
+
+    % \begin{minipage}[t]{0.35\linewidth}
+    % Datos: 
+    % \begin{align*}
+    % T_{i} &= \SI{15}{\degreeCelsius} \\
+    % T_{f} &= \SI{25}{\degreeCelsius} \\
+    % L_{i} &= \SI{5}{\meter} \\
+    % \alpha_{Fe} &= \SI{11.7d-6}{\degreeCelsius}^{-1} \\
+    % L_{f} &= \, ?
+    % \end{align*}
+    % \end{minipage}
+    % \hspace{1cm}
+    % \begin{minipage}[t]{0.4\linewidth}
+    % Expresión:
+    % \begin{align*}
+    %     \Delta L &= \alpha \, L_{i} \, \Delta T \\[0.5em]
+    %     L_{f} - L_{i} &= \alpha \, L_{i} \left( T_{f} - T_{i} \right) \\[0.5em] 
+    %     L_{f} &= L_{i} \left[ 1 + \alpha \, \left( T_{f} - T_{i} \right) \right]
+    % \end{align*}
+    % \end{minipage}
+    
+    % Sustitución:
+    % \begin{align*}
+    % L_{f} &= \left( \SI{5}{\meter} \right) \left[ 1 + \left( \SI{11.7d-6}{\degreeCelsius}^{-1} \right) \left( \SI{25}{\degreeCelsius} - \SI{10}{\degreeCelsius} \right)\right] \\[0.5em]
+    % L_{f} &= \left( \SI{5}{\meter} \right) \left[ 1 + \left( \SI{11.7d-6}{\degreeCelsius}^{-1} \right) \left( \SI{15}{\degreeCelsius}\right) \right] \\[0.5em]
+    % L_{f} &= \left( \SI{5}{\meter} \right) \left[ 1 + \num{1.755d-4} \right] \\[0.5em]
+    % L_{f} &= \left( \SI{5}{\meter} \right) \left( \num{1.0001755} \right) \\[0.5em]
+    % L_{f} &= \SI{5.0008775}{\meter}
+    % \end{align*}
+
+    % \begin{tasks}(4)
+    %     \task \SI{5.8775}{\meter}
+    %     \task \SI{5.08775}{\meter}
+    %     \task \SI{5.008775}{\meter}
+    %     \task \fbox{\SI{5.0008775}{\meter}}
+    % \end{tasks}
+
+    % \section{Máquinas y eficiencia.}
+
+    % \setcounter{question}{36} \question \label{Ejercicio_15} \textbf{Ejercicio de ejecución. } Una celda solar que está en desarrollo, transforma energía solar a energía eléctrica, si se sabe que se le suministran \SI{748}{\joule} y a la salida devuelve \SI{500}{\joule}, calcula la eficiencia en porcentaje de la celda solar.
+
+    % \begin{minipage}[t]{0.35\linewidth}
+    % Datos: 
+    % \begin{align*}
+    % W_{e} &= \SI{748}{\joule} \\
+    % W_{s} &= \SI{500}{\joule} \\
+    % \eta &= \, ?
+    % \end{align*}
+    % \end{minipage}
+    % \hspace{1cm}
+    % \begin{minipage}[t]{0.4\linewidth}
+    % Expresión:
+    % \begin{align*}
+    %     \eta = \dfrac{W_{s}}{W_{e}} \times 100 \%
+    % \end{align*}
+    % \end{minipage}
+
+    % Sustitución:
+    % \begin{align*}
+    % \eta = \dfrac{\SI{500}{\joule}}{\SI{748}{\joule}} \times 100 \% = \num{66.84} \%
+    % \end{align*}
+    % \begin{tasks}(4)
+    %     \task $\eta = 50.15 \%$
+    %     \task \fbox{$\eta = 66.84 \%$}
+    %     \task $\eta = 72.03 \%$
+    %     \task $\eta = 100.00 \%$
+    % \end{tasks}
+
+\end{questions}
+
+\end{document}
+

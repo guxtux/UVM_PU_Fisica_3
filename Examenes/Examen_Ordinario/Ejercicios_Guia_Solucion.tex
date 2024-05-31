@@ -1,0 +1,400 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usetikzlibrary{arrows, arrows.meta}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{scalerel}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\newlength{\depthofsumsign}
+\setlength{\depthofsumsign}{\depthof{$\sum$}}
+\newcommand{\nsum}[1][1.4]{% only for \displaystyle
+    \mathop{%
+        \raisebox
+            {-#1\depthofsumsign+1\depthofsumsign}
+            {\scalebox
+                {#1}
+                {$\displaystyle\sum$}%
+            }
+    }
+}
+
+\renewcommand*{\theenumi}{\thesection.\arabic{enumi}}
+\renewcommand*{\theenumii}{\theenumi.\arabic{enumii}}
+
+\renewcommand{\sin}{\operatorname{sen}}
+
+\title{\vspace*{-2cm} Ejercicios Guía de Estudio - Solución\\  Evaluación Continua - Física III\vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\vspace*{0.75cm}
+
+\textbf{Ejercicio 47. } Calcula la velocidad que posee un cuerpo que recorre una distancia de \SI{135}{\meter} en \SI{7}{\second} hacia el SE.
+
+\vspace*{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+d &= \SI{135}{\meter} \\
+t &= \SI{7}{\second} \\
+v &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+v = \dfrac{d}{t}
+\end{align*}
+\end{minipage}
+
+\vspace*{0.3cm}
+\textbf{Sustitución:}
+\begin{align*}
+v = \dfrac{\SI{135}{\meter}}{\SI{7}{\second}} = \SI[per-mode=fraction]{19.28}{\meter\per\second}
+\end{align*}
+
+\vspace*{0.3cm}
+\textbf{Ejercicio 48. } Carmelo tarda 3 minutos en recorrer los \SI{90}{\meter} de distancia que hay entre su casa y el Instituto. ¿A qué velocidad media ha ido?
+
+\vspace*{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+t &= \SI{3}{\minute} = \SI{180}{\second} \\
+d &= \SI{90}{\meter} \\
+v &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+v = \dfrac{d}{t}
+\end{align*}
+\end{minipage}
+
+\vspace*{0.3cm}
+\textbf{Sustitución:}
+\begin{align*}
+v = \dfrac{\SI{90}{\meter}}{\SI{180}{\second}} = \SI[per-mode=fraction]{0.5}{\meter\per\second}
+\end{align*}
+
+\vspace*{0.3cm}
+\textbf{Ejercicio 49. } Una ambulancia que se mueve con una velocidad de \SI{120}{\kilo\meter\per\hour}, necesita recorre un tramo recto de \SI{60}{\kilo\meter}. Calcula el tiempo necesario para que la ambulancia llegue a su destino.
+
+Antes de resolver el ejercicio, hay que expresar las cantidades en las unidades fundamentales, es decir, pasar de \unit{\kilo\meter} a \unit{\meter}:
+\begin{align*}
+v &= \SI[per-mode=fraction]{120}{\kilo\meter\per\hour} \left( \dfrac{\SI{1000}{\meter}}{\SI{1}{\kilo\meter}} \right)\left( \dfrac{\SI{1}{\hour}}{\SI{3600}{\second}} \right) = \SI[per-mode=fraction]{33.33}{\meter\per\second} \\[0.5em]
+d &= \SI{60}{\kilo\meter} \left( \dfrac{\SI{1000}{\meter}}{\SI{1}{\kilo\meter}}\right) = \SI{60000}{\meter}
+\end{align*}
+
+\vspace*{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+v &= \SI{120}{\kilo\meter\per\hour} = \SI[per-mode=fraction]{33.33}{\meter\per\second} \\
+d &= \SI{60}{\kilo\meter} = \SI{60000}{\meter} \\
+t &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+v = \dfrac{d}{t} \hspace{0.2cm} \Rightarrow \hspace{0.2cm} t = \dfrac{d}{v}
+\end{align*}
+\end{minipage}
+
+\vspace{0.3cm}
+\textbf{Sustitución:}
+\begin{align*}
+t = \dfrac{\SI{60000}{\meter}}{ \displaystyle \SI[per-mode=fraction]{33.33}{\meter\per\second}} = \SI{1800}{\second}
+\end{align*}
+La ambulancia tarda \SI{1800}{\second} = \SI{30}{\minute} en recorrer la distancia de \SI{60}{\kilo\meter}.
+
+\vspace*{0.3cm}
+\textbf{Ejercicio 50. } Encontrar la velocidad angular de la Tierra con respecto a su eje diametral. (De manera ideal).
+\\[0.5em]
+Para resolver este problema, consideramos que el diámetro de la Tierra medido en el Ecuador es de \SI{12742}{\kilo\meter}, por lo que la solución corresponde a puntos que se ubiquen en esta posición, para otros puntos, digamos hacia los polos, la velocidad angular cambia. Como necesitamos el periodo de rotación de la Tierra, sabemos que hace un giro completo en \SI{24}{\hour}, entonces su periodo en segundos es $T = \SI{86400}{\second}$.
+
+\vspace*{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+d &= \SI{12742}{\kilo\meter} = \SI{1.2742d7}{\meter} \\
+T &= \SI{86400}{\second} \\
+\omega &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+\omega = \dfrac{2 \, \pi \, \unit{\radian}}{T}
+\end{align*}
+\end{minipage}
+
+\vspace{0.3cm}
+\textbf{Sustitución:}
+\begin{align*}
+\omega = \dfrac{2 \, \pi \, \unit{\radian}}{\SI{86400}{\second}} = \SI[per-mode=fraction]{7.27d-5}{\radian\per\second}
+\end{align*}
+
+\vspace*{0.3cm}
+\textbf{Ejercicio 51. } Un volante gira en torno a su eje a razón de \num{3000} r.p.m. Un freno lo para en
+\SI{20}{\second}, obtenga su velocidad angular y su velocidad lineal si el radio es giro es de \SI{10}{\meter}.
+
+\vspace*{0.3cm}
+Tomemos en cuenta que el enunciado pide obtener la velocidad angular, pero debe de ser la velocidad del volante antes de que se frene totalmente, ya que una vez que se frena el volante, su velocidad angular es cero.
+
+Además, se necesita expresar la frecuencia en revoluciones por segundo con la que gira el volante, así:
+\begin{align*}
+\num{3000} \, \dfrac{\text{rev.}}{\unit{\minute}} \left( \dfrac{\SI{1}{\minute}}{\SI{60}{\second}} \right) = \unit{50} \, \dfrac{\text{rev.}}{\unit{\second}} = \SI{50}{\hertz}
+\end{align*}
+
+\vspace*{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+f_{i} &= \SI{50}{\hertz} \\
+r &= \SI{10}{\meter} \\
+\omega_{f} &= \, ? \\
+v_{T} &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresiones:}
+\begin{align*}
+\omega &= 2 \, \pi \, f \\
+v_{T} &= \omega \, r
+\end{align*}
+\end{minipage}
+
+\vspace{0.3cm}
+\textbf{Sustitución:}
+\begin{align*}
+\omega &= 2 \, \pi \, \left( \SI{50}{\hertz} \right) = \SI[per-mode=fraction]{314.15}{\radian\per\second} \\[0.5em]
+v_{T} &= \left( \SI[per-mode=fraction]{314.15}{\radian\per\second} \right) \left( \SI{10}{\meter} \right) = \SI[per-mode=fraction]{3141.59}{\meter\per\second}
+\end{align*}
+
+\vspace*{0.3cm}
+\textbf{Ejercicio 52. } Un automóvil se desplaza desde Santiago a Valparaíso a \SI{24}{\meter\per\second} y en el lapso de \SI{3}{\second} aumenta su velocidad a \SI{30}{\meter\per\second}. ¿Qué aceleración experimentó el automóvil?
+
+\vspace*{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+v_{i} &= \SI{24}{\meter\per\second} \\
+v_{f} &= \SI{30}{\meter\per\second} \\
+t &= \SI{3}{\second} \\
+a &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+a = \dfrac{v_{f} - v_{i}}{t}
+\end{align*}
+\end{minipage}
+
+\vspace{0.3cm}
+\textbf{Sustitución:}
+\begin{align*}
+a = \dfrac{\displaystyle \SI[per-mode=fraction]{30}{\meter\per\second} - \SI[per-mode=fraction]{24}{\meter\per\second}}{\SI{3}{\second}} = \dfrac{\displaystyle \SI[per-mode=fraction]{6}{\meter\per\second}}{\SI{3}{\second}} = \SI[per-mode=fraction]{2}{\meter\per\square\second}
+\end{align*}
+
+\newpage
+
+\textbf{Ejercicio 53. } En \SI{4}{\second} un móvil reduce su velocidad inicial de \SI{26}{\meter\per\second} a una velocidad final de \SI{10}{\meter\per\second}. Determine la aceleración experimentada por el móvil.
+
+\vspace*{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+v_{i} &= \SI{26}{\meter\per\second} \\
+v_{f} &= \SI{10}{\meter\per\second} \\
+t &= \SI{4}{\second} \\
+a &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+a = \dfrac{v_{f} - v_{i}}{t}
+\end{align*}
+\end{minipage}
+
+\vspace*{0.3cm}
+\textbf{Sustitución:}
+\begin{align*}
+a = \dfrac{\displaystyle \SI[per-mode=fraction]{10}{\meter\per\second} - \SI[per-mode=fraction]{26}{\meter\per\second}}{\SI{4}{\second}} = \dfrac{\displaystyle - \SI[per-mode=fraction]{16}{\meter\per\second}}{\SI{4}{\second}} = - \SI[per-mode=fraction]{4}{\meter\per\square\second}
+\end{align*}
+La aceleración con signo negativo nos indica que el objeto se está desacelerando.
+
+\vspace*{0.3cm}
+\textbf{Ejercicio 54. } Si un móvil parte del reposo (es decir, su velocidad inicial es cero, $v_{i} = 0$) con una aceleración de \SI{2}{\meter\per\square\second}. ¿Cuánto tardará en alcanzar una velocidad de \SI{14}{\meter\per\second}?
+
+\vspace*{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+v_{i} &= 0 \\
+v_{f} &= \SI{14}{\meter\per\second} \\
+a &= \SI{2}{\meter\per\square\second} \\
+t &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+a = \dfrac{v_{f} - v_{i}}{t} \hspace{0.2cm} \Rightarrow \hspace{0.2cm} t = \dfrac{v_{f} - v_{i}}{a}
+\end{align*}
+\end{minipage}
+
+\vspace*{0.3cm}
+\textbf{Sustitución:}
+\begin{align*}
+t = \dfrac{\displaystyle \SI[per-mode=fraction]{14}{\meter\per\second}}{\displaystyle \SI[per-mode=fraction]{2}{\meter\per\square\second}} = \SI{7}{\second}
+\end{align*}
+
+
+\vspace*{0.3cm}
+\textbf{Ejercicio 55. } Un objeto cae desde la Torre Latino, tarda \num{4} segundos en llegar al suelo, con respecto a un observador que mira desde la azotea. Calcule la velocidad final y la distancia de la que cae.
+
+\vspace*{0.3cm}
+Este es un problema de caída libre, por lo que hay que ocupar las correspondientes expresiones, como lo indica el enunciado, el objeto \enquote{cae}, por lo que asumimos que su velocidad inicial es cero.
+
+\vspace*{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+v_{i} &= 0 \\
+t &= \SI{4}{\second} \\
+g &= \SI{9.81}{\meter\per\square\second} \\
+v_{f} &= \, ? \\
+y &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresiones:}
+\begin{align*}
+v_{f} &= v_{i} + g \, t \\
+y &= v_{i} \, t + \dfrac{1}{2} g \, t^{2}
+\end{align*}
+\end{minipage}
+
+\vspace*{0.3cm}
+\textbf{Sustitución:}
+\begin{align*}
+v_{f} &= \left( \SI[per-mode=fraction]{9.81}{\meter\per\square\second} \right) (\SI{4}{\second}) = \SI[per-mode=fraction]{39.24}{\meter\per\second} \\[0.5em]
+y &= \dfrac{1}{2} \left( \SI[per-mode=fraction]{9.81}{\meter\per\square\second} \right)(\SI{4}{\second})^{2} = \dfrac{1}{2} \left( \SI[per-mode=fraction]{9.81}{\meter\per\square\second} \right)(\SI{16}{\square\second}) = \dfrac{\SI{156.96}{\meter}}{2} = \SI{78.48}{\meter}
+\end{align*}
+
+\vspace*{0.3cm}
+\textbf{Ejercicio 56. } Calcular el peso de un objeto en un satélite donde la gravedad es equivalente a \SI{3}{\meter\per\square\second}, si este tiene una masa de \SI{200}{\kilo\gram}.
+
+\vspace*{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Datos:}
+\begin{align*}
+a &= \SI{3}{\meter\per\square\second} \\
+m &= \SI{200}{\kilo\gram} \\
+W &= \, ?
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\textbf{Expresión:}
+\begin{align*}
+W = m \, a
+\end{align*}
+\end{minipage}
+
+\vspace*{0.3cm}
+\textbf{Sustitución:}
+\begin{align*}
+W = \left( \SI{200}{\kilo\gram} \right) \left( \SI[per-mode=fraction]{3}{\meter\per\square\second} \right) = \SI[per-mode=fraction]{600}{\kilo\gram\meter\per\square\second} = \SI{600}{\newton}
+\end{align*}
+Recuerda que por definición 1 Newton = $\displaystyle \unit[per-mode=fraction]{\kilo\gram\meter\per\square\second}$, y toda cantidad de peso se reporta en Newtons.
+
+\vspace*{0.3cm}
+\textbf{Ejercicio 57. } Una fuerza de \SI{400}{\newton} actúa a la derecha, mientras una fuerza de \SI{800}{\newton} actúa hacia abajo y a la izquierda con un ángulo de \ang{30} con respecto a la vertical. La fuerza resultante es $\ldots$
+
+\vspace*{0.3cm}
+Para resolver este ejercicio es conveniente usar un diagrama de cuerpo libre, es decir, un diagrama en donde solo se muestren las fuerzas que actúan, llamemos $F_{1}$ a la fuerza de \SI{400}{\newton} que actúa a la derecha, y $F_{2}$ es la fuerza de \SI{800}{\newton} actúa hacia abajo y a la izquierda con un ángulo de \ang{30} con respecto a la vertical.
+
+\begin{figure}[H]
+     \centering
+     \begin{tikzpicture}
+          \draw [stealth-stealth] (-3, 0) -- (3, 0) node[above, pos=1] {$x$};
+          \draw [stealth-stealth] (0, -4.5) -- (0, 3) node[right, pos=1] {$y$};
+          \draw [-stealth, thick] (0, 0) -- (2, 0) node[above, midway] {\small{$F_{1}$}};
+          \draw [-stealth, thick] (0, 0) -- (-2, -3.46) node[above, midway, rotate=60] {\small{$F_{2}$}};
+          \draw (0, -1) arc(270:240:1);
+          \node at (-0.3, -1.3) {\small{$\ang{30}$}};
+     \end{tikzpicture}
+\end{figure}
+Una vez trazado el diagrama de cuerpo libre, reconocemos que la respuesta al ejercicio corresponde a calcular la fuerza resultante $F_{R}$, es decir, la suma vectorial de las componentes en el eje $x$ y las componentes en el eje $y$, es decir:
+\begin{align*}
+F_{Rx} = \nsum_{i} F_{ix} = F_{1x} + F_{2x} \\[0.5em]
+F_{Ry} = \nsum_{i} F_{iy} = F_{1y} + F_{2y}
+\end{align*}
+
+Para obtener las componentes en $x$ y en el eje $y$ de cada fuerza, recordemos que las fuerzas son vectores y por lo tanto, ocupamos las expresiones que nos devuelven las componentes:
+\begin{align*}
+F_{x} = \abs{F} \, \cos \theta \\[0.5em]
+F_{y} = \abs{F} \, \sin \theta
+\end{align*}
+donde $\abs{F}$ es la magnitud del vector fuerza y $\theta$ es el ángulo que forma con respecto a la horizontal. En el caso de $F_{1}$ el ángulo que forma con respecto a la horizontal es de \ang{0}, mientras que el ángulo que forma $F_{2}$ con respecto a la horizontal es de \ang{240}, ¿por qué? ya que el eje $-y$ está a \ang{270}, se le restan los \ang{30} que forma la $F_{2}$ con respecto a esa misma vertical.
+
+Hacemos una tabla con las operaciones necesarias para obtener las componentes de las fuerzas:
+\begin{table}[H]
+\centering
+\begin{tabular}{c | c | c | c}
+Componente & Expresión & Operación & Componente \\ \hline
+$F_{1x}$ & $F_{1} \cdot \cos \ang{0}$ & $\left(\SI{400}{\newton}\right) \cdot \left( 1 \right)$ & $\SI{400}{\newton}$ \\ \hline
+$F_{1y}$ & $F_{1} \cdot \sin \ang{0}$ & $\left(\SI{400}{\newton}\right) \cdot \left( 0 \right)$ & $\SI{0}{\newton}$  \\ \hline
+$F_{2x}$ & $F_{2} \cdot \cos \ang{240}$ & $\left(\SI{800}{\newton}\right) \cdot \left( - 0.5 \right)$ & $- \SI{400}{\newton}$ \\ \hline
+$F_{2y}$ & $F_{2} \cdot \sin \ang{240}$ & $\left(\SI{800}{\newton}\right) \cdot \left( -0.866 \right)$ & $- \SI{692.82}{\newton}$ \\ \hline
+\end{tabular}
+\end{table}
+
+Una vez conocidas las componentes de las fuerzas, hacemos la suma vectorial:
+\begin{align*}
+F_{Rx} &= F_{1x} + F_{2x} = \left( \SI{400}{\newton} \right) + \left( - \SI{400}{\newton} \right) = \SI{0}{\newton} \\[0.5em]
+F_{Ry} &= F_{2y} + F_{2y} = \left( \SI{0}{\newton} \right) + \left( - \SI{692.82}{\newton} \right) = - \SI{692.82}{\newton}
+\end{align*}
+Como ya conocemos las componentes de la fuerza resultante, podemos ahora calcular la magnitud de la fuerza, para ello ocupamos la expresión:
+\begin{align*}
+\abs{F_{R}} = \sqrt{\left( F_{Rx} \right)^{2} + \left( F_{Ry} \right)^{2}}
+\end{align*}
+es decir:
+\begin{align*}
+\abs{F_{R}} &= \sqrt{\left( \SI{0}{\newton} \right)^{2} + \left( - \SI{692.82}{\newton} \right)^{2}} = \\[0.5em]
+\abs{F_{R}} &= \sqrt{\SI{479999.55}{\square\newton}} = \\[0.5em]
+\abs{F_{R}} &= \SI{692.82}{\newton}
+\end{align*}
+La dirección de la fuerza se obtiene calculando el ángulo $\theta_{R}$ del vector $F_{R}$ mediante la expresión:
+\begin{align*}
+\theta_{R} = \tan^{-1} \left( \dfrac{F_{Ry}}{F_{Rx}} \right)
+\end{align*}
+que al sustituir los valores:
+\begin{align*}
+\theta_{R} = \tan^{-1} \left( \dfrac{F_{Ry}}{F_{Rx}} \right)
+\end{align*}
+     
+\end{document}
